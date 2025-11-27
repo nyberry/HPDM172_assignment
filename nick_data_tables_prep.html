@@ -7719,21 +7719,406 @@ name, date of birth, Address.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>More to follow...</p>
+<h2 id="MEDICATION-table">MEDICATION table<a class="anchor-link" href="#MEDICATION-table">¶</a></h2><p>30+ meds. A medication can be prescribed to multiple patients and each patient could be prescribed multiple medications, but that many-to-many relationship will be described in the PRESCRIPTIONS table.</p>
+<table>
+<thead>
+<tr>
+<th>Field Name.</th>
+<th>Data Type</th>
+<th>Constraints/ Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>medication_id</code></td>
+<td>INT</td>
+<td><strong>primary key</strong> autoincrement.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VARCHAR(150).</td>
+<td>Unique, not null.</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c1c1da80">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c1c1da80">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="PRESCRIPTTION-Table">PRESCRIPTTION Table<a class="anchor-link" href="#PRESCRIPTTION-Table">¶</a></h2><p>This is a Junction table for PATIENT and MEDICATION</p>
+<p>This table represents the many-to-many relationship between patients and medications. Each record indicates that a specific patient has been prescribed a specific medication.
+It also records who prescribed the medication, when it was prescrinbed, and will presumably contain extra information like dose, duration and route. This is called a descriptive junction table, or a bridge entity with attributes.</p>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Data Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prescription_id</code></td>
+<td>INT</td>
+<td><strong>Primary key</strong></td>
+</tr>
+<tr>
+<td><code>patient_id</code></td>
+<td>INT</td>
+<td><strong>FK = Patient</strong></td>
+</tr>
+<tr>
+<td><code>doctor_id</code></td>
+<td>INT</td>
+<td><strong>FK = Doctor</strong></td>
+</tr>
+<tr>
+<td><code>medication_id</code></td>
+<td>INT</td>
+<td><strong>FK = Medication</strong></td>
+</tr>
+<tr>
+<td><code>prescribed_date</code></td>
+<td>DATE</td>
+<td>Must be within past 2 years</td>
+</tr>
+<tr>
+<td><code>dose_instructions</code></td>
+<td>VARCHAR(255)</td>
+<td>e.g., "Take one tablet twice a day"</td>
+</tr>
+<tr>
+<td><code>duration_days</code></td>
+<td>INT</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>route</code></td>
+<td>VARCHAR(150)</td>
+<td>not Null</td>
+</tr>
+</tbody>
+</table>
 </div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a2ad44cb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="DISEASES-Table">DISEASES Table<a class="anchor-link" href="#DISEASES-Table">¶</a></h2><p>One disease can be treated by many meds, and by many doctors.
+One medication can treat many diseases.
+One doctor can specialise in many diseases.</p>
+<p>There are TWO many-to-many relationships here, which can be represented in two junction tables: Disease-Medication, and Disease-Doctor</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disease_id</code></td>
+<td>INT</td>
+<td><strong>Primary key</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VARCHAR(150)</td>
+<td>Unique, not null</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>TEXT</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>icd10_code</code></td>
+<td>VARCHAR(10)</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5c605fa5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="DiseaseMEDICATION">DiseaseMEDICATION<a class="anchor-link" href="#DiseaseMEDICATION">¶</a></h2><p>Many to many, represents which meds are used to treat which diseases</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disease_treatment_id</code></td>
+<td>INT</td>
+<td>Primary Key</td>
+</tr>
+<tr>
+<td><code>disease_id</code></td>
+<td>INT</td>
+<td>Foreign Key - Disease</td>
+</tr>
+<tr>
+<td><code>medication_id</code></td>
+<td>INT</td>
+<td>Foreign Key - Medication</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=81a2daca">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="DiseaseDOCTOR">DiseaseDOCTOR<a class="anchor-link" href="#DiseaseDOCTOR">¶</a></h2><p>Many to Many, represents which doctors treat which diseases</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disease_specialist_id</code></td>
+<td>INT</td>
+<td>PK</td>
+</tr>
+<tr>
+<td><code>disease_id</code></td>
+<td>INT</td>
+<td>FK → Disease</td>
+</tr>
+<tr>
+<td><code>doctor_id</code></td>
+<td>INT</td>
+<td>FK → Doctor</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9a671107">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=58e4441c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="APPOINTMENTS-table">APPOINTMENTS table<a class="anchor-link" href="#APPOINTMENTS-table">¶</a></h2><p>Each Appointment is a one to one relationship between a PATIENT and a DOCTOR occuring at a HOSPTIAL and at a certain time and for a certain duration.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>appointment_id</code></td>
+<td>INT</td>
+<td><strong>Primary key</strong></td>
+</tr>
+<tr>
+<td><code>patient_id</code></td>
+<td>INT</td>
+<td><strong>FK → Patient</strong></td>
+</tr>
+<tr>
+<td><code>doctor_id</code></td>
+<td>INT</td>
+<td><strong>FK → Doctor</strong></td>
+</tr>
+<tr>
+<td><code>hospital_id</code></td>
+<td>INT</td>
+<td><strong>FK → Hospital</strong></td>
+</tr>
+<tr>
+<td><code>appointment_start</code></td>
+<td>DATETIME</td>
+<td>exact scheduled time</td>
+</tr>
+<tr>
+<td><code>duration_minutes</code></td>
+<td>INT</td>
+<td>typical values 10–60</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>VARCHAR(255)</td>
+<td>optional free-text</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>VARCHAR(50)</td>
+<td>e.g. "Scheduled", "Completed", "Cancelled"</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5f885b91">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="LABTESTS-table">LABTESTS table<a class="anchor-link" href="#LABTESTS-table">¶</a></h2><p>A table should be created for storing the results from lab tests,
+which are for individual patients.
+A patient may have many lab tests, but each lab result is for one patient.
+and each lab test should be requested by a specific doctor (one to one)
+each lab result corresponds to one test type (many to one)</p>
+<p>To achieve this we can create a LAB TESTStable, and then a LABRESULTS table which is a junctional table with attributes, joining a test result to a patient (many to one) and describing the doctor who requested it, the date of the request, the result of the test, the date of the result, and optionally whether it is normal or abnormal and a reference range.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lab_test_id</code></td>
+<td>INT</td>
+<td><strong>Primary key</strong></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VARCHAR(150)</td>
+<td>e.g. “HbA1c”, “CRP”</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>TEXT</td>
+<td>optional</td>
+</tr>
+<tr>
+<td><code>units</code></td>
+<td>VARCHAR(20)</td>
+<td>e.g. “mmol/mol”, “mg/L”</td>
+</tr>
+<tr>
+<td><code>reference_range</code></td>
+<td>VARCHAR(50)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sample_type</code></td>
+<td>VARCHAR(50)</td>
+<td>e.g. “Blood”, “Urine”</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=28b60dde">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="LABRESULTS-Table">LABRESULTS Table<a class="anchor-link" href="#LABRESULTS-Table">¶</a></h2><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lab_result_id</code></td>
+<td>INT</td>
+<td><strong>Primary key</strong></td>
+</tr>
+<tr>
+<td><code>lab_test_id</code></td>
+<td>INT</td>
+<td>FK - LabTest</td>
+</tr>
+<tr>
+<td><code>patient_id</code></td>
+<td>INT</td>
+<td>FK - Patient</td>
+</tr>
+<tr>
+<td><code>doctor_id</code></td>
+<td>INT</td>
+<td>FK - Doctor</td>
+</tr>
+<tr>
+<td><code>requested_date</code></td>
+<td>DATE</td>
+<td>when the doctor ordered the test</td>
+</tr>
+<tr>
+<td><code>result_date</code></td>
+<td>DATE</td>
+<td>when the lab produced the result</td>
+</tr>
+<tr>
+<td><code>result_value</code></td>
+<td>VARCHAR(50)</td>
+<td>numeric or text result</td>
+</tr>
+<tr>
+<td><code>is_normal</code></td>
+<td>BOOLEAN</td>
+<td>optional</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td>TEXT</td>
+<td>optional commentary</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
