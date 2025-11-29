@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS Hospital (
     hospital_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150) NOT NULL UNIQUE,
     address VARCHAR(255) NOT NULL,
-    beds INT NOT NULL CHECK (size_beds > 0),
+    beds INT NOT NULL CHECK (beds > 0),
     accreditation_status VARCHAR(100)
 ) ENGINE=InnoDB;
 
