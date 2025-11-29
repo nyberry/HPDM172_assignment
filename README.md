@@ -10,7 +10,7 @@ Please look in the planning folder for:
 - suggested repo workflow (ie. clone the dev branch and work on that branch until ready to push to dev; when we have a working project we can push to main)
 ---
 
-## Getting Started (Team Members)
+## Getting Started Guide for Team Members
 
 This may help with getting set up locally so you can run the database, generate synthetic data, and test the required SQL queries.
 
@@ -41,7 +41,7 @@ Download the MySQL Installer from:
 
 Choose **MySQL Server** + **MySQL Workbench** during installation.
 
-### **Linux (Ubuntu/Debian)**
+### **Linux (Ubuntu)**
 
 ```bash
 sudo apt update
@@ -93,16 +93,9 @@ This will:
 
 ---
 
-## 5. Generating & inserting synthetic data (for the Data Engineer role)
+## 5. Generating & inserting synthetic data 
 
-When the data scripts are ready:
-
-```bash
-cd data_generation
-python generate_data.py
-```
-
-This will output CSV files such as:
+Suggest generate CSV files such as:
 
 * hospitals.csv
 * doctors.csv
@@ -121,13 +114,17 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 ```
 
-(Each table will have its own import command—see `/mysql/data_import.sql` once created.)
+(Each table will have its own import command— suggest collect these in `/mysql/data_import.sql` once created.)
 
 ---
 
 ## 6. Running the required SQL queries
 
-After data is loaded, you can execute the queries in the `sql_queries/` folder.
+After data is loaded, you could collect the queries to execute in `/mysql/queries.sql`. To execute, copy-paste the query directly into the MySQL prompt.
+
+Or maybe save the, as standalone files in a seperate folder like /sql_queries/
+
+Then to run a query, something like:
 
 Example:
 
@@ -135,18 +132,18 @@ Example:
 mysql -u root -p hospitaldb < sql_queries/doctors_by_hospital.sql
 ```
 
-Or copy-paste the query directly into the MySQL prompt.
+
 
 ---
 
 ## 7. Exporting the final MySQL database (for the final submission)
 
-Once all data and queries are working:
+Once we are happy all data and queries are working:
 
 ```bash
 mysqldump -u root -p hospitaldb > mysql/hospital_database.sql
 ```
 
-This `.sql` file is what will be submitted in the final GitHub repository.
+This `.sql` file is what we can submit in the final GitHub repository.
 
 ---
