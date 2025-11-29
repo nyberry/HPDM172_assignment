@@ -12,8 +12,7 @@ CREATE TABLE IF NOT EXISTS Hospital (
     hospital_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150) NOT NULL UNIQUE,
     address VARCHAR(255) NOT NULL,
-    size_beds INT NOT NULL CHECK (size_beds > 0),
-    hospital_type VARCHAR(100),
+    beds INT NOT NULL CHECK (size_beds > 0),
     accreditation_status VARCHAR(100)
 ) ENGINE=InnoDB;
 
@@ -25,6 +24,7 @@ CREATE TABLE IF NOT EXISTS Doctor (
     last_name VARCHAR(100) NOT NULL,
     date_of_birth DATE NOT NULL,
     specialty VARCHAR(100),
+    accreditation_date DATE NOT NULL,
     address VARCHAR(255) NOT NULL,
     FOREIGN KEY (hospital_id)
         REFERENCES Hospital(hospital_id)
@@ -177,7 +177,7 @@ CREATE TABLE IF NOT EXISTS LabResult (
     doctor_id INT NOT NULL,
     requested_date DATE NOT NULL,
     result_date DATE,
-    result_value VARCHAR(50),
+    result_value VARCHAR(150),
     is_normal BOOLEAN,
     notes TEXT,
 
