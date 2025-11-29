@@ -33,6 +33,7 @@ HPDM127_ASSIGMENT/
 │   ├── ERD.png                   # final ERD diagram
 │   ├── schedule.png              # Project timeline
 │   ├── repo_structure.md         # proposed repo organisation
+│   ├── repo_workflow.md          # proposed repo branch strategy
 │
 ├── TeamPortfolio/
 │   ├── meeting_agenda_1.pdf

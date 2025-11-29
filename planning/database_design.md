@@ -79,13 +79,49 @@ All tables use `INT AUTO_INCREMENT` primary keys for simplicity and clarity.
 
 ### 4.2 Relationships
 
-* **Hospital → Doctor**: 1-to-many
-* **Doctor → Patient**: 1-to-many
-* **Patient ↔ Medication**: many-to-many via Prescriptions
-* **Disease ↔ Doctor**: many-to-many via specialist table
-* **Disease ↔ Medication**: many-to-many mapping
-* **Patient → Appointment**: 1-to-many
-* **Patient → LabResult**: 1-to-many
+### **Hospital**
+
+* One Hospital may have many Doctors
+* One Hospital may offer many Appointments
+
+### **Doctor**
+
+* One Doctor works at one Hospital
+* ... may have many Patients
+* ... may write many Prescriptions
+* ... may request many LabResults
+* ... may specialise in many diseases (via DiseaseSpecialist)
+
+### **Patient**
+
+* One patient is looked after by one Doctor
+* ... may have many Prescriptions
+* ... may have many Appointments
+* ... may have many LabResults
+
+### **Medication**
+
+* One medication may appear in many Prescriptions
+* One medication may treat many Diseases (via DiseaseTreatment)
+
+### **Disease**
+
+* One disease may be teated by many Medications (via DiseaseTreatment)
+* One disease may be managed by many Doctors (via DiseaseSpecialist)
+
+### **Appointment**
+
+* One appointment joins together one Patient, one Doctor and one Hospital
+
+### **LabTest**
+
+* One LabTest may appear in mant LabResults
+
+### **LabResult**
+
+* One LabResult joins together one LabTest, one patient, and one doctor.
+
+---
 
 ### 4.3 Data Types
 
