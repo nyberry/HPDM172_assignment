@@ -1,7 +1,7 @@
 # Hospital Database Design Document
 
 *HPDM172 Group Project*
-*Version 2.0*
+*Version 1.0*
 *November 29 2025*
 
 ---
@@ -12,7 +12,7 @@ This document describes the steps taken to design the **Hospital Database** as r
 It includes:
 
 * Requirements analysis
-* Entity identification
+* Description of entities
 * Schema design
 * Entity relationships description
 * MySQL table definitions
@@ -50,7 +50,7 @@ The SQL queries must allow:
 * Appointments by patient/doctor
 * Prescriptions by hospital, alphabetically by medication
 * Hospitals accredited before 2015 with emergency facilities
-* CRUD operations: add patient, update patient address
+* Operations ro add patient, update patient address
 
 ---
 
@@ -164,6 +164,7 @@ CREATE TABLE Hospital (
     address VARCHAR(255),
     beds INT,
     accreditation_status VARCHAR(100),
+    has_emergency_department BOOLEAN
 );
 ```
 
@@ -384,31 +385,10 @@ CREATE TABLE LabResult (
 ```
 ---
 
-## 7. Query Support Notes
+## 7. Notes for use
 
-The schema above supports all required SQL tasks including:
+The next steps are to create and import data, and to write the required SQL queries. The schema above supports all the required SQL tasks.
 
-* CRUD operations (add patient, update address)
-* List doctors at a hospital
-* List prescriptions by patient or doctor
-* Alphabetical medication ordering
-* Specialist doctors for diseases
-* Lab results for patients > 60
-* Accreditation-based queries
-* Appointments for patient/doctor
+Queries should be stored separately in a `sql_queries` file, or as individual files in a `sql_queries` folder.
 
-These queries are stored separately in the `sql_queries` file.
 
----
-
-## 8. Conclusion
-
-This document outlines the analytical and design steps taken to develop the hospital database, including:
-
-* Requirements analysis
-* Entity identification
-* Schema decisions
-* MySQL table definitions
-* ERD guidance
-
-Creating this database is the first step which allows future implementation, data import, and writing the required SQL queries.

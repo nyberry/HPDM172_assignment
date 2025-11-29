@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS Hospital (
     name VARCHAR(150) NOT NULL UNIQUE,
     address VARCHAR(255) NOT NULL,
     beds INT NOT NULL CHECK (beds > 0),
-    accreditation_status VARCHAR(100)
+    accreditation_status VARCHAR(100),
+    has_emergency_department BOOLEAN NOT NULL
 ) ENGINE=InnoDB;
 
 
