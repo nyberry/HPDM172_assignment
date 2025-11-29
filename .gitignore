@@ -3,3 +3,4 @@ venv/
 ENV/
 env/
 nick_notes/
+.DS_Store
