@@ -13,8 +13,9 @@ CREATE TABLE IF NOT EXISTS Hospital (
     name VARCHAR(150) NOT NULL UNIQUE,
     address VARCHAR(255) NOT NULL,
     beds INT NOT NULL CHECK (beds > 0),
-    accreditation_status VARCHAR(100),
-    has_emergency_department BOOLEAN NOT NULL
+    accreditation_date DATE NOT NULL,
+    has_emergency_department BOOLEAN NOT NULL,
+    is_teaching_hospital BOOLEAN NOT NULL
 ) ENGINE=InnoDB;
 
 
@@ -24,8 +25,6 @@ CREATE TABLE IF NOT EXISTS Doctor (
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     date_of_birth DATE NOT NULL,
-    specialty VARCHAR(100),
-    accreditation_date DATE NOT NULL,
     address VARCHAR(255) NOT NULL,
     FOREIGN KEY (hospital_id)
         REFERENCES Hospital(hospital_id)
@@ -61,6 +60,8 @@ CREATE TABLE IF NOT EXISTS Prescription (
     doctor_id INT NOT NULL,
     medication_id INT NOT NULL,
     prescribed_date DATE NOT NULL,
+    dose_value INT,
+    dose_units VARCHAR(50),
     dose_instructions VARCHAR(255),
     duration_days INT,
     route VARCHAR(150) NOT NULL,

@@ -1,15 +1,14 @@
 # Hospital Database Design Document
 
 *HPDM172 Group Project*
-*Version 1.0*
-*November 29 2025*
+*Version 1.1*
+*November 30 2025*
 
 ---
 
 ## 1. Introduction
 
-This document describes the steps taken to design the **Hospital Database** as required for the HPDM172 assignment.
-It includes:
+This document describes the steps taken to design the **Hospital Database** as required for the HPDM172 assignment. It includes:
 
 * Requirements analysis
 * Description of entities
@@ -41,16 +40,16 @@ The system must contain:
 
 The SQL queries must allow:
 
-* Listing doctors at a hospital
-* Listing prescriptions by patient/doctor
-* Ordering prescriptions alphabetically by patient name
-* Doctors at teaching hospitals (accredited 2015–2024)
-* Patients who may have a particular disease
-* Lab results for patients over age 60
-* Appointments by patient/doctor
-* Prescriptions by hospital, alphabetically by medication
-* Hospitals accredited before 2015 with emergency facilities
-* Operations ro add patient, update patient address
+* List hospitals by type or accreditation date
+* List hospitals that have am emergency service
+* List doctors at a hospital
+* List prescriptions by patient or doctor
+* List doctors who specialise in a particular disease
+* List patients who may have a particular disease
+* List lab results for patients by age
+* List appointments by patient or doctor
+* List prescriptions by hospital, alphabetically by medication
+* Operations to add patients and update their details
 
 ---
 
@@ -103,6 +102,10 @@ All tables use `INT AUTO_INCREMENT` primary keys for simplicity and clarity.
 
 * One medication may appear in many Prescriptions
 * One medication may treat many Diseases (via DiseaseTreatment)
+
+### **Prescriptions**
+
+* One prescription is made by one doctor, for one patient, for one medication
 
 ### **Disease**
 
@@ -162,8 +165,9 @@ CREATE TABLE Hospital (
     hospital_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255),
-    beds INT,
-    accreditation_status VARCHAR(100),
+    beds INT, 
+    accreditation_date VARCHAR(100),
+    is_teaching_hospital BOOLEAN,
     has_emergency_department BOOLEAN
 );
 ```
@@ -184,7 +188,6 @@ CREATE TABLE Doctor (
     last_name VARCHAR(100) NOT NULL,
     date_of_birth DATE,
     address VARCHAR(255),
-    specialty VARCHAR(100),
     hospital_id INT,
     FOREIGN KEY (hospital_id) REFERENCES Hospital(hospital_id)
 );
@@ -245,6 +248,8 @@ CREATE TABLE Prescription (
     doctor_id INT NOT NULL,
     medication_id INT NOT NULL,
     prescribed_date DATE NOT NULL,
+    dose_value INT,
+    dose_units VARCHAR(50),
     dose_instructions VARCHAR(255),
     duration_days INT,
     route VARCHAR(150) NOT NULL,
