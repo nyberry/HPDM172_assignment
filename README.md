@@ -22,8 +22,8 @@ HPDM172_assignment/
 ├── mysql/
 │   ├── schema.sql                # Creates the database tables
 │   ├── data_import.sql           # Loads CSV data into MySQL
-│   ├── hospital_database.sql     # Exports the database
-│   └── test_queries.sql          # SQL queries
+│   ├── export_database.sql     # Exports the database
+│   └── queries.sql          # SQL queries
 │
 ├── data/                         # Synthetic data 
 │   ├── hospitals.csv
@@ -126,7 +126,7 @@ planning/database_design.md
 Run the queries in MySQL:
 
 ```sql
-SOURCE mysql/test_queries.sql
+SOURCE mysql/queries.sql
 ```
 
 
