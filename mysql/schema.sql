@@ -8,6 +8,25 @@ CREATE DATABASE IF NOT EXISTS hospitaldb;
 USE hospitaldb;
 
 
+-- Drop tables if re-running
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS LabResult;
+DROP TABLE IF EXISTS Appointment;
+DROP TABLE IF EXISTS Prescription;
+DROP TABLE IF EXISTS DiseaseSpecialist;
+DROP TABLE IF EXISTS DiseaseTreatment;
+DROP TABLE IF EXISTS Patient;
+DROP TABLE IF EXISTS Doctor;
+DROP TABLE IF EXISTS Hospital;
+DROP TABLE IF EXISTS Medication;
+DROP TABLE IF EXISTS Disease;
+DROP TABLE IF EXISTS LabTest;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+-- Create the tables
+
 CREATE TABLE IF NOT EXISTS Hospital (
     hospital_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150) NOT NULL UNIQUE,

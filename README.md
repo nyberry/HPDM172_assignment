@@ -1,149 +1,139 @@
 # HPDM172_assignment
 
+## Overview
+This project implements a relational database for the HPDM172 MSc Data Science assignment, representing the activities of a group of hospitals.
 
-This is a repository for group assignment HPDM172
+It includes:
+- a MySQL database schema describung hospitals, doctors, patients and clinical activtity.
+- a sythnetic data generator
+- SQL scripts for creating and loading the database
+- SQL searches
+- a GitHub Pages site for documentation and project presentation
 
-Please look in the planning folder for:
 
-- project schedule / timeline
-- suggested repo structure
-- suggested repo workflow (ie. clone the dev branch and work on that branch until ready to push to dev; when we have a working project we can push to main)
----
+## Repository Structure
 
-## Getting Started Guide for Team Members
-
-This may help with getting set up locally so you can run the database, generate synthetic data, and test the required SQL queries.
-
----
-
-## 1. Install MySQL (if you haven’t already)
-
-### **macOS**
-
-You can install MySQL using **Homebrew**:
-
-```bash
-brew update
-brew install mysql
+```text
+HPDM172_assignment/
+│
+├── README.md                     # Project documentation 
+├── index.html                    # GitHub Pages site
+│
+├── mysql/
+│   ├── schema.sql                # Creates the database tables
+│   ├── data_import.sql           # Loads CSV data into MySQL
+│   ├── hospital_database.sql     # Exports the database
+│   └── test_queries.sql          # SQL queries
+│
+├── data/                         # Synthetic data 
+│   ├── hospitals.csv
+│   ├── doctors.csv
+│   ├── patients.csv
+│   ├── medications.csv
+│   ├── diseases.csv
+│   ├── disease_treatments.csv
+│   ├── disease_specialists.csv
+│   ├── lab_tests.csv
+│   ├── prescriptions.csv
+│   ├── appointments.csv
+│   └── lab_results.csv
+│
+├── data_generation/
+│   ├── generate_data.py          # Python to generate data
+│
+├── planning/
+│   ├── assignment_brief.pdf
+│   ├── ERD.drawio                # Editable
+│   ├── ERD.png                   # Final 
+│   ├── database_design.md        
+│   ├── repo_structure.md
+│   ├── repo_workflow.md
+│   └── schedule.png
+│
+└── TeamPortfolio/
+    ├── meeting_minutes_1.pdf
+    ├── meeting_minutes_2.pdf
+    ├── meeting_minutes_3.pdf
+    ├── meeting_agenda_1.pdf
+    ├── meeting_agenda_2.pdf
+    ├── meeting_agenda_3.pdf
+    └── gen_ai.md                 # Records of GenAI use
 ```
 
-Start MySQL:
+
+## Requirements
+
+- MySQL 8.x
+- Python 3.x
+
+
+## Setup Instructions
+
+### 1. Clone the repository
 
 ```bash
-brew services start mysql
+git clone https://github.com/<your-username>/HPDM172_assignment.git
+cd HPDM172_assignment
 ```
 
-### **Windows**
-
-Download the MySQL Installer from:
-
-[https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/)
-
-Choose **MySQL Server** + **MySQL Workbench** during installation.
-
-### **Linux (Ubuntu)**
+### 2. Run the python script to recreate CSV files
 
 ```bash
-sudo apt update
-sudo apt install mysql-server
-sudo systemctl start mysql
+cd data_generation
+python generate_data.py
 ```
 
----
+### 3. Open MySQL
 
-## 2. Log in to MySQL in your terminal
 
 ```bash
-mysql -u root -p
+mysql --local-infile=1 -u root -p
+
 ```
+notes:
+(--local-infile=1 enables .csv loading)
+(if you are asked for a password, just press enter)
 
-(You will be asked for your MySQL root password. On some systems—such as fresh macOS installs—there may be no password initially. Just press **Enter**.)
 
----
-
-## 3. Create the database (first-time setup)
-
-Inside the MySQL prompt:
+### 4. Create the database (+drops any previous tables)
 
 ```sql
-CREATE DATABASE hospitaldb;
+SOURCE mysql/schema.sql;
 ```
 
-Then:
+### 5. Load the data
 
 ```sql
-USE hospitaldb;
+SOURCE mysql/data_import.sql;
 ```
 
----
+## Planning
 
-## 4. Load our schema.sql file
+An Entity relationshp diagram for the projecty is available at
 
-Once you have pulled the latest version of the repository, navigate to the project folder in your terminal and run:
-
-```bash
-mysql -u root -p hospitaldb < mysql/schema.sql
+```
+planning/erd.png
 ```
 
-This will:
+an editable .drawio file is included, snd a description of the steps taken to design the database is at
 
-- create all tables
--  set up primary/foreign keys
-- prepare the database for synthetic data input
+```
+planning/database_design.md
+```
 
----
+## Running the Required SQL queries
 
-## 5. Generating & inserting synthetic data 
-
-Suggest generate CSV files such as:
-
-* hospitals.csv
-* doctors.csv
-* patients.csv
-* prescriptions.csv
-* etc.
-
-To import a CSV file into a table:
+Run the queries in MySQL:
 
 ```sql
-LOAD DATA LOCAL INFILE 'patients.csv'
-INTO TABLE Patients
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS;
-```
-
-(Each table will have its own import command— suggest collect these in `/mysql/data_import.sql` once created.)
-
----
-
-## 6. Running the required SQL queries
-
-After data is loaded, you could collect the queries to execute in `/mysql/queries.sql`. To execute, copy-paste the query directly into the MySQL prompt.
-
-Or maybe save the, as standalone files in a seperate folder like /sql_queries/
-
-Then to run a query, something like:
-
-Example:
-
-```bash
-mysql -u root -p hospitaldb < sql_queries/doctors_by_hospital.sql
+SOURCE mysql/test_queries.sql
 ```
 
 
+## Team Portfolio
 
----
+All meetings, agendas and documentation of AI assistance is stored in 
 
-## 7. Exporting the final MySQL database (for the final submission)
-
-Once we are happy all data and queries are working:
-
-```bash
-mysqldump -u root -p hospitaldb > mysql/hospital_database.sql
 ```
-
-This `.sql` file is what we can submit in the final GitHub repository.
-
----
+TeamPOrtfolio/
+```

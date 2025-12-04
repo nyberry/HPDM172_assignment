@@ -1,0 +1,16 @@
+disease_id,name,description,icd10_code
+1,Hypertension,Elevated blood pressure,I10
+2,Type 2 diabetes mellitus,Disorder of glucose metabolism,E11
+3,Ischaemic heart disease,Coronary artery disease,I25
+4,Asthma,Reversible airway obstruction,J45
+5,COPD,Chronic obstructive pulmonary disease,J44
+6,Chronic kidney disease,Impaired kidney function,N18
+7,Heart failure,Impaired cardiac pump function,I50
+8,Depression,Mood disorder,F32
+9,Anxiety disorder,Anxiety-related condition,F41
+10,Osteoarthritis,Degenerative joint disease,M19
+11,Rheumatoid arthritis,Inflammatory arthritis,M06
+12,Hyperlipidaemia,Raised cholesterol or triglycerides,E78
+13,Chronic liver disease,Progressive liver damage,K76
+14,Hypothyroidism,Underactive thyroid gland,E03
+15,Migraine,Recurrent headache disorder,G43
