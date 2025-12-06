@@ -72,11 +72,11 @@ HPDM172_assignment/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/HPDM172_assignment.git
+git clone https://github.com/nyberry/HPDM172_assignment.git
 cd HPDM172_assignment
 ```
 
-### 2. Run the python script to recreate CSV files
+### 2. (optional) Run the python script to recreate CSV files
 
 ```bash
 cd data_generation
