@@ -12,7 +12,7 @@ N_PATIENTS = 600
 N_MEDICATIONS = 40
 N_DISEASES = 12
 N_LAB_TESTS = 15
-N_PRESCRIPTIONS = 500        
+N_PRESCRIPTIONS = 500
 N_APPOINTMENTS = 1000
 N_LAB_RESULTS = 800
 
@@ -20,6 +20,7 @@ TODAY = datetime(2025, 12, 1)  # fixed "today" so it’s reproducible
 
 
 # Helper functions
+
 
 def rand_date(start_year=1958, end_year=2005):
     """For DOB: Random date between 1 Jan start_year and 31 Dec end_year (inclusive)."""
@@ -45,81 +46,444 @@ def rand_datetime_within_days(past_days=90, future_days=30):
 
 # 100 most common names in UK
 FIRST_NAMES = [
-    "Oliver","George","Harry","Jack","Jacob","Noah","Charlie","Muhammad","Thomas","Oscar",
-    "William","James","Leo","Alfie","Henry","Joshua","Freddie","Archie","Ethan","Isaac",
-    "Alexander","Joseph","Edward","Samuel","Max","Daniel","Arthur","Lucas","Mohammed","Logan",
-    "Theo","Harrison","Benjamin","Mason","Finley","Arlo","Sebastian","Adam","Teddy","Dylan",
-    "Zachary","Reuben","Hugo","Luca","Louis","Jaxon","Roman","Toby","Rory",
-    "Amelia","Olivia","Isla","Emily","Ava","Grace","Sophia","Mia","Poppy","Ella",
-    "Lily","Evie","Jessica","Isabella","Charlotte","Sophie","Daisy","Alice","Phoebe","Freya",
-    "Florence","Sienna","Willow","Elsie","Matilda","Ruby","Harper","Emma","Chloe","Rosie",
-    "Molly","Maya","Millie","Eva","Erin","Aria","Lottie","Zara","Thea","Annabelle",
-    "Heidi","Eleanor","Luna","Beatrice","Hannah","Imogen","Elizabeth","Ivy","Georgia"
+    "Oliver",
+    "George",
+    "Harry",
+    "Jack",
+    "Jacob",
+    "Noah",
+    "Charlie",
+    "Muhammad",
+    "Thomas",
+    "Oscar",
+    "William",
+    "James",
+    "Leo",
+    "Alfie",
+    "Henry",
+    "Joshua",
+    "Freddie",
+    "Archie",
+    "Ethan",
+    "Isaac",
+    "Alexander",
+    "Joseph",
+    "Edward",
+    "Samuel",
+    "Max",
+    "Daniel",
+    "Arthur",
+    "Lucas",
+    "Mohammed",
+    "Logan",
+    "Theo",
+    "Harrison",
+    "Benjamin",
+    "Mason",
+    "Finley",
+    "Arlo",
+    "Sebastian",
+    "Adam",
+    "Teddy",
+    "Dylan",
+    "Zachary",
+    "Reuben",
+    "Hugo",
+    "Luca",
+    "Louis",
+    "Jaxon",
+    "Roman",
+    "Toby",
+    "Rory",
+    "Amelia",
+    "Olivia",
+    "Isla",
+    "Emily",
+    "Ava",
+    "Grace",
+    "Sophia",
+    "Mia",
+    "Poppy",
+    "Ella",
+    "Lily",
+    "Evie",
+    "Jessica",
+    "Isabella",
+    "Charlotte",
+    "Sophie",
+    "Daisy",
+    "Alice",
+    "Phoebe",
+    "Freya",
+    "Florence",
+    "Sienna",
+    "Willow",
+    "Elsie",
+    "Matilda",
+    "Ruby",
+    "Harper",
+    "Emma",
+    "Chloe",
+    "Rosie",
+    "Molly",
+    "Maya",
+    "Millie",
+    "Eva",
+    "Erin",
+    "Aria",
+    "Lottie",
+    "Zara",
+    "Thea",
+    "Annabelle",
+    "Heidi",
+    "Eleanor",
+    "Luna",
+    "Beatrice",
+    "Hannah",
+    "Imogen",
+    "Elizabeth",
+    "Ivy",
+    "Georgia",
 ]
 
 LAST_NAMES = [
-    "Smith","Jones","Williams","Brown","Taylor","Davies","Wilson","Evans","Thomas","Johnson",
-    "Roberts","Robinson","Thompson","Wright","Walker","White","Edwards","Hughes","Green","Hall",
-    "Lewis","Harris","Clarke","Patel","Jackson","Wood","Turner","Martin","Cooper","Hill",
-    "Ward","Morris","Moore","Clark","Lee","King","Baker","Harrison","Morgan","Allen",
-    "James","Scott","Phillips","Watson","Davis","Parker","Price","Bennett","Young","Griffiths",
-    "Mitchell","Kelly","Cook","Carter","Shaw","Collins","Bell","Barker","Murphy","Miller",
-    "Cox","Richards","Khan","Marshall","Anderson","Simpson","Ellis","Adams","Singh","Begum",
-    "Wilkinson","Foster","Chapman","Powell","Gray","Rose","Stevens","Fisher","Barnes","Matthews",
-    "Thomson","Lawrence","Webb","Reynolds","Lloyd","Graham","Holt","Jenkins","Farrell","Pearson",
-    "Fox","Gibson","Berry","Owen","Spencer","Burton","Holmes","Moss","Black"
+    "Smith",
+    "Jones",
+    "Williams",
+    "Brown",
+    "Taylor",
+    "Davies",
+    "Wilson",
+    "Evans",
+    "Thomas",
+    "Johnson",
+    "Roberts",
+    "Robinson",
+    "Thompson",
+    "Wright",
+    "Walker",
+    "White",
+    "Edwards",
+    "Hughes",
+    "Green",
+    "Hall",
+    "Lewis",
+    "Harris",
+    "Clarke",
+    "Patel",
+    "Jackson",
+    "Wood",
+    "Turner",
+    "Martin",
+    "Cooper",
+    "Hill",
+    "Ward",
+    "Morris",
+    "Moore",
+    "Clark",
+    "Lee",
+    "King",
+    "Baker",
+    "Harrison",
+    "Morgan",
+    "Allen",
+    "James",
+    "Scott",
+    "Phillips",
+    "Watson",
+    "Davis",
+    "Parker",
+    "Price",
+    "Bennett",
+    "Young",
+    "Griffiths",
+    "Mitchell",
+    "Kelly",
+    "Cook",
+    "Carter",
+    "Shaw",
+    "Collins",
+    "Bell",
+    "Barker",
+    "Murphy",
+    "Miller",
+    "Cox",
+    "Richards",
+    "Khan",
+    "Marshall",
+    "Anderson",
+    "Simpson",
+    "Ellis",
+    "Adams",
+    "Singh",
+    "Begum",
+    "Wilkinson",
+    "Foster",
+    "Chapman",
+    "Powell",
+    "Gray",
+    "Rose",
+    "Stevens",
+    "Fisher",
+    "Barnes",
+    "Matthews",
+    "Thomson",
+    "Lawrence",
+    "Webb",
+    "Reynolds",
+    "Lloyd",
+    "Graham",
+    "Holt",
+    "Jenkins",
+    "Farrell",
+    "Pearson",
+    "Fox",
+    "Gibson",
+    "Berry",
+    "Owen",
+    "Spencer",
+    "Burton",
+    "Holmes",
+    "Moss",
+    "Black",
 ]
 
 STREET_NAMES = [
-    "High Street","Station Road","Main Road","Church Road","Church Street","Park Road",
-    "London Road","Victoria Road","Green Lane","Manor Road","Park Avenue","Queen Street",
-    "Kings Road","Kingsway","New Road","West Street","North Street","South Street",
-    "East Street","The Avenue","The Crescent","The Drive","The Green","The Grove",
-    "The Close","The Street","Mill Road","Mill Lane","Bridge Street","School Lane",
-    "Chapel Street","Elm Road","Oak Road","Cedar Road","Birch Road","Maple Avenue",
-    "Springfield Road","Clarence Road","Richmond Road","Albert Road","George Street",
-    "York Road","Grosvenor Road","Broadway","Broad Street","Lower Road","Upper Street",
-    "Broad Lane","Windmill Lane","Meadow Lane","Field Road","Hill Road","Hill Street",
-    "Church Lane","Park Lane","College Road","Manor Lane","Farm Lane","Lime Grove",
-    "Beech Road","Poplar Avenue","Willow Road","Holly Road","Cavendish Road","Fairfield Road",
-    "North Road","South Road","East Road","West Road","St James Road","St Johns Road",
-    "St Marys Road","St Marks Road","St Peters Road","Prospect Road","Queensway",
-    "Valley Road","Riverside","River Street","Market Street","Market Road","Harbour Road",
-    "Sea View Road","Beacon Hill","Long Lane","Short Street","Old Road","New Street",
-    "Orchard Road","Hawthorn Road","Sycamore Road","Firs Avenue","Ash Road","Acacia Avenue",
-    "Castle Street","Court Road","Garden Lane","Summerhill Road"
+    "High Street",
+    "Station Road",
+    "Main Road",
+    "Church Road",
+    "Church Street",
+    "Park Road",
+    "London Road",
+    "Victoria Road",
+    "Green Lane",
+    "Manor Road",
+    "Park Avenue",
+    "Queen Street",
+    "Kings Road",
+    "Kingsway",
+    "New Road",
+    "West Street",
+    "North Street",
+    "South Street",
+    "East Street",
+    "The Avenue",
+    "The Crescent",
+    "The Drive",
+    "The Green",
+    "The Grove",
+    "The Close",
+    "The Street",
+    "Mill Road",
+    "Mill Lane",
+    "Bridge Street",
+    "School Lane",
+    "Chapel Street",
+    "Elm Road",
+    "Oak Road",
+    "Cedar Road",
+    "Birch Road",
+    "Maple Avenue",
+    "Springfield Road",
+    "Clarence Road",
+    "Richmond Road",
+    "Albert Road",
+    "George Street",
+    "York Road",
+    "Grosvenor Road",
+    "Broadway",
+    "Broad Street",
+    "Lower Road",
+    "Upper Street",
+    "Broad Lane",
+    "Windmill Lane",
+    "Meadow Lane",
+    "Field Road",
+    "Hill Road",
+    "Hill Street",
+    "Church Lane",
+    "Park Lane",
+    "College Road",
+    "Manor Lane",
+    "Farm Lane",
+    "Lime Grove",
+    "Beech Road",
+    "Poplar Avenue",
+    "Willow Road",
+    "Holly Road",
+    "Cavendish Road",
+    "Fairfield Road",
+    "North Road",
+    "South Road",
+    "East Road",
+    "West Road",
+    "St James Road",
+    "St Johns Road",
+    "St Marys Road",
+    "St Marks Road",
+    "St Peters Road",
+    "Prospect Road",
+    "Queensway",
+    "Valley Road",
+    "Riverside",
+    "River Street",
+    "Market Street",
+    "Market Road",
+    "Harbour Road",
+    "Sea View Road",
+    "Beacon Hill",
+    "Long Lane",
+    "Short Street",
+    "Old Road",
+    "New Street",
+    "Orchard Road",
+    "Hawthorn Road",
+    "Sycamore Road",
+    "Firs Avenue",
+    "Ash Road",
+    "Acacia Avenue",
+    "Castle Street",
+    "Court Road",
+    "Garden Lane",
+    "Summerhill Road",
 ]
 
 
 TOWNS = [
-    "Exeter","Topsham","Exminster","Starcross","Dawlish","Teignmouth","Bishopsteignton",
-    "Newton Abbot","Kingsteignton","Chudleigh","Christow","Cheriton Bishop","Cranbrook",
-    "Broadclyst","Pinhoe","Heavitree","Alphington","Ide","Kennford","Kenton","Mamhead",
-    "Shillingford St George","Shillingford Abbot","Tedburn St Mary","Crediton",
-    "Copplestone","Morchard Bishop","Bow","North Tawton","Thorverton","Bickleigh",
-    "Silverton","Killerton","Cullompton","Kentisbeare","Willand","Uffculme","Tiverton",
-    "Halberton","Sampford Peverell","Bradninch","Feniton","Whimple","Rockbeare",
-    "Honiton","Ottery St Mary","West Hill","Tipton St John","Sidmouth","Sidbury",
-    "Seaton","Colyton","Beer","Axminster","Uplyme","Lyme Regis","Uffculme","Burlescombe",
-    "Stoke Canon","Rewe","Brampford Speke","Poltimore","Huxham","Aylesbeare","Clyst St George",
-    "Clyst St Mary","Clyst Honiton","Exton","Lympstone","Woodbury","Woodbury Salterton",
-    "Budleigh Salterton","East Budleigh","Otterton","Newton Poppleford","Harberton",
-    "Honiton","Awliscombe","Yarcombe","Dunkeswell","Broadhembury","Talaton","Payhembury",
-    "Kilmington","Dalwood","Stockland","Upottery","Monkton","Weston","Branscombe",
-    "Salcombe Regis","Rousdon","Whitford","Shute","Musbury","Colyford","Farway","Gittisham"
+    "Exeter",
+    "Topsham",
+    "Exminster",
+    "Starcross",
+    "Dawlish",
+    "Teignmouth",
+    "Bishopsteignton",
+    "Newton Abbot",
+    "Kingsteignton",
+    "Chudleigh",
+    "Christow",
+    "Cheriton Bishop",
+    "Cranbrook",
+    "Broadclyst",
+    "Pinhoe",
+    "Heavitree",
+    "Alphington",
+    "Ide",
+    "Kennford",
+    "Kenton",
+    "Mamhead",
+    "Shillingford St George",
+    "Shillingford Abbot",
+    "Tedburn St Mary",
+    "Crediton",
+    "Copplestone",
+    "Morchard Bishop",
+    "Bow",
+    "North Tawton",
+    "Thorverton",
+    "Bickleigh",
+    "Silverton",
+    "Killerton",
+    "Cullompton",
+    "Kentisbeare",
+    "Willand",
+    "Uffculme",
+    "Tiverton",
+    "Halberton",
+    "Sampford Peverell",
+    "Bradninch",
+    "Feniton",
+    "Whimple",
+    "Rockbeare",
+    "Honiton",
+    "Ottery St Mary",
+    "West Hill",
+    "Tipton St John",
+    "Sidmouth",
+    "Sidbury",
+    "Seaton",
+    "Colyton",
+    "Beer",
+    "Axminster",
+    "Uplyme",
+    "Lyme Regis",
+    "Uffculme",
+    "Burlescombe",
+    "Stoke Canon",
+    "Rewe",
+    "Brampford Speke",
+    "Poltimore",
+    "Huxham",
+    "Aylesbeare",
+    "Clyst St George",
+    "Clyst St Mary",
+    "Clyst Honiton",
+    "Exton",
+    "Lympstone",
+    "Woodbury",
+    "Woodbury Salterton",
+    "Budleigh Salterton",
+    "East Budleigh",
+    "Otterton",
+    "Newton Poppleford",
+    "Harberton",
+    "Honiton",
+    "Awliscombe",
+    "Yarcombe",
+    "Dunkeswell",
+    "Broadhembury",
+    "Talaton",
+    "Payhembury",
+    "Kilmington",
+    "Dalwood",
+    "Stockland",
+    "Upottery",
+    "Monkton",
+    "Weston",
+    "Branscombe",
+    "Salcombe Regis",
+    "Rousdon",
+    "Whitford",
+    "Shute",
+    "Musbury",
+    "Colyford",
+    "Farway",
+    "Gittisham",
 ]
 
 HOSPITAL_TYPES = [
-    "General Hospital", "Community Hospital", "Specialist Hospital", "Clinic",
-    "Medical Centre", "Health Centre", "Infirmary", "Sanitorium", "Secure Facility",
-    "Correctional Healthcare Institute", "Chiropractic Hospital", "Massage and Spa",
-    "Rehabilitation Centre", "Urgent Care Centre", "Outpatient Facility",
-    "Diagnostic Centre", "Surgical Centre", "Maternity Hospital", "Pediatric Hospital",
-    "Psychiatric Hospital", "Veterans Hospital","Military Hospital","Veterinary Hospital",
-    "Eye Hospital","Dental Hospital","Cardiac Centre","Cancer Centre","Electroconvulsive Therapy Centre"
+    "General Hospital",
+    "Community Hospital",
+    "Specialist Hospital",
+    "Clinic",
+    "Medical Centre",
+    "Health Centre",
+    "Infirmary",
+    "Sanitorium",
+    "Secure Facility",
+    "Correctional Healthcare Institute",
+    "Chiropractic Hospital",
+    "Massage and Spa",
+    "Rehabilitation Centre",
+    "Urgent Care Centre",
+    "Outpatient Facility",
+    "Diagnostic Centre",
+    "Surgical Centre",
+    "Maternity Hospital",
+    "Pediatric Hospital",
+    "Psychiatric Hospital",
+    "Veterans Hospital",
+    "Military Hospital",
+    "Veterinary Hospital",
+    "Eye Hospital",
+    "Dental Hospital",
+    "Cardiac Centre",
+    "Cancer Centre",
+    "Electroconvulsive Therapy Centre",
 ]
 
 GENDERS = ["Male", "Female", "Other"]
+
 
 # Hospitals
 def generate_hospitals():
@@ -135,11 +499,9 @@ def generate_hospitals():
         has_ae = random.choice([0, 1])
         teaching = random.choice([0, 1])
 
-        hospitals.append([
-            i, name, address, beds,
-            accreditation_date.isoformat(),
-            has_ae, teaching
-        ])
+        hospitals.append(
+            [i, name, address, beds, accreditation_date.isoformat(), has_ae, teaching]
+        )
     return hospitals
 
 
@@ -157,10 +519,7 @@ def generate_doctors(hospitals):
         street = random.choice(STREET_NAMES)
         town = random.choice(TOWNS)
         address = f"{random.randint(1, 200)} {street}, {town}, UK"
-        doctors.append([
-            doc_id, hospital_id, first, last,
-            dob.isoformat(), address
-        ])
+        doctors.append([doc_id, hospital_id, first, last, dob.isoformat(), address])
     return doctors
 
 
@@ -184,26 +543,61 @@ def generate_patients(doctors):
             town = random.choice(TOWNS)
             address = f"{random.randint(1, 200)} {street}, {town}, UK"
             gender = random.choice(GENDERS)
-            patients.append([
-                patient_id, doc_id, first, last,
-                dob.isoformat(), address, gender
-            ])
+            patients.append(
+                [patient_id, doc_id, first, last, dob.isoformat(), address, gender]
+            )
             patient_id += 1
     return patients
+
 
 #  Medications
 def generate_medications():
     base_names = [
-        "Atorvastatin", "Lisinopril", "Metformin", "Omeprazole", "Amlodipine",
-        "Simvastatin", "Losartan", "Levothyroxine", "Salbutamol", "Sertraline",
-        "Amoxicillin", "Ibuprofen", "Paracetamol", "Prednisolone", "Furosemide",
-        "Warfarin", "Clopidogrel", "Bisoprolol", "Ramipril", "Dapagliflozin",
-        "Tamsulosin", "Citalopram", "Fluoxetine", "Gabapentin", "Tramadol",
-        "Hydrochlorothiazide", "Spironolactone", "Pantoprazole", "Ranitidine",
-        "Metoprolol", "Aspirin", "Insulin glargine", "Insulin aspart",
-        "Duloxetine", "Venlafaxine", "Allopurinol", "Clarithromycin",
-        "Azithromycin", "Nitrofurantoin", "Cefalexin", "Levofloxacin",
-        'Sildenafil','Tadalafil','Melatonin','Novochok'
+        "Atorvastatin",
+        "Lisinopril",
+        "Metformin",
+        "Omeprazole",
+        "Amlodipine",
+        "Simvastatin",
+        "Losartan",
+        "Levothyroxine",
+        "Salbutamol",
+        "Sertraline",
+        "Amoxicillin",
+        "Ibuprofen",
+        "Paracetamol",
+        "Prednisolone",
+        "Furosemide",
+        "Warfarin",
+        "Clopidogrel",
+        "Bisoprolol",
+        "Ramipril",
+        "Dapagliflozin",
+        "Tamsulosin",
+        "Citalopram",
+        "Fluoxetine",
+        "Gabapentin",
+        "Tramadol",
+        "Hydrochlorothiazide",
+        "Spironolactone",
+        "Pantoprazole",
+        "Ranitidine",
+        "Metoprolol",
+        "Aspirin",
+        "Insulin glargine",
+        "Insulin aspart",
+        "Duloxetine",
+        "Venlafaxine",
+        "Allopurinol",
+        "Clarithromycin",
+        "Azithromycin",
+        "Nitrofurantoin",
+        "Cefalexin",
+        "Levofloxacin",
+        "Sildenafil",
+        "Tadalafil",
+        "Melatonin",
+        "Novochok",
     ]
 
     meds = []
@@ -215,7 +609,9 @@ def generate_medications():
         meds.append([i, name])
     return meds
 
+
 # Diseases
+
 
 def generate_diseases():
     disease_defs = [
@@ -244,6 +640,7 @@ def generate_diseases():
 
 #  DiseaseTreatment (link diseases to medications)
 
+
 def generate_disease_treatments(diseases, medications):
     treatments = []
     treatment_id = 1
@@ -257,7 +654,9 @@ def generate_disease_treatments(diseases, medications):
             treatment_id += 1
     return treatments
 
+
 # DiseaseSpecialist (link diseases to doctors)
+
 
 def generate_disease_specialists(diseases, doctors):
     specialists = []
@@ -272,7 +671,9 @@ def generate_disease_specialists(diseases, doctors):
             spec_id += 1
     return specialists
 
+
 # Lab Tests
+
 
 def generate_lab_tests():
     base_tests = [
@@ -301,6 +702,7 @@ def generate_lab_tests():
 
 
 # Prescriptions
+
 
 def generate_prescriptions(patients, doctors, medications):
 
@@ -332,18 +734,27 @@ def generate_prescriptions(patients, doctors, medications):
         duration_days = random.choice([7, 14, 28, 30, 90])
         route = random.choice(routes)
 
-        prescriptions.append([
-            presc_id, patient_id, doctor_id, medication_id,
-            prescribed_date.isoformat(),
-            dose_value, dose_units, dose_instructions,
-            duration_days, route
-        ])
+        prescriptions.append(
+            [
+                presc_id,
+                patient_id,
+                doctor_id,
+                medication_id,
+                prescribed_date.isoformat(),
+                dose_value,
+                dose_units,
+                dose_instructions,
+                duration_days,
+                route,
+            ]
+        )
         presc_id += 1
 
     return prescriptions
 
 
 # Appointments
+
 
 def generate_appointments(patients, doctors, hospitals):
     appointments = []
@@ -361,22 +772,36 @@ def generate_appointments(patients, doctors, hospitals):
 
         start_dt = rand_datetime_within_days(90, 30)
         duration = random.choice([10, 15, 20, 30, 40])
-        reason = random.choice([
-            "Follow-up", "Medication review", "New symptoms",
-            "Annual review", "Test results discussion"
-        ])
+        reason = random.choice(
+            [
+                "Follow-up",
+                "Medication review",
+                "New symptoms",
+                "Annual review",
+                "Test results discussion",
+            ]
+        )
         status = random.choice(["Scheduled", "Completed", "Cancelled", "No-show"])
 
-        appointments.append([
-            appt_id, patient_id, doctor_id, hospital_id,
-            start_dt.strftime("%Y-%m-%d %H:%M:%S"),
-            duration, reason, status
-        ])
+        appointments.append(
+            [
+                appt_id,
+                patient_id,
+                doctor_id,
+                hospital_id,
+                start_dt.strftime("%Y-%m-%d %H:%M:%S"),
+                duration,
+                reason,
+                status,
+            ]
+        )
         appt_id += 1
 
     return appointments
 
+
 # Lab Results
+
 
 def generate_lab_results(patients, doctors, lab_tests):
     lab_results = []
@@ -395,22 +820,29 @@ def generate_lab_results(patients, doctors, lab_tests):
         result_date = requested_date + timedelta(days=random.randint(0, 7))
         value = round(random.uniform(0.1, 200.0), 1)
         is_normal = random.choice([0, 1])
-        notes = random.choice([
-            "Within normal range",
-            "Slightly elevated",
-            "Significantly abnormal",
-            "Repeat test recommended",
-            "Clinical correlation advised",
-        ])
+        notes = random.choice(
+            [
+                "Within normal range",
+                "Slightly elevated",
+                "Significantly abnormal",
+                "Repeat test recommended",
+                "Clinical correlation advised",
+            ]
+        )
 
-        lab_results.append([
-            result_id, lab_test_id, patient_id, doctor_id,
-            requested_date.isoformat(),
-            result_date.isoformat(),
-            str(value),
-            is_normal,
-            notes
-        ])
+        lab_results.append(
+            [
+                result_id,
+                lab_test_id,
+                patient_id,
+                doctor_id,
+                requested_date.isoformat(),
+                result_date.isoformat(),
+                str(value),
+                is_normal,
+                notes,
+            ]
+        )
         result_id += 1
 
     return lab_results
@@ -418,8 +850,9 @@ def generate_lab_results(patients, doctors, lab_tests):
 
 # CSV writer helper
 
+
 def write_csv(filename, header, rows):
-    filepath = f'data/{filename}'
+    filepath = f"data/{filename}"
     with open(filepath, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(header)
@@ -428,6 +861,7 @@ def write_csv(filename, header, rows):
 
 
 # Main data generatort
+
 
 def main():
 
@@ -446,23 +880,42 @@ def main():
     # Write CSVs matching your schema
     write_csv(
         "hospitals.csv",
-        ["hospital_id", "name", "address", "beds",
-         "accreditation_date", "has_emergency_department",
-         "is_teaching_hospital"],
+        [
+            "hospital_id",
+            "name",
+            "address",
+            "beds",
+            "accreditation_date",
+            "has_emergency_department",
+            "is_teaching_hospital",
+        ],
         hospitals,
     )
 
     write_csv(
         "doctors.csv",
-        ["doctor_id", "hospital_id", "first_name", "last_name",
-         "date_of_birth", "address"],
+        [
+            "doctor_id",
+            "hospital_id",
+            "first_name",
+            "last_name",
+            "date_of_birth",
+            "address",
+        ],
         doctors,
     )
 
     write_csv(
         "patients.csv",
-        ["patient_id", "doctor_id", "first_name", "last_name",
-         "date_of_birth", "address", "gender"],
+        [
+            "patient_id",
+            "doctor_id",
+            "first_name",
+            "last_name",
+            "date_of_birth",
+            "address",
+            "gender",
+        ],
         patients,
     )
 
@@ -492,31 +945,62 @@ def main():
 
     write_csv(
         "lab_tests.csv",
-        ["lab_test_id", "name", "description", "units",
-         "reference_range", "sample_type"],
+        [
+            "lab_test_id",
+            "name",
+            "description",
+            "units",
+            "reference_range",
+            "sample_type",
+        ],
         lab_tests,
     )
 
     write_csv(
         "prescriptions.csv",
-        ["prescription_id", "patient_id", "doctor_id", "medication_id",
-         "prescribed_date", "dose_value", "dose_units",
-         "dose_instructions", "duration_days", "route"],
+        [
+            "prescription_id",
+            "patient_id",
+            "doctor_id",
+            "medication_id",
+            "prescribed_date",
+            "dose_value",
+            "dose_units",
+            "dose_instructions",
+            "duration_days",
+            "route",
+        ],
         prescriptions,
     )
 
     write_csv(
         "appointments.csv",
-        ["appointment_id", "patient_id", "doctor_id", "hospital_id",
-         "appointment_start", "duration_minutes", "reason", "status"],
+        [
+            "appointment_id",
+            "patient_id",
+            "doctor_id",
+            "hospital_id",
+            "appointment_start",
+            "duration_minutes",
+            "reason",
+            "status",
+        ],
         appointments,
     )
 
     write_csv(
         "lab_results.csv",
-        ["lab_result_id", "lab_test_id", "patient_id", "doctor_id",
-         "requested_date", "result_date", "result_value",
-         "is_normal", "notes"],
+        [
+            "lab_result_id",
+            "lab_test_id",
+            "patient_id",
+            "doctor_id",
+            "requested_date",
+            "result_date",
+            "result_value",
+            "is_normal",
+            "notes",
+        ],
         lab_results,
     )
 
