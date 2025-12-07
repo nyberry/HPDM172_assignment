@@ -1,0 +1,41 @@
+hospital_id,name,address,num_beds,accreditation_year,has_emergency_service,is_teaching_hospital
+1,South Lynne General Hospital,"8 Akhtar gardens, South Garyburgh, L9B 8NQ",242,2010,0,1
+2,Port Julieview General Hospital,"637 Ward lodge, Bellhaven, N1 1NH",911,2010,0,1
+3,Shepherdmouth General Hospital,"Flat 2, Lydia ford, Griffithsmouth, G72 3DP",760,2021,1,1
+4,Sheppardton General Hospital,"3 Victor row, Vanessaville, E96 9PJ",782,2022,0,0
+5,New Joanneville General Hospital,"Studio 04X, Jones cliff, Patelville, NR12 0HL",54,2014,0,0
+6,Smithberg General Hospital,"17 Chamberlain circles, South Jeffrey, E48 9XZ",509,2013,0,1
+7,Bethanview General Hospital,"Studio 9, Ryan walks, Taylormouth, FY7X 7PG",833,2024,0,0
+8,Paynehaven General Hospital,"Studio 1, Baker walks, Lindseybury, L6 8AR",602,2016,1,1
+9,Lake Jade General Hospital,"74 Kelly way, South Rossstad, L5F 1YZ",748,2018,1,1
+10,Lake Kellyshire General Hospital,"2 Wright forge, Newmanborough, CF0Y 2DG",542,2022,1,0
+11,North Joelborough General Hospital,"Studio 02w, James heights, South Natalie, IP59 8DW",115,2021,1,0
+12,Port Eric General Hospital,"Flat 9, Hunt via, Katherineshire, L1 3NL",395,2016,1,1
+13,Harrisonview General Hospital,"981 Michelle bridge, Moorehaven, IP9 2GL",426,2014,1,0
+14,South Joan General Hospital,"04 Rosie wells, New Diana, IP7N 2EJ",849,2020,0,1
+15,Adamston General Hospital,"81 Smith crossroad, Jacksonport, W0 9GJ",587,2010,1,1
+16,Owenmouth General Hospital,"Studio 1, Shirley village, Edwardborough, M5W 7HB",340,2012,1,0
+17,West Clivefort General Hospital,"Flat 15m, Martyn forks, Thomastown, CB0P 6BQ",452,2022,0,1
+18,East Melissatown General Hospital,"0 Zoe row, Parkerchester, M8 4JR",294,2011,1,1
+19,Conormouth General Hospital,"Studio 4, Carl flat, Owenberg, PO6 2EJ",93,2024,1,0
+20,Ellieshire General Hospital,"Flat 6, Beth cliffs, East Mitchellview, LE95 0UN",103,2024,1,0
+21,North Shaneburgh General Hospital,"94 Holmes village, Harrisonbury, E6K 6JP",457,2024,0,1
+22,Laurastad General Hospital,"81 Blackburn roads, Frederickchester, B64 1HA",811,2020,1,1
+23,North Charlottechester General Hospital,"58 Emily islands, Lake Victoriabury, WD0M 7WN",121,2016,0,0
+24,Morrisburgh General Hospital,"Flat 70, Freeman springs, Lindseybury, G5F 5LB",89,2014,0,1
+25,Harveychester General Hospital,"Studio 94r, Oliver square, Lake Luke, BH4H 2GH",675,2013,1,1
+26,East Emmaside General Hospital,"Studio 3, Shaw unions, Duffyland, L7W 0ZJ",657,2011,1,1
+27,South Richardside General Hospital,"0 Chadwick park, West Daleshire, HG57 4AY",192,2015,0,0
+28,Holtview General Hospital,"6 Owen junction, South Christopher, B02 3GP",560,2023,0,1
+29,Chapmanport General Hospital,"089 Antony key, New Margaretshire, M30 1LZ",268,2012,1,1
+30,Gibbshaven General Hospital,"495 Caroline stravenue, New Aimeeland, S1 9FA",756,2017,0,1
+31,North Brucefort General Hospital,"Studio 8, Zoe forge, Kerrburgh, SN8R 8AR",865,2018,1,0
+32,Port Alexander General Hospital,"Studio 76, Henry plaza, New Frankview, LD5X 6YY",793,2011,0,1
+33,Andersonside General Hospital,"Studio 42g, Hopkins locks, North Julieburgh, L7 1HA",124,2022,0,1
+34,Howellsberg General Hospital,"Studio 66, Rose causeway, New Richard, B2 8YN",602,2010,1,1
+35,East George General Hospital,"48 Rahman locks, Lake Abdul, W98 3HW",889,2020,1,0
+36,Charlotteport General Hospital,"5 Ben common, Lake Guyshire, M05 0HT",552,2020,0,0
+37,Port Lewistown General Hospital,"Studio 0, Sheila rapid, South Gregory, L7C 4PA",223,2011,1,1
+38,South Charlie General Hospital,"Studio 88, Holt gateway, West Francesland, CF7 8EH",359,2021,1,0
+39,Crawfordberg General Hospital,"23 Myers mission, New Danielle, TA39 3HH",154,2010,0,0
+40,East Kerry General Hospital,"50 Dawn ramp, East Josephineshire, L9 8NH",643,2020,0,0

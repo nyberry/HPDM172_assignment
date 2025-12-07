@@ -1,0 +1,186 @@
+##################################
+#Packages and libraries to be imported
+
+from faker import Faker #data generator 
+import random
+import csv
+from datetime import datetime, timedelta
+import pandas as pd
+
+#######################################
+#Hospital data set
+
+fake = Faker("en_GB") #British data generation 
+
+
+hospitals = []
+
+
+for i in range(1, 41):  # 1 to 40
+    hospital = {
+        "hospital_id": i,
+        "name": f"{fake.city()} General Hospital",
+        "address": fake.address().replace("\n", ", "),
+        "num_beds": random.randint(50, 1000),
+        "accreditation_year": random.randint(2010, 2024),
+        "has_emergency_service": random.choice([0, 1]),
+        "is_teaching_hospital": random.choice([0, 1])
+    }
+    
+    hospitals.append(hospital)
+
+
+df_hospitals = pd.DataFrame(hospitals)
+
+
+df_hospitals.to_csv("hospitals.csv", index=False)
+
+
+############################################
+
+#Doctors Data set
+
+NUM_DOCTORS = 100
+
+doctors = []
+
+hospital_ids = df_hospitals["hospital_id"].tolist()  # [1..40]
+
+
+hospital_assignment = []
+for h_id in hospital_ids:
+    hospital_assignment.append(h_id)  
+
+
+remaining_doctors = NUM_DOCTORS - len(hospital_assignment)  # 100 - 40 = 60
+
+for _ in range(remaining_doctors):
+    hospital_assignment.append(random.choice(hospital_ids))
+
+
+random.shuffle(hospital_assignment)
+
+
+for i in range(1, NUM_DOCTORS + 1):
+    doctor = {
+        "doctor_id": i,
+        "first_name": fake.first_name(),
+        "last_name": fake.last_name(),
+        "date_of_birth": fake.date_of_birth(minimum_age=30, maximum_age=70),
+        "address": fake.address().replace("\n", ", "),
+        "hospital_id": hospital_assignment[i - 1]  # one hospital per doctor
+    }
+    doctors.append(doctor)
+
+df_doctors = pd.DataFrame(doctors)
+df_doctors.to_csv("doctors.csv", index=False)
+
+#################################################
+
+#Patients Data set
+
+NUM_PATIENTS = 600
+
+patients = []
+
+
+doctor_ids = df_doctors["doctor_id"].tolist()  # [1..100]
+
+)
+assigned_doctors = []
+for d_id in doctor_ids:
+    assigned_doctors.extend([d_id] * 6)
+
+
+random.shuffle(assigned_doctors)
+
+
+for i in range(1, NUM_PATIENTS + 1):
+    patient = {
+        "patient_id": i,
+        "first_name": fake.first_name(),
+        "last_name": fake.last_name(),
+        "date_of_birth": fake.date_of_birth(minimum_age=0, maximum_age=100),
+        "address": fake.address().replace("\n", ", "),
+        "doctor_id": assigned_doctors[i - 1]  # perfectly balanced
+    }
+    patients.append(patient)
+
+df_patients = pd.DataFrame(patients)
+df_patients.to_csv("patients.csv", index=False)
+
+#######################################
+#MEDICATIONS data set
+
+NUM_MEDICATIONS = 30
+
+medications = []
+
+
+base_med_names = [
+    "Paracetamol", "Ibuprofen", "Amoxicillin", "Metformin", "Atorvastatin",
+    "Omeprazole", "Amlodipine", "Simvastatin", "Salbutamol", "Prednisolone",
+    "Aspirin", "Lisinopril", "Levothyroxine", "Citalopram", "Diazepam"
+]
+
+for i in range(1, NUM_MEDICATIONS + 1):
+    if i <= len(base_med_names):
+        name = base_med_names[i - 1]
+    else:
+       
+        name = fake.word().capitalize() + "ol" # Realistic fake meds
+
+    medication = {
+        "medication_id": i,
+        "name": name
+    }
+    medications.append(medication)
+
+df_medications = pd.DataFrame(medications)
+df_medications.to_csv("medications.csv", index=False)
+
+######################################################
+#PRESCRIPTIONS Data set 
+
+NUM_PRESCRIPTIONS = 500
+
+prescriptions = []
+
+
+patient_ids = df_patients["patient_id"].tolist()
+medication_ids = df_medications["medication_id"].tolist()
+
+
+patient_to_doctor = dict(zip(df_patients["patient_id"], df_patients["doctor_id"]))
+
+
+today = datetime.today()
+two_years_ago = today - timedelta(days=365 * 2)
+
+for i in range(1, NUM_PRESCRIPTIONS + 1):
+    
+    pid = random.choice(patient_ids)
+    did = patient_to_doctor[pid]                
+    mid = random.choice(medication_ids)         
+
+    # Random date in last 2 years
+    random_days = random.randint(0, 365 * 2)
+    date_prescribed = two_years_ago + timedelta(days=random_days)
+
+    prescription = {
+        "prescription_id": i,
+        "patient_id": pid,
+        "doctor_id": did,
+        "medication_id": mid,
+        "date_prescribed": date_prescribed.date()  # store just the date
+    }
+
+    prescriptions.append(prescription)
+
+df_prescriptions = pd.DataFrame(prescriptions)
+df_prescriptions.to_csv("prescriptions.csv", index=False)
+
+#######################################################
+
+
+
