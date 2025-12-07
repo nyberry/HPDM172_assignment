@@ -21,8 +21,8 @@ HPDM172_assignment/
 ├── mysql/
 │   ├── schema.sql                # Creates the database tables
 │   ├── data_import.sql           # Loads CSV data into MySQL
-│   ├── export_database.sql     # Exports the database
-│   └── queries.sql          # SQL queries
+│   ├── export_database.sh        # Exports the database
+│   └── queries.sql               # SQL queries
 │
 ├── data/                         # Synthetic data 
 │   ├── hospitals.csv
@@ -43,20 +43,22 @@ HPDM172_assignment/
 ├── planning/
 │   ├── assignment_brief.pdf
 │   ├── ERD.drawio                # Editable
-│   ├── ERD.png                   # Final 
+│   ├── ERD.png                   
 │   ├── database_design.md        
 │   ├── repo_structure.md
 │   ├── repo_workflow.md
-│   └── schedule.png
 │
 └── TeamPortfolio/
-    ├── meeting_minutes_1.pdf
-    ├── meeting_minutes_2.pdf
-    ├── meeting_minutes_3.pdf
-    ├── meeting_agenda_1.pdf
-    ├── meeting_agenda_2.pdf
-    ├── meeting_agenda_3.pdf
-    └── gen_ai.md                 # Records of GenAI use
+    ├── ActionPlan.xls
+    ├── meeting_minutes_1.docx
+    ├── meeting_minutes_2.docx
+    ├── meeting_minutes_3.docx
+    ├── meeting_minutes_4.docx
+    ├── meeting_agenda_1.docx
+    ├── meeting_agenda_2.docx
+    ├── meeting_agenda_3.docx
+    ├── meeting_agenda_4.docx
+    └── GenAI_prompts.md          # Records of GenAI use
 ```
 
 
@@ -106,7 +108,7 @@ SOURCE mysql/schema.sql;
 SOURCE mysql/data_import.sql;
 ```
 
-## Running the Required SQL queries
+## 6. Running the Required SQL queries
 
 Run the queries in MySQL:
 
@@ -114,6 +116,22 @@ Run the queries in MySQL:
 SOURCE mysql/queries.sql
 ```
 
+## 7. Exporting the database
+
+SQL cannot execute the export directly. The export must be run using the mysqldump command in the terminal.
+
+Run the export script provided: 
+
+```bash
+cd mysql
+./export_database.sh
+```
+
+This generates:
+
+```bash
+mysql/hospitaldb_export.sql
+```
 
 ## Planning
 
