@@ -1,73 +1,132 @@
--- Print a list of all doctors as a particular hospital
+-- 1. Print a list of all doctors as a particular hospital
 
-SELECT 'List of Doctors at Harberton Urgent Care Centre' AS title;
 SELECT d.doctor_id, d.first_name, d.last_name
     FROM doctor d
     JOIN hospital h ON d.hospital_id = h.hospital_id
-    WHERE h.name = 'Harberton Urgent Care Centre';
+    WHERE h.hospital_id = 2;
 
--- Print a list of all prescriptions for a particular patient, ordered by the prescription date.
-SELECT 'All Prescriptions for Patient ordered by date' AS title;
-SELECT p.prescription_id, p.prescribed_date, m.name AS medication_name, p.dose_value, p.dose_units, p.dose_instructions, p.duration_days, p.route
-    FROM prescription p
-    JOIN patient pt ON p.patient_id = pt.patient_id
-    JOIN medication m ON p.medication_id = m.medication_id
-    WHERE pt.patient_id = 299
-    ORDER BY p.prescribed_date DESC;
+-- 2. Print a list of all prescriptions for a particular patient, ordered by the prescription date.
 
--- Print a list of all prescriptions that a particular doctor has written.
-SELECT 'All Prescriptions written by Doctor Isabella Moore' AS title;
-SELECT
-    p.prescription_id,
-    p.prescribed_date,
-    pt.first_name AS patient_first_name,
-    pt.last_name AS patient_last_name,
-    m.name AS medication_name, p.dose_value,
-    p.dose_units,
-    p.dose_instructions,
-    p.duration_days,
-    p.route
-    FROM prescription p
-    JOIN doctor d ON p.doctor_id = d.doctor_id
-    JOIN patient pt ON p.patient_id = pt.patient_id
-    JOIN medication m ON p.medication_id = m.medication_id
-    WHERE d.first_name = 'Isabella' AND d.last_name = 'Moore'
-    ORDER BY p.prescribed_date DESC;
+SELECT *
+    FROM prescription
+    WHERE patient_id = 101
+    ORDER BY prescribed_date ASC;
 
--- Print a table showing all prescriptions ordered by the patient name alphabetically.
-SELECT 'All Prescriptions ordered by Patient Name' AS title;
-SELECT
-    p.prescription_id,
-    pt.first_name AS patient_first_name,
-    pt.last_name AS patient_last_name,
-    d.first_name AS doctor_first_name,
-    d.last_name AS doctor_last_name,
-    m.name AS medication_name,
-    p.prescribed_date,
-    p.dose_value,
-    p.dose_units,
-    p.dose_instructions,
-    p.duration_days,
-    p.route
-    FROM prescription p
-    JOIN patient pt ON p.patient_id = pt.patient_id
-    JOIN doctor d ON p.doctor_id = d.doctor_id
-    JOIN medication m ON p.medication_id = m.medication_id
-    ORDER BY pt.last_name, pt.first_name;
+-- 3. Print a list of all prescriptions that a particular doctor has prescribed
 
--- Add a new patient to the database
-INSERT INTO Patient (
-    doctor_id,
-    first_name,
-    last_name,
-    date_of_birth,
-    address,
-    gender
-) VALUES (
-    4,
-    'Extra',
-    'Patient',
-    '1995-08-21',
-    '24 Park Road, Exeter, UK',
-    'Male'
-);
+SELECT *
+    FROM prescription
+    WHERE doctor_id = 58
+    ORDER BY prescription_id ASC;
+
+
+-- 4. Print a table showing all prescriptions ordered by the patient’s name alphabetically 
+
+SELECT *
+    FROM prescription pr
+    JOIN patient p ON pr.patient_id=p.patient_id
+    JOIN medication m ON pr.medication_id=m.medication_id
+    ORDER BY 
+    p.last_name ASC,
+    p.first_name ASC;
+
+-- 5. Add a new customer to the database, including being registered with one of the doctors
+
+INSERT INTO patient (patient_id, doctor_id, first_name, last_name, date_of_birth, address, gender)
+VALUES
+    (602, 10, 'John', 'Walker', '1988-03-12', '12 Marine Road, Exeter, EX21AB', 'Male');
+
+
+-- 6. Modify address details of an existing customer
+
+SELECT first_name, last_name, address
+    FROM Patient
+    WHERE Patient_id = 300;
+
+UPDATE Patient
+    SET address = '132 DIGBY Road, EXMOUTH, OX171NZ, United Kingdom'
+    WHERE patient_id = 300;
+
+
+--- 7. Print a list of all patient names and addresses for patients registered to doctors based at one particular hospital – that could be used for posting information mail to all of the hospitals registered patients
+
+SELECT 
+    p.first_name,
+    p.last_name,
+    p.address
+FROM patient p
+JOIN doctor d
+    ON p.doctor_id = d.doctor_id
+WHERE d.hospital_id = 39;
+
+--- 8.	Print a list of all doctors based at teaching hospitals that were accredited between 2015 – 2024
+
+SELECT 
+    d.doctor_id,
+    d.first_name,
+    d.last_name,
+    h.name AS hospital_name,
+    h.accreditation_date
+FROM doctor d
+JOIN Hospital h
+    ON d.hospital_id = h.hospital_id
+WHERE h.is_teaching_hospital = 1
+  AND h.accreditation_date BETWEEN '2015-01-01' AND '2024-12-31'
+ORDER BY h.accreditation_date ASC, d.first_name ASC, d.last_name ASC;
+ 
+
+--- 9.	List all patient who may have a particular disease based on which medication they have been pre7scribed 
+
+SELECT 
+    p.patient_id,
+    p.first_name,
+    p.last_name,
+    p.address,
+    m.name AS medication_name
+FROM patient p
+JOIN prescription pr
+    ON p.patient_id = pr.patient_id
+JOIN medication m
+    ON pr.medication_id = m.medication_id
+WHERE m.name = 'Tramadol'
+ORDER BY p.last_name ASC, p.first_name ASC;
+
+
+-- 10. Print a list of all doctors who specialize in treating a particular disease at a particular hospital.
+
+SELECT 
+    d.doctor_id,
+    d.first_name,
+    d.last_name,
+    h.name AS hospital_name,
+    ds.disease_id,
+    di.name AS disease_name
+FROM Doctor d
+JOIN Hospital h 
+    ON d.hospital_id = h.hospital_id
+JOIN DiseaseSpecialist ds
+    ON d.doctor_id = ds.doctor_id
+JOIN Disease di
+    ON ds.disease_id = di.disease_id
+WHERE h.hospital_id = 18
+  AND di.disease_id = 1;
+
+
+-- 11. List all lab results for all patients over the age of 60 
+
+SELECT 
+    lr.lab_result_id,
+    p.patient_id,
+    p.first_name,
+    p.last_name,
+    lr.lab_test_id,
+    lr.requested_date,
+    lr.result_date,
+    lr.result_value,
+    lr.is_normal,
+    lr.notes
+FROM LabResult lr
+JOIN patient p
+    ON lr.patient_id = p.patient_id
+WHERE TIMESTAMPDIFF(YEAR, p.date_of_birth, CURDATE()) > 60
+ORDER BY p.last_name ASC, p.first_name ASC, lr.result_date DESC;
