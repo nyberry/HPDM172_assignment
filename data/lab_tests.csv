@@ -1,0 +1,16 @@
+lab_test_id,name,description,units,reference_range,sample_type
+1,Full blood count,Haematology panel,10^9/L,See comment,Blood
+2,Serum creatinine,Renal function,µmol/L,60–110,Blood
+3,eGFR,Estimated GFR,mL/min/1.73m2,>60,Blood
+4,HbA1c,Glycated haemoglobin,%,20–42,Blood
+5,Lipid profile,"Total cholesterol, HDL, LDL",mmol/L,TC <5.0,Blood
+6,ALT,Alanine transaminase,IU/L,0–40,Blood
+7,AST,Aspartate transaminase,IU/L,0–40,Blood
+8,CRP,C-reactive protein,mg/L,0–5,Blood
+9,TSH,Thyroid-stimulating hormone,mU/L,0.4–4.0,Blood
+10,Free T4,Thyroxine,pmol/L,9–25,Blood
+11,Urine dipstick,Urinalysis,,Negative,Urine
+12,Urine ACR,Albumin:creatinine ratio,mg/mmol,<3,Urine
+13,Chest X-ray,Plain film imaging,,,Imaging
+14,CT chest,CT thorax,,,Imaging
+15,MRI brain,MRI head,,,Imaging

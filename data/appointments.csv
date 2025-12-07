@@ -1,0 +1,1001 @@
+appointment_id,patient_id,doctor_id,hospital_id,appointment_start,duration_minutes,reason,status
+1,121,21,13,2025-09-04 17:46:48,40,Annual review,No-show
+2,507,85,36,2025-09-25 00:18:27,15,Medication review,Completed
+3,273,46,9,2025-10-27 22:00:00,30,Annual review,Completed
+4,442,74,19,2025-10-12 02:51:12,40,Medication review,Cancelled
+5,194,33,29,2025-11-22 05:33:49,15,Annual review,Completed
+6,30,5,24,2025-10-28 08:23:49,20,Medication review,No-show
+7,255,43,32,2025-11-12 18:38:12,40,Annual review,Scheduled
+8,11,2,18,2025-12-02 01:08:48,15,New symptoms,No-show
+9,218,37,35,2025-11-15 11:13:06,30,Test results discussion,Cancelled
+10,75,13,33,2025-09-20 12:02:03,40,Follow-up,Scheduled
+11,341,57,35,2025-10-17 14:26:25,30,New symptoms,Scheduled
+12,6,1,33,2025-10-21 06:07:36,40,Test results discussion,No-show
+13,310,52,17,2025-11-17 15:25:13,20,Medication review,Scheduled
+14,595,100,8,2025-10-06 19:56:06,20,Medication review,No-show
+15,348,58,22,2025-12-01 21:26:00,15,Follow-up,Cancelled
+16,544,91,20,2025-11-25 01:35:54,15,New symptoms,Scheduled
+17,321,54,37,2025-09-10 13:48:38,15,Annual review,Cancelled
+18,370,62,16,2025-11-24 12:20:46,20,New symptoms,Cancelled
+19,530,89,10,2025-11-01 18:44:01,30,Medication review,Cancelled
+20,504,84,14,2025-10-01 08:56:41,40,Annual review,Scheduled
+21,194,33,29,2025-09-30 20:37:23,10,Medication review,Completed
+22,37,7,7,2025-12-02 07:30:44,20,Medication review,No-show
+23,447,75,35,2025-09-24 12:42:40,30,Follow-up,No-show
+24,366,61,38,2025-12-19 21:46:17,30,Annual review,No-show
+25,116,20,27,2025-09-30 17:58:49,10,New symptoms,Scheduled
+26,209,35,18,2025-10-27 04:04:43,15,Medication review,Cancelled
+27,577,97,27,2025-12-24 17:27:16,15,Test results discussion,Scheduled
+28,539,90,39,2025-12-21 20:03:50,15,Annual review,Scheduled
+29,253,43,32,2025-12-07 17:21:52,10,New symptoms,Scheduled
+30,292,49,4,2025-09-25 16:31:08,30,New symptoms,Scheduled
+31,332,56,20,2025-10-01 20:38:44,10,Follow-up,No-show
+32,492,82,29,2025-11-29 04:03:07,20,Test results discussion,Scheduled
+33,338,57,35,2025-09-10 12:20:30,40,Annual review,Cancelled
+34,583,98,27,2025-09-27 02:40:32,15,Follow-up,Cancelled
+35,331,56,20,2025-09-12 18:48:43,10,Test results discussion,No-show
+36,95,16,33,2025-11-18 10:48:55,20,Medication review,Completed
+37,409,69,34,2025-09-19 07:38:51,10,Medication review,Completed
+38,398,67,32,2025-11-19 03:18:08,20,Medication review,Scheduled
+39,306,51,9,2025-12-06 07:30:14,30,New symptoms,Completed
+40,368,62,16,2025-09-20 15:54:43,20,Test results discussion,Completed
+41,502,84,14,2025-11-27 11:54:43,30,Annual review,Cancelled
+42,577,97,27,2025-12-27 13:47:26,30,Follow-up,No-show
+43,378,63,22,2025-12-30 04:49:52,15,Annual review,No-show
+44,96,16,33,2025-09-09 20:27:18,40,New symptoms,No-show
+45,230,39,35,2025-10-02 02:40:37,30,Test results discussion,Scheduled
+46,298,50,2,2025-12-01 22:03:34,30,Follow-up,No-show
+47,308,52,17,2025-09-30 20:33:23,15,New symptoms,Completed
+48,536,90,39,2025-11-24 01:22:28,20,Test results discussion,Scheduled
+49,565,95,12,2025-09-16 20:40:02,10,Test results discussion,Scheduled
+50,523,88,38,2025-11-23 12:14:25,30,Follow-up,No-show
+51,583,98,27,2025-10-21 04:50:16,20,New symptoms,Scheduled
+52,516,86,39,2025-09-05 03:49:03,10,Annual review,Completed
+53,187,32,9,2025-11-17 07:18:50,10,Follow-up,No-show
+54,305,51,9,2025-11-01 23:05:45,40,Annual review,No-show
+55,272,46,9,2025-11-07 06:44:00,15,Medication review,Completed
+56,81,14,17,2025-12-28 07:05:25,20,Follow-up,No-show
+57,548,92,29,2025-09-05 11:29:27,10,Annual review,Scheduled
+58,14,3,11,2025-10-05 08:20:41,30,Annual review,No-show
+59,499,84,14,2025-10-30 19:09:00,40,Test results discussion,Cancelled
+60,405,68,16,2025-10-30 18:28:56,10,Medication review,Completed
+61,15,3,11,2025-10-09 01:12:07,10,Follow-up,Completed
+62,28,5,24,2025-10-12 15:04:48,30,Medication review,Completed
+63,447,75,35,2025-12-15 13:58:35,15,Follow-up,Cancelled
+64,475,80,20,2025-09-30 18:30:07,30,Annual review,Scheduled
+65,120,20,27,2025-10-04 06:06:27,15,Annual review,No-show
+66,483,81,39,2025-09-05 19:28:19,30,Test results discussion,Completed
+67,207,35,18,2025-10-29 06:00:50,40,Annual review,Scheduled
+68,342,57,35,2025-09-03 12:41:48,10,Annual review,No-show
+69,508,85,36,2025-12-23 08:45:25,40,Test results discussion,Cancelled
+70,38,7,7,2025-12-05 15:53:54,30,Annual review,No-show
+71,238,40,38,2025-09-13 18:54:15,40,Follow-up,No-show
+72,591,99,36,2025-11-02 07:58:06,40,Follow-up,Cancelled
+73,428,72,12,2025-12-02 21:54:53,10,Annual review,Cancelled
+74,460,77,19,2025-11-25 16:58:45,10,Medication review,Cancelled
+75,197,33,29,2025-12-02 02:49:08,20,Annual review,Completed
+76,520,87,19,2025-10-14 15:53:13,40,New symptoms,No-show
+77,135,23,19,2025-10-28 23:18:55,30,Annual review,Cancelled
+78,484,81,39,2025-10-03 11:05:41,40,Medication review,Cancelled
+79,89,15,28,2025-12-04 18:25:45,15,Medication review,Completed
+80,161,27,15,2025-12-28 14:59:41,30,Follow-up,No-show
+81,506,85,36,2025-10-30 23:07:13,15,Medication review,Scheduled
+82,19,4,1,2025-11-10 16:04:02,20,New symptoms,Completed
+83,179,30,1,2025-12-08 18:22:54,10,Follow-up,Cancelled
+84,441,74,19,2025-09-24 03:08:07,40,Medication review,Scheduled
+85,576,96,38,2025-10-15 12:21:40,30,New symptoms,Cancelled
+86,364,61,38,2025-09-11 01:31:39,40,New symptoms,Completed
+87,528,88,38,2025-12-28 08:11:35,10,Follow-up,No-show
+88,469,79,37,2025-09-23 12:58:30,10,Test results discussion,Scheduled
+89,576,96,38,2025-09-10 03:35:30,40,Follow-up,Completed
+90,121,21,13,2025-10-11 21:10:09,20,Medication review,Cancelled
+91,453,76,9,2025-12-09 05:38:56,30,Follow-up,Completed
+92,373,63,22,2025-11-05 23:23:02,15,Follow-up,Completed
+93,450,75,35,2025-11-21 17:32:04,10,Medication review,No-show
+94,350,59,30,2025-10-27 16:23:25,40,Medication review,Scheduled
+95,273,46,9,2025-11-13 07:40:45,30,New symptoms,Completed
+96,156,26,40,2025-12-13 20:20:57,30,Medication review,Completed
+97,440,74,19,2025-11-21 06:37:39,30,Annual review,Cancelled
+98,31,6,20,2025-11-26 22:33:58,15,Follow-up,Scheduled
+99,87,15,28,2025-11-06 16:36:33,20,Annual review,Completed
+100,445,75,35,2025-09-13 22:27:47,30,Follow-up,Completed
+101,589,99,36,2025-09-13 05:24:47,40,New symptoms,No-show
+102,412,69,34,2025-12-18 12:00:41,20,New symptoms,Cancelled
+103,9,2,18,2025-10-26 07:52:21,40,Test results discussion,Completed
+104,414,69,34,2025-11-27 15:23:30,15,Test results discussion,No-show
+105,354,59,30,2025-11-19 13:07:59,15,New symptoms,Scheduled
+106,38,7,7,2025-12-15 08:37:17,20,Annual review,Completed
+107,533,89,10,2025-12-16 00:15:54,20,Medication review,Scheduled
+108,524,88,38,2025-12-18 03:30:30,20,Test results discussion,Cancelled
+109,164,28,40,2025-09-06 13:09:11,10,Test results discussion,Cancelled
+110,248,42,35,2025-10-31 00:28:22,30,Test results discussion,Scheduled
+111,62,11,23,2025-11-13 10:12:27,20,Test results discussion,Cancelled
+112,127,22,40,2025-09-11 06:27:04,10,Annual review,Cancelled
+113,587,98,27,2025-09-03 00:17:46,30,New symptoms,Completed
+114,596,100,8,2025-12-20 19:52:26,40,Test results discussion,Completed
+115,359,60,18,2025-10-30 02:22:50,20,Test results discussion,Completed
+116,387,65,36,2025-12-11 21:49:19,15,Follow-up,Cancelled
+117,529,89,10,2025-12-24 02:02:11,15,New symptoms,No-show
+118,101,17,28,2025-09-30 10:59:15,30,Annual review,Scheduled
+119,95,16,33,2025-09-14 01:50:36,30,Medication review,No-show
+120,220,37,35,2025-11-27 15:16:31,10,New symptoms,No-show
+121,573,96,38,2025-12-11 18:27:32,30,New symptoms,No-show
+122,434,73,38,2025-11-26 10:55:16,30,Annual review,Completed
+123,148,25,31,2025-12-09 05:07:59,15,Annual review,No-show
+124,133,23,19,2025-12-10 15:37:03,40,Follow-up,Completed
+125,467,78,17,2025-12-02 21:59:48,10,Medication review,Cancelled
+126,122,21,13,2025-12-27 19:39:36,30,Follow-up,Scheduled
+127,379,64,23,2025-12-22 00:37:00,20,Follow-up,Completed
+128,121,21,13,2025-11-13 03:09:48,20,New symptoms,Cancelled
+129,302,51,9,2025-12-05 08:34:37,10,Medication review,Completed
+130,432,72,12,2025-09-11 10:43:49,20,New symptoms,Completed
+131,188,32,9,2025-12-05 21:56:36,10,Follow-up,Cancelled
+132,70,12,26,2025-09-10 16:14:07,30,Annual review,Cancelled
+133,580,97,27,2025-11-28 20:13:03,20,Annual review,No-show
+134,136,23,19,2025-09-28 21:33:38,40,Annual review,No-show
+135,460,77,19,2025-09-30 22:18:33,20,Follow-up,No-show
+136,397,67,32,2025-10-17 05:01:49,30,New symptoms,Scheduled
+137,454,76,9,2025-10-25 20:39:41,10,Medication review,Scheduled
+138,586,98,27,2025-10-31 23:20:10,40,Follow-up,Scheduled
+139,198,33,29,2025-12-16 05:07:51,40,Follow-up,Completed
+140,488,82,29,2025-12-08 14:27:59,10,Follow-up,Completed
+141,20,4,1,2025-10-25 09:25:05,15,Medication review,No-show
+142,87,15,28,2025-12-14 14:29:40,40,New symptoms,No-show
+143,47,8,16,2025-12-06 10:25:49,10,New symptoms,No-show
+144,185,31,34,2025-11-21 13:44:38,10,Test results discussion,Cancelled
+145,392,66,27,2025-10-21 22:32:07,10,Follow-up,Scheduled
+146,555,93,39,2025-10-04 15:39:49,20,Medication review,Completed
+147,262,44,11,2025-09-19 09:41:57,15,New symptoms,No-show
+148,174,29,25,2025-09-13 10:33:28,40,New symptoms,Completed
+149,28,5,24,2025-09-13 08:38:17,20,Annual review,Scheduled
+150,328,55,38,2025-09-29 15:54:51,30,New symptoms,Cancelled
+151,385,65,36,2025-09-25 11:44:37,10,Medication review,Completed
+152,243,41,1,2025-12-06 17:27:02,40,Test results discussion,No-show
+153,118,20,27,2025-10-24 06:58:15,10,New symptoms,No-show
+154,567,95,12,2025-11-20 01:06:49,10,Annual review,Scheduled
+155,418,70,30,2025-10-17 09:18:34,10,New symptoms,Scheduled
+156,253,43,32,2025-12-18 17:07:26,15,New symptoms,No-show
+157,457,77,19,2025-09-18 07:02:28,40,Medication review,Completed
+158,383,64,23,2025-12-15 22:37:54,15,Medication review,No-show
+159,569,95,12,2025-11-28 17:16:13,10,Follow-up,No-show
+160,297,50,2,2025-10-04 12:03:18,10,Follow-up,No-show
+161,280,47,14,2025-12-27 02:15:56,20,Annual review,Cancelled
+162,218,37,35,2025-12-24 15:02:21,40,New symptoms,Scheduled
+163,166,28,40,2025-12-14 17:02:11,40,Follow-up,Cancelled
+164,92,16,33,2025-11-17 18:15:15,10,Medication review,Cancelled
+165,443,74,19,2025-10-12 22:37:58,40,Test results discussion,Cancelled
+166,351,59,30,2025-10-22 18:01:42,30,New symptoms,Completed
+167,330,55,38,2025-11-07 08:06:37,15,Annual review,Cancelled
+168,17,3,11,2025-09-27 23:12:25,10,Test results discussion,No-show
+169,5,1,33,2025-09-03 20:38:22,15,Annual review,No-show
+170,403,68,16,2025-12-15 11:52:27,10,Follow-up,Scheduled
+171,456,76,9,2025-09-25 23:09:30,20,Annual review,Cancelled
+172,397,67,32,2025-10-06 09:44:58,10,Follow-up,No-show
+173,380,64,23,2025-10-09 11:24:09,30,Follow-up,Completed
+174,21,4,1,2025-10-26 14:10:53,20,Medication review,Scheduled
+175,311,52,17,2025-10-14 22:37:22,15,Annual review,Cancelled
+176,38,7,7,2025-10-26 12:25:10,30,Test results discussion,Completed
+177,8,2,18,2025-10-10 01:49:50,30,Follow-up,Cancelled
+178,583,98,27,2025-12-08 03:41:11,30,Medication review,Completed
+179,580,97,27,2025-12-28 02:03:20,40,Medication review,Scheduled
+180,132,22,40,2025-09-14 15:09:06,15,New symptoms,Completed
+181,536,90,39,2025-10-25 06:27:39,15,Follow-up,Cancelled
+182,574,96,38,2025-11-29 03:26:56,10,Annual review,Scheduled
+183,331,56,20,2025-11-24 23:49:14,30,New symptoms,Scheduled
+184,531,89,10,2025-12-01 14:27:06,30,New symptoms,Scheduled
+185,230,39,35,2025-09-11 02:52:16,20,Annual review,No-show
+186,324,54,37,2025-09-03 00:02:38,30,Medication review,Cancelled
+187,84,14,17,2025-12-22 00:52:21,10,Medication review,No-show
+188,77,13,33,2025-10-20 13:00:38,15,Medication review,Cancelled
+189,319,54,37,2025-09-14 04:52:29,10,Follow-up,No-show
+190,443,74,19,2025-09-06 15:57:27,40,New symptoms,Cancelled
+191,254,43,32,2025-09-22 22:34:25,30,Medication review,Cancelled
+192,56,10,7,2025-11-05 18:38:05,40,Medication review,Scheduled
+193,450,75,35,2025-09-20 13:51:28,30,Test results discussion,Scheduled
+194,88,15,28,2025-09-13 18:49:17,10,Annual review,Cancelled
+195,67,12,26,2025-09-26 18:21:35,10,Annual review,Scheduled
+196,309,52,17,2025-12-29 14:14:54,30,Follow-up,Scheduled
+197,58,10,7,2025-12-19 14:19:53,10,New symptoms,No-show
+198,412,69,34,2025-09-20 14:36:04,40,Annual review,Completed
+199,11,2,18,2025-11-29 01:02:58,30,Annual review,No-show
+200,104,18,13,2025-11-06 22:43:38,10,Annual review,Cancelled
+201,198,33,29,2025-09-22 23:20:49,10,Follow-up,Scheduled
+202,199,34,11,2025-12-22 07:21:43,15,Test results discussion,Cancelled
+203,364,61,38,2025-11-22 18:02:05,30,Test results discussion,No-show
+204,191,32,9,2025-10-19 05:10:21,15,Follow-up,Scheduled
+205,131,22,40,2025-11-01 12:28:22,40,Annual review,Cancelled
+206,319,54,37,2025-12-24 08:04:49,40,Medication review,Completed
+207,481,81,39,2025-10-31 22:31:37,40,New symptoms,Cancelled
+208,378,63,22,2025-09-03 13:39:50,40,Test results discussion,Completed
+209,59,10,7,2025-10-18 02:18:18,40,Test results discussion,Scheduled
+210,433,73,38,2025-11-07 18:17:57,15,Medication review,Completed
+211,71,12,26,2025-11-07 07:44:50,15,Annual review,No-show
+212,340,57,35,2025-12-23 07:35:22,40,New symptoms,Cancelled
+213,429,72,12,2025-11-04 19:28:32,15,Follow-up,No-show
+214,44,8,16,2025-12-07 07:12:16,15,Follow-up,Completed
+215,236,40,38,2025-12-01 14:13:07,40,Medication review,Completed
+216,493,83,4,2025-11-05 08:58:20,30,Medication review,No-show
+217,189,32,9,2025-09-03 07:20:33,20,Follow-up,Scheduled
+218,367,62,16,2025-09-07 19:53:31,40,Follow-up,Completed
+219,298,50,2,2025-11-26 12:27:02,15,Test results discussion,Cancelled
+220,45,8,16,2025-09-07 18:20:41,15,Medication review,Cancelled
+221,179,30,1,2025-10-14 12:21:28,20,Medication review,Cancelled
+222,568,95,12,2025-10-19 18:16:35,15,Medication review,Scheduled
+223,181,31,34,2025-10-22 20:01:23,10,Follow-up,Completed
+224,389,65,36,2025-09-23 13:09:11,20,Medication review,Cancelled
+225,468,78,17,2025-10-18 15:10:47,20,New symptoms,Completed
+226,540,90,39,2025-11-25 05:16:21,10,Follow-up,Completed
+227,134,23,19,2025-10-08 19:47:30,15,Test results discussion,No-show
+228,384,64,23,2025-11-02 17:45:42,40,Annual review,Completed
+229,48,8,16,2025-12-30 14:53:54,40,Medication review,Cancelled
+230,153,26,40,2025-11-04 15:06:08,15,Follow-up,Cancelled
+231,130,22,40,2025-12-09 16:42:26,40,Annual review,Completed
+232,84,14,17,2025-12-02 09:28:06,40,Follow-up,Completed
+233,521,87,19,2025-11-16 08:45:03,40,New symptoms,No-show
+234,532,89,10,2025-12-01 03:38:32,15,New symptoms,Cancelled
+235,539,90,39,2025-12-04 20:19:39,30,Annual review,Cancelled
+236,596,100,8,2025-11-18 20:32:38,40,Follow-up,Completed
+237,225,38,10,2025-10-11 10:03:03,30,Medication review,No-show
+238,224,38,10,2025-10-31 10:03:31,30,Annual review,Completed
+239,384,64,23,2025-10-21 10:11:32,40,Follow-up,Completed
+240,87,15,28,2025-10-29 07:01:24,30,Test results discussion,Cancelled
+241,236,40,38,2025-12-24 09:27:40,10,Annual review,Cancelled
+242,437,73,38,2025-11-28 14:31:01,30,Annual review,No-show
+243,377,63,22,2025-12-07 14:43:07,20,New symptoms,No-show
+244,26,5,24,2025-10-06 20:50:13,30,Medication review,Cancelled
+245,78,13,33,2025-11-10 17:29:39,10,New symptoms,Scheduled
+246,284,48,27,2025-10-16 05:21:09,10,Follow-up,Scheduled
+247,369,62,16,2025-09-09 10:24:15,40,Medication review,Cancelled
+248,202,34,11,2025-11-04 22:22:32,20,New symptoms,Cancelled
+249,196,33,29,2025-12-28 07:00:09,15,Test results discussion,Cancelled
+250,9,2,18,2025-10-30 03:39:02,20,New symptoms,No-show
+251,416,70,30,2025-12-23 14:46:49,10,Annual review,Completed
+252,408,68,16,2025-10-16 04:35:33,15,Medication review,No-show
+253,240,40,38,2025-12-11 03:55:13,40,Test results discussion,No-show
+254,473,79,37,2025-11-07 03:35:19,10,New symptoms,Completed
+255,440,74,19,2025-11-22 02:33:59,15,Annual review,No-show
+256,572,96,38,2025-09-07 20:17:42,20,Medication review,Completed
+257,313,53,8,2025-09-03 21:07:02,30,New symptoms,Cancelled
+258,231,39,35,2025-11-22 09:22:05,30,Annual review,Cancelled
+259,334,56,20,2025-12-24 23:24:32,10,Test results discussion,Scheduled
+260,143,24,21,2025-10-01 20:15:11,20,Test results discussion,No-show
+261,391,66,27,2025-10-11 15:39:44,30,Follow-up,No-show
+262,193,33,29,2025-12-03 04:37:27,10,New symptoms,No-show
+263,312,52,17,2025-09-20 02:32:12,15,Follow-up,Completed
+264,33,6,20,2025-12-28 03:52:46,30,Follow-up,Completed
+265,204,34,11,2025-09-15 11:51:06,30,New symptoms,Completed
+266,239,40,38,2025-10-28 12:39:00,40,Follow-up,No-show
+267,59,10,7,2025-11-12 14:02:38,40,Follow-up,Completed
+268,335,56,20,2025-11-20 18:45:07,30,Medication review,Scheduled
+269,133,23,19,2025-12-15 04:03:08,30,Annual review,Scheduled
+270,399,67,32,2025-10-12 02:15:54,15,Medication review,Cancelled
+271,443,74,19,2025-12-03 04:38:07,15,Test results discussion,Cancelled
+272,208,35,18,2025-12-08 13:42:11,30,New symptoms,Completed
+273,8,2,18,2025-09-29 16:59:34,30,Follow-up,No-show
+274,253,43,32,2025-12-13 02:40:08,20,Test results discussion,No-show
+275,472,79,37,2025-11-30 20:19:01,40,Follow-up,Scheduled
+276,295,50,2,2025-11-29 14:32:34,20,New symptoms,No-show
+277,180,30,1,2025-11-21 14:17:09,15,Medication review,No-show
+278,469,79,37,2025-11-15 16:40:07,15,Test results discussion,Scheduled
+279,403,68,16,2025-09-10 11:29:28,15,Medication review,Cancelled
+280,551,92,29,2025-10-28 16:18:14,10,Medication review,No-show
+281,422,71,13,2025-12-18 08:20:45,10,New symptoms,Scheduled
+282,108,18,13,2025-12-08 22:39:01,20,Annual review,No-show
+283,169,29,25,2025-10-21 01:58:40,15,Test results discussion,Scheduled
+284,474,79,37,2025-09-07 04:30:51,10,Annual review,No-show
+285,352,59,30,2025-11-18 13:04:04,15,Annual review,Scheduled
+286,11,2,18,2025-10-20 15:54:26,10,Medication review,Cancelled
+287,476,80,20,2025-12-05 03:08:30,30,Follow-up,Scheduled
+288,562,94,38,2025-10-19 01:10:12,30,Medication review,No-show
+289,286,48,27,2025-10-03 08:01:21,15,Follow-up,Scheduled
+290,182,31,34,2025-10-29 02:48:48,10,Test results discussion,No-show
+291,173,29,25,2025-09-17 01:34:25,10,New symptoms,Completed
+292,452,76,9,2025-11-10 12:48:22,15,Medication review,Scheduled
+293,546,91,20,2025-10-13 23:24:32,30,Follow-up,Scheduled
+294,400,67,32,2025-10-31 20:53:42,30,Follow-up,Scheduled
+295,50,9,22,2025-11-14 06:47:26,15,Medication review,Cancelled
+296,245,41,1,2025-10-10 20:00:03,10,Follow-up,No-show
+297,29,5,24,2025-09-04 19:51:15,20,Medication review,Scheduled
+298,226,38,10,2025-09-20 18:12:12,15,Medication review,Scheduled
+299,426,71,13,2025-12-10 12:25:24,10,New symptoms,Cancelled
+300,576,96,38,2025-10-08 19:21:19,40,Medication review,No-show
+301,439,74,19,2025-09-25 10:59:14,15,Medication review,Scheduled
+302,366,61,38,2025-11-03 19:00:11,15,Follow-up,No-show
+303,324,54,37,2025-09-04 07:50:14,30,Medication review,No-show
+304,226,38,10,2025-09-14 19:39:29,20,Test results discussion,Cancelled
+305,45,8,16,2025-09-15 01:47:11,15,Annual review,Cancelled
+306,512,86,39,2025-09-21 18:29:08,40,Test results discussion,Completed
+307,258,43,32,2025-09-20 09:32:30,40,New symptoms,No-show
+308,137,23,19,2025-11-05 11:26:56,15,New symptoms,No-show
+309,70,12,26,2025-11-06 01:42:12,10,Test results discussion,No-show
+310,392,66,27,2025-12-10 05:33:15,15,Test results discussion,Scheduled
+311,239,40,38,2025-09-06 02:51:41,40,Follow-up,Cancelled
+312,243,41,1,2025-11-24 04:56:41,15,Test results discussion,Scheduled
+313,62,11,23,2025-09-28 17:03:18,20,Annual review,Cancelled
+314,207,35,18,2025-10-01 10:50:10,30,Medication review,Scheduled
+315,244,41,1,2025-12-27 03:13:56,30,New symptoms,Completed
+316,285,48,27,2025-11-02 15:50:14,10,Test results discussion,No-show
+317,296,50,2,2025-09-06 14:25:08,15,New symptoms,Cancelled
+318,249,42,35,2025-10-11 23:10:43,40,Follow-up,Completed
+319,228,38,10,2025-12-29 01:46:47,30,Test results discussion,Cancelled
+320,188,32,9,2025-11-26 21:33:04,10,Follow-up,No-show
+321,72,12,26,2025-10-09 08:57:14,10,Medication review,Completed
+322,129,22,40,2025-09-19 19:37:47,15,Test results discussion,Completed
+323,242,41,1,2025-12-09 12:46:11,10,Annual review,No-show
+324,319,54,37,2025-10-03 21:02:07,15,Medication review,No-show
+325,181,31,34,2025-12-28 15:28:17,15,New symptoms,Cancelled
+326,591,99,36,2025-11-28 01:05:42,15,New symptoms,No-show
+327,82,14,17,2025-11-10 19:46:23,30,Annual review,Completed
+328,483,81,39,2025-11-26 16:57:41,30,Test results discussion,No-show
+329,160,27,15,2025-12-04 14:17:10,10,Annual review,No-show
+330,86,15,28,2025-10-30 07:10:49,40,Test results discussion,Completed
+331,567,95,12,2025-10-06 02:49:05,20,Annual review,No-show
+332,314,53,8,2025-11-29 01:56:37,20,Annual review,No-show
+333,74,13,33,2025-11-05 16:59:01,15,Annual review,Completed
+334,159,27,15,2025-10-08 19:43:13,10,Follow-up,Cancelled
+335,504,84,14,2025-11-19 13:21:50,30,Annual review,Cancelled
+336,394,66,27,2025-12-06 01:28:24,20,Test results discussion,Scheduled
+337,419,70,30,2025-09-09 12:56:47,10,Annual review,Completed
+338,199,34,11,2025-11-25 17:17:44,20,New symptoms,No-show
+339,378,63,22,2025-09-13 04:55:22,30,Annual review,Completed
+340,249,42,35,2025-12-03 18:21:44,10,New symptoms,Scheduled
+341,152,26,40,2025-10-22 17:53:21,40,Annual review,Completed
+342,261,44,11,2025-10-20 01:02:11,40,Test results discussion,Completed
+343,13,3,11,2025-09-24 16:00:15,10,Annual review,No-show
+344,83,14,17,2025-12-11 16:33:27,15,Annual review,Completed
+345,438,73,38,2025-10-21 02:27:55,20,Test results discussion,No-show
+346,316,53,8,2025-11-20 22:14:12,10,Follow-up,Cancelled
+347,147,25,31,2025-10-24 05:43:49,15,Annual review,Cancelled
+348,7,2,18,2025-10-04 16:47:41,30,Follow-up,Scheduled
+349,72,12,26,2025-11-22 03:16:25,40,Annual review,Cancelled
+350,442,74,19,2025-10-05 03:12:47,15,New symptoms,Completed
+351,138,23,19,2025-10-10 10:50:33,30,Medication review,Scheduled
+352,462,77,19,2025-12-21 02:50:27,15,Medication review,Completed
+353,61,11,23,2025-10-07 11:34:50,15,New symptoms,No-show
+354,452,76,9,2025-09-23 04:53:15,15,Follow-up,Cancelled
+355,88,15,28,2025-11-14 08:20:33,10,New symptoms,Scheduled
+356,351,59,30,2025-09-07 18:15:23,40,Medication review,No-show
+357,497,83,4,2025-09-21 13:48:16,10,Follow-up,Cancelled
+358,8,2,18,2025-12-24 02:23:33,10,Follow-up,Completed
+359,535,90,39,2025-09-03 09:50:35,30,Test results discussion,Cancelled
+360,498,83,4,2025-12-02 21:25:11,20,Test results discussion,No-show
+361,345,58,22,2025-11-12 23:59:02,20,New symptoms,Completed
+362,370,62,16,2025-11-18 09:00:39,30,Test results discussion,Scheduled
+363,365,61,38,2025-11-05 03:06:03,10,Follow-up,No-show
+364,412,69,34,2025-09-28 23:08:55,10,Test results discussion,Scheduled
+365,544,91,20,2025-10-26 06:24:47,15,New symptoms,No-show
+366,487,82,29,2025-12-10 23:40:23,30,Medication review,Scheduled
+367,330,55,38,2025-09-05 05:30:10,20,Follow-up,Cancelled
+368,455,76,9,2025-10-17 08:27:43,40,Annual review,No-show
+369,84,14,17,2025-11-08 15:21:14,30,Annual review,Scheduled
+370,395,66,27,2025-10-29 01:30:02,40,Medication review,Completed
+371,533,89,10,2025-12-22 01:12:46,40,Follow-up,Completed
+372,510,85,36,2025-09-18 21:52:05,20,Test results discussion,No-show
+373,173,29,25,2025-11-27 15:50:48,10,Annual review,Completed
+374,250,42,35,2025-10-13 02:19:03,15,Follow-up,Scheduled
+375,446,75,35,2025-09-07 16:11:00,15,New symptoms,No-show
+376,288,48,27,2025-10-14 19:01:36,20,Annual review,Scheduled
+377,140,24,21,2025-12-14 19:09:08,30,Follow-up,Cancelled
+378,230,39,35,2025-12-22 20:13:28,40,Follow-up,Cancelled
+379,387,65,36,2025-11-15 02:37:12,40,Annual review,Completed
+380,229,39,35,2025-10-22 07:27:55,10,New symptoms,Scheduled
+381,115,20,27,2025-09-19 07:25:11,20,Test results discussion,Completed
+382,119,20,27,2025-12-22 05:37:23,20,Medication review,Cancelled
+383,390,65,36,2025-12-23 00:37:38,10,New symptoms,Scheduled
+384,549,92,29,2025-10-08 20:48:03,30,Annual review,Cancelled
+385,374,63,22,2025-09-26 12:38:05,40,Test results discussion,Completed
+386,110,19,21,2025-11-17 18:17:21,10,Test results discussion,No-show
+387,324,54,37,2025-09-30 02:21:16,20,Medication review,No-show
+388,467,78,17,2025-09-30 15:03:07,40,New symptoms,Completed
+389,36,6,20,2025-12-27 06:59:04,20,New symptoms,Scheduled
+390,281,47,14,2025-12-22 10:54:11,30,Medication review,No-show
+391,299,50,2,2025-11-14 03:35:22,10,New symptoms,Completed
+392,216,36,5,2025-10-15 16:54:37,10,Medication review,No-show
+393,402,67,32,2025-10-30 01:54:55,15,Follow-up,No-show
+394,346,58,22,2025-11-23 00:42:04,30,New symptoms,No-show
+395,401,67,32,2025-09-15 22:43:13,40,New symptoms,Cancelled
+396,200,34,11,2025-12-17 09:54:42,30,Follow-up,Completed
+397,332,56,20,2025-12-23 16:47:02,10,New symptoms,No-show
+398,168,28,40,2025-12-23 01:44:54,15,Annual review,No-show
+399,299,50,2,2025-09-30 02:55:24,15,Medication review,Completed
+400,10,2,18,2025-11-11 08:05:40,40,Follow-up,Completed
+401,386,65,36,2025-11-23 22:28:54,15,Follow-up,Scheduled
+402,365,61,38,2025-12-03 00:25:15,15,Follow-up,Scheduled
+403,528,88,38,2025-11-06 17:27:29,40,Annual review,Completed
+404,414,69,34,2025-10-19 13:47:14,10,Follow-up,Completed
+405,407,68,16,2025-12-05 21:09:42,20,Test results discussion,Completed
+406,385,65,36,2025-09-19 09:37:05,30,Annual review,Cancelled
+407,456,76,9,2025-11-12 07:50:58,10,Follow-up,Scheduled
+408,85,15,28,2025-09-25 16:48:05,30,Test results discussion,Completed
+409,24,4,1,2025-12-24 22:55:17,40,Test results discussion,No-show
+410,281,47,14,2025-09-20 08:39:00,40,Medication review,No-show
+411,496,83,4,2025-11-25 04:59:08,20,Test results discussion,Completed
+412,102,17,28,2025-11-04 03:40:36,10,Test results discussion,Completed
+413,416,70,30,2025-09-05 20:01:29,30,Test results discussion,No-show
+414,66,11,23,2025-12-11 18:15:16,40,Test results discussion,Scheduled
+415,213,36,5,2025-09-24 18:46:44,15,Test results discussion,Completed
+416,6,1,33,2025-12-18 17:11:26,30,New symptoms,Scheduled
+417,41,7,7,2025-09-27 00:19:33,40,Medication review,Completed
+418,90,15,28,2025-12-20 05:25:20,20,Follow-up,Scheduled
+419,128,22,40,2025-12-09 06:49:19,20,New symptoms,Completed
+420,434,73,38,2025-09-02 00:23:55,15,New symptoms,Scheduled
+421,532,89,10,2025-10-28 23:19:41,40,Annual review,Completed
+422,591,99,36,2025-12-06 05:37:45,20,Test results discussion,Cancelled
+423,552,92,29,2025-12-10 03:31:24,15,Follow-up,Scheduled
+424,243,41,1,2025-09-09 03:11:33,15,Medication review,Cancelled
+425,221,37,35,2025-09-28 01:27:16,40,Test results discussion,Completed
+426,368,62,16,2025-10-25 20:45:27,15,Test results discussion,No-show
+427,77,13,33,2025-12-17 18:28:48,20,New symptoms,No-show
+428,168,28,40,2025-11-18 16:24:42,30,Follow-up,Cancelled
+429,436,73,38,2025-09-29 19:33:54,40,Medication review,Scheduled
+430,276,46,9,2025-10-09 09:42:31,20,Test results discussion,Completed
+431,430,72,12,2025-10-01 19:19:18,20,Annual review,No-show
+432,27,5,24,2025-12-28 05:00:49,15,Follow-up,Cancelled
+433,128,22,40,2025-12-14 04:49:49,10,Test results discussion,No-show
+434,68,12,26,2025-11-04 22:55:02,10,New symptoms,Cancelled
+435,280,47,14,2025-09-30 09:56:43,15,New symptoms,Scheduled
+436,101,17,28,2025-11-14 05:40:27,15,Annual review,Scheduled
+437,127,22,40,2025-10-06 02:58:03,40,New symptoms,No-show
+438,98,17,28,2025-12-13 17:07:58,20,Test results discussion,Cancelled
+439,565,95,12,2025-10-24 15:12:10,40,Follow-up,Scheduled
+440,175,30,1,2025-11-02 17:58:14,30,Medication review,Cancelled
+441,545,91,20,2025-12-18 02:58:35,40,Annual review,No-show
+442,131,22,40,2025-10-22 07:18:42,10,Test results discussion,Completed
+443,130,22,40,2025-09-29 16:53:27,30,Test results discussion,Cancelled
+444,55,10,7,2025-11-12 21:01:38,15,Test results discussion,No-show
+445,469,79,37,2025-10-07 13:19:44,30,New symptoms,No-show
+446,515,86,39,2025-10-27 16:40:35,20,Annual review,Completed
+447,313,53,8,2025-09-18 21:10:49,20,Annual review,Cancelled
+448,93,16,33,2025-09-17 10:22:47,10,Medication review,Scheduled
+449,170,29,25,2025-12-22 17:10:12,10,Follow-up,Cancelled
+450,568,95,12,2025-12-06 16:50:59,10,Annual review,Completed
+451,492,82,29,2025-12-07 15:56:25,40,Test results discussion,Scheduled
+452,416,70,30,2025-09-04 16:46:47,40,Medication review,Scheduled
+453,436,73,38,2025-12-14 18:08:02,20,Medication review,Scheduled
+454,460,77,19,2025-10-04 17:25:03,40,Medication review,Completed
+455,77,13,33,2025-11-12 06:34:52,15,Test results discussion,Cancelled
+456,53,9,22,2025-11-23 02:01:42,30,Annual review,Completed
+457,383,64,23,2025-09-23 23:42:23,20,Medication review,Scheduled
+458,298,50,2,2025-10-30 02:16:13,30,New symptoms,Cancelled
+459,219,37,35,2025-09-02 10:24:45,40,Annual review,Completed
+460,313,53,8,2025-12-11 02:32:21,10,Annual review,No-show
+461,59,10,7,2025-11-10 01:53:15,10,Test results discussion,No-show
+462,337,57,35,2025-10-29 22:24:53,20,Follow-up,Scheduled
+463,359,60,18,2025-10-08 03:33:28,30,New symptoms,Scheduled
+464,104,18,13,2025-11-24 15:41:28,30,Medication review,Scheduled
+465,542,91,20,2025-12-10 20:53:54,15,Annual review,Scheduled
+466,500,84,14,2025-09-03 08:12:18,15,New symptoms,Completed
+467,482,81,39,2025-11-17 18:30:20,20,New symptoms,Cancelled
+468,439,74,19,2025-10-07 09:01:47,40,New symptoms,Scheduled
+469,450,75,35,2025-11-26 07:33:02,15,Medication review,Cancelled
+470,445,75,35,2025-09-03 03:04:39,20,Medication review,Scheduled
+471,195,33,29,2025-10-27 07:43:44,10,Medication review,No-show
+472,432,72,12,2025-11-05 07:34:00,10,Medication review,Completed
+473,491,82,29,2025-10-23 14:42:57,10,Annual review,No-show
+474,564,94,38,2025-12-07 05:30:44,15,New symptoms,No-show
+475,514,86,39,2025-11-16 12:09:55,15,Follow-up,Scheduled
+476,22,4,1,2025-09-26 11:46:42,15,New symptoms,Scheduled
+477,243,41,1,2025-09-12 02:31:23,20,Annual review,Scheduled
+478,445,75,35,2025-12-04 05:51:41,20,New symptoms,No-show
+479,85,15,28,2025-11-24 07:03:39,15,Test results discussion,Completed
+480,524,88,38,2025-10-08 06:49:54,15,New symptoms,Scheduled
+481,270,45,38,2025-10-20 00:45:17,30,Medication review,No-show
+482,106,18,13,2025-12-08 13:02:45,40,Medication review,Completed
+483,153,26,40,2025-10-16 13:00:28,10,Medication review,No-show
+484,40,7,7,2025-10-25 04:17:15,15,Medication review,No-show
+485,19,4,1,2025-12-30 16:56:46,15,Follow-up,Scheduled
+486,390,65,36,2025-11-20 02:08:32,40,New symptoms,Completed
+487,228,38,10,2025-11-06 06:42:08,30,Annual review,Scheduled
+488,523,88,38,2025-11-23 22:18:13,10,New symptoms,Scheduled
+489,276,46,9,2025-11-11 14:23:15,20,New symptoms,No-show
+490,253,43,32,2025-11-03 02:33:59,10,Medication review,Scheduled
+491,1,1,33,2025-09-12 02:56:46,20,Medication review,Cancelled
+492,484,81,39,2025-10-26 09:38:13,40,Follow-up,No-show
+493,190,32,9,2025-10-20 23:37:51,30,New symptoms,Cancelled
+494,312,52,17,2025-09-23 15:45:39,10,Follow-up,Completed
+495,340,57,35,2025-11-11 00:22:19,20,Test results discussion,Cancelled
+496,244,41,1,2025-10-25 14:00:21,15,Test results discussion,No-show
+497,90,15,28,2025-09-22 15:41:57,15,Test results discussion,Scheduled
+498,43,8,16,2025-12-24 21:34:28,15,Medication review,No-show
+499,102,17,28,2025-09-16 12:57:51,40,Test results discussion,Cancelled
+500,309,52,17,2025-12-03 01:55:30,15,Test results discussion,Completed
+501,45,8,16,2025-09-26 19:44:24,15,Annual review,Cancelled
+502,574,96,38,2025-11-08 10:43:10,20,Annual review,Scheduled
+503,447,75,35,2025-09-15 03:32:40,30,Annual review,Scheduled
+504,171,29,25,2025-12-27 08:15:30,20,Medication review,Cancelled
+505,47,8,16,2025-12-20 22:33:56,10,Medication review,No-show
+506,507,85,36,2025-12-14 09:29:21,40,Follow-up,Completed
+507,449,75,35,2025-12-09 21:24:33,30,Test results discussion,No-show
+508,411,69,34,2025-12-28 21:50:33,20,Medication review,Completed
+509,4,1,33,2025-10-03 01:40:05,40,Medication review,Scheduled
+510,526,88,38,2025-11-29 10:30:31,40,Test results discussion,Cancelled
+511,311,52,17,2025-10-14 18:50:30,20,New symptoms,Scheduled
+512,176,30,1,2025-10-15 11:35:12,10,Test results discussion,Completed
+513,299,50,2,2025-09-09 14:10:32,15,New symptoms,Completed
+514,277,47,14,2025-09-12 00:06:01,15,Medication review,Scheduled
+515,2,1,33,2025-11-08 11:17:23,40,New symptoms,Cancelled
+516,86,15,28,2025-12-17 15:48:26,20,Medication review,No-show
+517,302,51,9,2025-11-04 00:54:33,10,Follow-up,Cancelled
+518,225,38,10,2025-10-26 07:26:56,15,New symptoms,Scheduled
+519,551,92,29,2025-12-24 06:11:39,10,Annual review,Cancelled
+520,565,95,12,2025-10-12 00:46:14,30,Medication review,Cancelled
+521,276,46,9,2025-10-11 14:19:46,40,Annual review,Completed
+522,457,77,19,2025-10-16 23:54:29,30,New symptoms,Completed
+523,491,82,29,2025-09-20 04:37:55,30,Medication review,No-show
+524,190,32,9,2025-10-06 04:44:04,15,Test results discussion,No-show
+525,185,31,34,2025-10-26 18:25:17,10,New symptoms,Completed
+526,182,31,34,2025-11-17 13:05:33,40,Medication review,Scheduled
+527,147,25,31,2025-09-15 23:46:16,30,Medication review,No-show
+528,413,69,34,2025-09-21 11:07:24,40,Medication review,Scheduled
+529,103,18,13,2025-11-14 09:01:32,30,Follow-up,Scheduled
+530,14,3,11,2025-09-10 11:50:36,15,Medication review,Scheduled
+531,275,46,9,2025-09-29 16:43:48,40,Follow-up,Scheduled
+532,109,19,21,2025-12-16 07:37:41,20,Follow-up,Completed
+533,143,24,21,2025-12-04 06:56:41,40,Annual review,Completed
+534,315,53,8,2025-11-05 10:05:47,30,Medication review,Completed
+535,58,10,7,2025-12-16 13:01:00,20,Test results discussion,Scheduled
+536,22,4,1,2025-09-10 15:30:19,10,Test results discussion,Cancelled
+537,106,18,13,2025-12-10 07:57:37,30,Medication review,Scheduled
+538,230,39,35,2025-09-06 15:51:07,15,Annual review,No-show
+539,151,26,40,2025-11-09 14:32:36,20,Medication review,No-show
+540,116,20,27,2025-12-06 12:03:00,15,Follow-up,Completed
+541,105,18,13,2025-10-26 17:20:58,20,Follow-up,Cancelled
+542,122,21,13,2025-11-11 00:01:17,10,Follow-up,Completed
+543,183,31,34,2025-11-24 05:33:11,40,New symptoms,Completed
+544,436,73,38,2025-10-01 04:04:33,20,Test results discussion,Cancelled
+545,357,60,18,2025-09-22 04:18:51,20,Annual review,Cancelled
+546,272,46,9,2025-09-16 19:54:27,10,Medication review,Completed
+547,328,55,38,2025-09-30 16:42:20,30,Annual review,No-show
+548,69,12,26,2025-09-23 23:22:57,40,Annual review,Cancelled
+549,149,25,31,2025-09-19 13:30:49,20,Medication review,Completed
+550,395,66,27,2025-11-09 11:16:33,20,Annual review,No-show
+551,493,83,4,2025-11-21 09:07:13,40,New symptoms,Completed
+552,252,42,35,2025-11-15 09:46:21,30,Test results discussion,No-show
+553,552,92,29,2025-12-14 15:33:05,30,Test results discussion,Completed
+554,394,66,27,2025-09-18 05:41:12,40,Annual review,Completed
+555,90,15,28,2025-10-17 16:04:44,20,Follow-up,Completed
+556,18,3,11,2025-11-11 08:53:56,40,Annual review,Completed
+557,113,19,21,2025-09-13 13:39:02,20,New symptoms,Completed
+558,302,51,9,2025-11-30 09:33:55,15,Test results discussion,No-show
+559,249,42,35,2025-10-12 22:06:26,15,Follow-up,Completed
+560,121,21,13,2025-09-29 18:47:06,30,Follow-up,No-show
+561,381,64,23,2025-09-12 12:02:47,10,Test results discussion,Scheduled
+562,489,82,29,2025-12-26 07:53:38,15,Follow-up,Completed
+563,375,63,22,2025-09-29 10:24:03,10,Medication review,Scheduled
+564,13,3,11,2025-12-21 12:35:08,30,Medication review,Completed
+565,482,81,39,2025-09-29 04:58:15,40,New symptoms,No-show
+566,422,71,13,2025-11-06 12:06:15,30,Follow-up,Cancelled
+567,114,19,21,2025-10-02 06:29:15,10,Follow-up,Completed
+568,516,86,39,2025-10-03 03:16:46,10,Annual review,No-show
+569,466,78,17,2025-12-18 14:33:13,20,Test results discussion,Cancelled
+570,233,39,35,2025-11-23 06:26:47,15,New symptoms,Scheduled
+571,535,90,39,2025-11-14 07:33:30,15,Medication review,No-show
+572,58,10,7,2025-10-14 12:10:40,30,Medication review,Scheduled
+573,480,80,20,2025-12-03 16:55:15,20,Annual review,No-show
+574,169,29,25,2025-09-12 14:47:18,20,Annual review,Completed
+575,277,47,14,2025-09-23 01:11:05,10,Follow-up,Cancelled
+576,344,58,22,2025-09-07 10:43:01,15,New symptoms,Completed
+577,555,93,39,2025-09-22 16:09:38,10,Medication review,Scheduled
+578,317,53,8,2025-10-08 10:56:58,40,Medication review,Scheduled
+579,247,42,35,2025-10-24 06:24:49,10,Test results discussion,Scheduled
+580,578,97,27,2025-12-04 22:42:14,10,Follow-up,Cancelled
+581,96,16,33,2025-10-31 22:12:10,10,New symptoms,Cancelled
+582,408,68,16,2025-12-08 03:10:33,15,New symptoms,No-show
+583,365,61,38,2025-09-27 03:35:32,10,New symptoms,No-show
+584,516,86,39,2025-09-21 14:42:27,40,Medication review,Scheduled
+585,392,66,27,2025-12-03 14:45:44,40,Follow-up,Cancelled
+586,166,28,40,2025-10-01 10:13:02,30,Follow-up,Scheduled
+587,238,40,38,2025-10-13 20:59:19,15,Medication review,Cancelled
+588,459,77,19,2025-09-27 11:25:30,20,New symptoms,Cancelled
+589,442,74,19,2025-09-09 18:28:25,30,Medication review,Completed
+590,77,13,33,2025-10-01 14:14:31,40,Annual review,Scheduled
+591,16,3,11,2025-09-29 16:40:08,20,Test results discussion,Scheduled
+592,511,86,39,2025-09-20 06:36:10,30,New symptoms,Completed
+593,303,51,9,2025-10-03 08:30:58,10,New symptoms,Cancelled
+594,362,61,38,2025-09-19 07:50:18,10,Medication review,No-show
+595,265,45,38,2025-12-02 21:33:21,20,Annual review,Completed
+596,127,22,40,2025-12-21 10:29:23,30,Follow-up,Cancelled
+597,294,49,4,2025-11-18 20:30:43,30,Test results discussion,Completed
+598,452,76,9,2025-11-12 05:05:46,40,Test results discussion,Cancelled
+599,383,64,23,2025-09-18 05:05:38,30,Test results discussion,No-show
+600,270,45,38,2025-09-10 06:52:57,40,Follow-up,Completed
+601,575,96,38,2025-09-03 13:01:00,15,Follow-up,Cancelled
+602,385,65,36,2025-10-02 17:17:32,40,Annual review,Scheduled
+603,229,39,35,2025-11-16 09:15:01,30,Follow-up,Cancelled
+604,478,80,20,2025-12-01 23:18:56,40,Annual review,Scheduled
+605,88,15,28,2025-10-07 00:08:05,10,Annual review,No-show
+606,205,35,18,2025-11-18 23:13:15,20,Follow-up,Cancelled
+607,351,59,30,2025-12-28 08:33:56,30,Medication review,No-show
+608,118,20,27,2025-10-26 01:19:18,30,Follow-up,Completed
+609,482,81,39,2025-09-30 06:08:36,15,New symptoms,Scheduled
+610,390,65,36,2025-09-14 02:48:22,20,Annual review,No-show
+611,219,37,35,2025-09-12 12:01:10,15,Follow-up,No-show
+612,277,47,14,2025-10-20 22:44:14,15,Follow-up,Completed
+613,71,12,26,2025-10-25 04:29:28,30,Follow-up,Cancelled
+614,463,78,17,2025-11-22 12:02:44,40,Medication review,Cancelled
+615,189,32,9,2025-09-12 10:27:25,10,Annual review,Cancelled
+616,305,51,9,2025-10-03 22:46:50,15,New symptoms,No-show
+617,494,83,4,2025-12-03 07:59:16,40,Medication review,No-show
+618,364,61,38,2025-12-21 17:52:09,30,Follow-up,Completed
+619,80,14,17,2025-12-23 07:57:20,40,Medication review,Cancelled
+620,325,55,38,2025-09-04 18:06:54,15,Annual review,Completed
+621,512,86,39,2025-11-02 10:34:02,10,Annual review,Cancelled
+622,534,89,10,2025-09-02 17:08:07,30,Medication review,No-show
+623,593,99,36,2025-09-20 22:07:53,10,Medication review,Completed
+624,431,72,12,2025-12-17 00:56:46,15,Test results discussion,No-show
+625,222,37,35,2025-11-08 14:11:46,15,Medication review,Scheduled
+626,380,64,23,2025-11-11 15:24:18,10,New symptoms,Cancelled
+627,515,86,39,2025-09-26 05:21:19,30,Annual review,No-show
+628,421,71,13,2025-11-09 07:10:33,20,Test results discussion,No-show
+629,536,90,39,2025-11-06 05:03:55,10,Medication review,No-show
+630,439,74,19,2025-11-13 10:52:19,15,Test results discussion,Completed
+631,556,93,39,2025-11-25 15:19:48,30,New symptoms,No-show
+632,291,49,4,2025-09-21 06:25:20,10,Follow-up,Scheduled
+633,17,3,11,2025-12-30 15:58:53,30,Follow-up,No-show
+634,558,93,39,2025-09-21 08:38:43,30,Test results discussion,Scheduled
+635,297,50,2,2025-11-22 16:19:42,15,Medication review,No-show
+636,565,95,12,2025-11-14 23:57:38,10,Medication review,No-show
+637,128,22,40,2025-11-09 01:58:41,30,Annual review,No-show
+638,8,2,18,2025-11-13 17:57:59,15,Test results discussion,Cancelled
+639,275,46,9,2025-10-23 08:39:18,20,Annual review,Completed
+640,5,1,33,2025-11-21 11:58:26,10,Follow-up,Scheduled
+641,158,27,15,2025-11-13 16:51:25,40,Test results discussion,Cancelled
+642,344,58,22,2025-10-05 02:10:17,40,Annual review,Completed
+643,570,95,12,2025-11-16 23:52:51,15,Test results discussion,No-show
+644,53,9,22,2025-12-23 04:59:34,30,Medication review,No-show
+645,178,30,1,2025-11-19 06:40:14,20,Test results discussion,Completed
+646,448,75,35,2025-10-16 20:23:45,10,Medication review,Scheduled
+647,591,99,36,2025-11-17 02:54:32,20,Test results discussion,Completed
+648,331,56,20,2025-10-11 13:36:08,10,Follow-up,Scheduled
+649,448,75,35,2025-09-04 05:46:17,40,Medication review,Scheduled
+650,557,93,39,2025-09-17 07:06:23,40,Annual review,Scheduled
+651,134,23,19,2025-11-29 02:25:27,20,Medication review,Completed
+652,228,38,10,2025-10-29 15:45:33,15,Test results discussion,Completed
+653,388,65,36,2025-10-22 13:55:24,10,New symptoms,Scheduled
+654,148,25,31,2025-09-06 11:50:38,40,Follow-up,Scheduled
+655,471,79,37,2025-12-26 17:04:09,10,Follow-up,Completed
+656,290,49,4,2025-10-22 20:59:01,15,Follow-up,Scheduled
+657,507,85,36,2025-11-11 04:14:00,15,Annual review,Scheduled
+658,503,84,14,2025-09-06 06:19:36,30,Follow-up,No-show
+659,79,14,17,2025-10-12 20:03:00,30,Annual review,Cancelled
+660,462,77,19,2025-10-03 06:47:50,15,New symptoms,Scheduled
+661,183,31,34,2025-12-21 03:46:51,40,Follow-up,Scheduled
+662,352,59,30,2025-11-08 08:07:45,30,Test results discussion,Scheduled
+663,163,28,40,2025-12-12 07:31:28,20,Follow-up,Completed
+664,31,6,20,2025-12-15 01:43:39,10,Test results discussion,Completed
+665,222,37,35,2025-11-11 20:30:49,10,Medication review,Scheduled
+666,336,56,20,2025-09-28 21:45:35,15,Follow-up,Completed
+667,275,46,9,2025-10-25 03:22:41,30,Medication review,Scheduled
+668,357,60,18,2025-12-18 02:09:46,20,Annual review,No-show
+669,447,75,35,2025-12-10 13:09:09,30,Medication review,Cancelled
+670,178,30,1,2025-10-10 10:10:15,20,Annual review,Scheduled
+671,598,100,8,2025-12-25 02:18:57,20,Medication review,Completed
+672,500,84,14,2025-11-25 04:07:27,30,Annual review,Cancelled
+673,327,55,38,2025-09-22 21:15:42,40,Annual review,No-show
+674,205,35,18,2025-12-21 03:04:24,20,New symptoms,Scheduled
+675,461,77,19,2025-10-04 11:26:13,10,Test results discussion,Cancelled
+676,420,70,30,2025-10-28 23:41:09,40,Test results discussion,Cancelled
+677,408,68,16,2025-09-07 19:31:49,10,Medication review,Cancelled
+678,440,74,19,2025-10-08 02:25:34,20,Medication review,Scheduled
+679,221,37,35,2025-11-13 04:03:45,20,Medication review,Cancelled
+680,126,21,13,2025-09-03 20:53:34,20,Follow-up,Cancelled
+681,219,37,35,2025-12-01 08:48:44,40,New symptoms,Completed
+682,576,96,38,2025-09-14 20:40:41,30,New symptoms,Completed
+683,540,90,39,2025-10-14 05:27:10,10,Test results discussion,Cancelled
+684,77,13,33,2025-12-22 10:47:36,30,Annual review,Cancelled
+685,328,55,38,2025-10-10 11:26:52,15,Follow-up,No-show
+686,511,86,39,2025-09-11 02:03:56,20,Annual review,Scheduled
+687,128,22,40,2025-11-28 22:07:53,15,Test results discussion,Cancelled
+688,393,66,27,2025-10-17 21:48:21,40,Follow-up,Cancelled
+689,19,4,1,2025-12-22 19:13:48,10,Annual review,Cancelled
+690,135,23,19,2025-11-19 05:14:03,10,Test results discussion,Scheduled
+691,346,58,22,2025-09-05 03:50:03,10,Annual review,Scheduled
+692,426,71,13,2025-10-30 10:45:13,20,New symptoms,Cancelled
+693,410,69,34,2025-09-17 11:44:31,40,New symptoms,No-show
+694,49,9,22,2025-11-17 09:02:20,20,Annual review,No-show
+695,125,21,13,2025-11-13 14:31:43,40,Follow-up,Scheduled
+696,230,39,35,2025-09-11 06:55:25,10,Medication review,Scheduled
+697,331,56,20,2025-11-25 14:25:38,15,Medication review,Scheduled
+698,196,33,29,2025-11-12 15:06:11,40,Follow-up,Scheduled
+699,266,45,38,2025-09-10 08:44:58,10,Follow-up,Cancelled
+700,77,13,33,2025-10-23 05:03:27,20,Test results discussion,No-show
+701,277,47,14,2025-10-05 01:50:07,15,Test results discussion,No-show
+702,123,21,13,2025-09-26 12:32:52,20,Medication review,No-show
+703,458,77,19,2025-09-25 18:18:03,40,Test results discussion,Completed
+704,592,99,36,2025-12-03 19:18:01,30,New symptoms,Cancelled
+705,495,83,4,2025-10-15 20:26:47,10,New symptoms,Cancelled
+706,85,15,28,2025-11-09 13:08:39,40,Medication review,Completed
+707,80,14,17,2025-09-16 14:11:53,30,Follow-up,Completed
+708,14,3,11,2025-10-13 23:15:51,30,Annual review,Completed
+709,500,84,14,2025-09-22 07:10:01,20,Medication review,Cancelled
+710,320,54,37,2025-11-29 03:53:44,15,Test results discussion,Scheduled
+711,134,23,19,2025-10-14 11:36:40,20,Annual review,No-show
+712,526,88,38,2025-10-11 10:08:42,30,Medication review,Scheduled
+713,285,48,27,2025-11-23 03:45:39,15,New symptoms,Scheduled
+714,151,26,40,2025-11-30 12:12:06,10,Follow-up,Completed
+715,17,3,11,2025-11-30 11:42:06,15,New symptoms,Scheduled
+716,488,82,29,2025-12-14 02:06:19,30,New symptoms,Cancelled
+717,122,21,13,2025-12-17 20:36:13,10,New symptoms,No-show
+718,218,37,35,2025-10-01 05:56:25,30,Test results discussion,No-show
+719,521,87,19,2025-11-05 19:20:19,10,Annual review,Cancelled
+720,379,64,23,2025-09-20 23:50:24,10,Annual review,No-show
+721,199,34,11,2025-10-29 02:10:00,15,Annual review,Completed
+722,283,48,27,2025-12-13 19:56:28,40,Annual review,No-show
+723,112,19,21,2025-09-11 16:25:04,15,Follow-up,Completed
+724,118,20,27,2025-09-12 07:38:23,10,Test results discussion,Cancelled
+725,245,41,1,2025-09-14 18:52:15,40,Follow-up,Cancelled
+726,232,39,35,2025-11-19 13:23:00,30,Annual review,Scheduled
+727,226,38,10,2025-10-24 02:12:52,30,Medication review,Completed
+728,209,35,18,2025-11-08 12:05:15,20,Test results discussion,Cancelled
+729,4,1,33,2025-09-20 07:12:07,15,Test results discussion,No-show
+730,313,53,8,2025-10-18 08:02:50,15,New symptoms,Scheduled
+731,171,29,25,2025-10-08 09:05:17,20,Annual review,Completed
+732,14,3,11,2025-12-03 03:47:58,30,New symptoms,Scheduled
+733,182,31,34,2025-10-23 05:32:49,10,Medication review,Scheduled
+734,361,61,38,2025-12-03 00:12:30,40,Follow-up,No-show
+735,254,43,32,2025-12-02 18:19:39,10,Follow-up,Scheduled
+736,581,97,27,2025-10-28 10:34:01,15,Test results discussion,Completed
+737,151,26,40,2025-09-20 05:39:10,10,New symptoms,Cancelled
+738,464,78,17,2025-12-06 06:38:59,20,Test results discussion,Cancelled
+739,499,84,14,2025-10-21 05:34:02,20,Annual review,Scheduled
+740,362,61,38,2025-10-30 11:23:10,20,Test results discussion,No-show
+741,116,20,27,2025-10-24 09:59:58,40,Follow-up,Completed
+742,421,71,13,2025-10-14 18:27:55,15,New symptoms,No-show
+743,32,6,20,2025-10-19 10:50:11,40,Annual review,Cancelled
+744,212,36,5,2025-09-19 08:02:48,15,Annual review,Scheduled
+745,281,47,14,2025-12-16 19:29:40,30,Test results discussion,Completed
+746,272,46,9,2025-11-08 17:44:08,20,Annual review,No-show
+747,283,48,27,2025-11-01 01:33:03,15,Follow-up,Cancelled
+748,126,21,13,2025-11-25 04:04:05,30,Test results discussion,Cancelled
+749,296,50,2,2025-09-23 09:31:31,10,Annual review,Completed
+750,478,80,20,2025-10-01 04:06:43,40,New symptoms,Completed
+751,311,52,17,2025-12-05 12:46:04,20,Follow-up,Cancelled
+752,16,3,11,2025-11-29 03:07:56,10,Medication review,Cancelled
+753,127,22,40,2025-09-12 07:53:55,30,New symptoms,Scheduled
+754,441,74,19,2025-11-09 09:37:46,10,Follow-up,Cancelled
+755,142,24,21,2025-11-09 00:08:06,20,Test results discussion,Completed
+756,89,15,28,2025-10-24 13:24:30,15,Medication review,No-show
+757,600,100,8,2025-09-17 16:10:22,20,Medication review,Scheduled
+758,485,81,39,2025-11-09 20:42:21,15,Annual review,No-show
+759,409,69,34,2025-09-21 01:21:34,20,New symptoms,Cancelled
+760,178,30,1,2025-12-20 11:59:59,30,New symptoms,Completed
+761,205,35,18,2025-10-20 13:10:47,15,Annual review,Completed
+762,309,52,17,2025-10-31 05:23:05,10,New symptoms,No-show
+763,559,94,38,2025-10-07 14:34:34,30,Annual review,Scheduled
+764,142,24,21,2025-12-13 06:00:02,30,New symptoms,Cancelled
+765,480,80,20,2025-11-09 18:39:46,30,Annual review,No-show
+766,421,71,13,2025-11-30 13:44:21,10,Test results discussion,Scheduled
+767,432,72,12,2025-09-19 04:06:32,15,Test results discussion,Cancelled
+768,249,42,35,2025-12-23 16:29:54,40,New symptoms,Completed
+769,557,93,39,2025-12-20 19:46:07,20,Follow-up,No-show
+770,129,22,40,2025-11-19 05:50:47,10,Annual review,No-show
+771,56,10,7,2025-09-18 10:32:23,10,New symptoms,Scheduled
+772,342,57,35,2025-12-26 09:49:25,10,New symptoms,No-show
+773,340,57,35,2025-09-13 19:39:01,10,Test results discussion,Scheduled
+774,210,35,18,2025-12-11 05:57:53,15,Test results discussion,No-show
+775,140,24,21,2025-10-15 09:47:18,15,New symptoms,Cancelled
+776,7,2,18,2025-12-05 04:03:17,40,Medication review,Scheduled
+777,69,12,26,2025-09-02 00:09:59,15,Test results discussion,Scheduled
+778,533,89,10,2025-09-20 19:25:02,15,Medication review,Scheduled
+779,486,81,39,2025-09-06 18:54:25,40,Annual review,No-show
+780,57,10,7,2025-09-25 15:40:56,20,Annual review,No-show
+781,189,32,9,2025-10-17 14:50:35,40,New symptoms,No-show
+782,127,22,40,2025-11-24 22:54:51,15,Follow-up,Completed
+783,146,25,31,2025-10-18 17:39:32,15,Test results discussion,Completed
+784,488,82,29,2025-12-04 07:08:09,20,New symptoms,Scheduled
+785,505,85,36,2025-11-12 07:55:32,20,Annual review,No-show
+786,110,19,21,2025-12-01 02:13:39,30,Annual review,Completed
+787,29,5,24,2025-10-27 00:50:35,30,Follow-up,No-show
+788,12,2,18,2025-12-23 17:30:12,20,Follow-up,No-show
+789,44,8,16,2025-11-09 21:08:49,15,Annual review,No-show
+790,284,48,27,2025-09-03 18:30:09,15,New symptoms,Completed
+791,358,60,18,2025-12-12 22:56:12,30,Test results discussion,Scheduled
+792,179,30,1,2025-10-01 09:35:16,20,Test results discussion,Cancelled
+793,471,79,37,2025-09-29 04:37:49,20,New symptoms,No-show
+794,70,12,26,2025-12-04 22:24:48,30,Annual review,Completed
+795,590,99,36,2025-12-09 10:41:56,40,New symptoms,Completed
+796,332,56,20,2025-12-25 08:14:58,40,New symptoms,No-show
+797,70,12,26,2025-09-10 17:23:05,10,Medication review,Completed
+798,99,17,28,2025-09-22 15:01:23,30,Annual review,Cancelled
+799,238,40,38,2025-10-17 22:42:57,10,Medication review,No-show
+800,431,72,12,2025-09-14 11:59:07,10,Test results discussion,Cancelled
+801,118,20,27,2025-09-09 06:22:54,10,Annual review,Cancelled
+802,31,6,20,2025-10-05 19:12:43,20,Follow-up,No-show
+803,387,65,36,2025-09-27 20:50:04,40,Test results discussion,Completed
+804,201,34,11,2025-10-21 00:42:42,30,Annual review,Cancelled
+805,231,39,35,2025-10-11 01:37:34,15,Annual review,Completed
+806,89,15,28,2025-12-24 00:49:10,10,Follow-up,Completed
+807,35,6,20,2025-09-29 07:04:08,10,New symptoms,No-show
+808,582,97,27,2025-12-17 03:15:04,10,New symptoms,Completed
+809,541,91,20,2025-12-07 08:20:43,15,Medication review,No-show
+810,513,86,39,2025-11-09 08:55:59,20,Test results discussion,Completed
+811,69,12,26,2025-11-26 05:19:12,30,Annual review,Scheduled
+812,583,98,27,2025-09-17 04:10:35,15,Test results discussion,Cancelled
+813,104,18,13,2025-09-24 21:34:55,30,Medication review,Scheduled
+814,554,93,39,2025-11-05 06:11:52,10,Medication review,Cancelled
+815,258,43,32,2025-11-16 19:31:08,20,Follow-up,Completed
+816,295,50,2,2025-09-16 12:29:11,40,Test results discussion,Completed
+817,531,89,10,2025-12-29 16:37:08,40,New symptoms,No-show
+818,59,10,7,2025-12-17 00:16:20,10,Test results discussion,No-show
+819,270,45,38,2025-09-07 19:42:27,10,New symptoms,No-show
+820,268,45,38,2025-10-10 22:27:00,20,Follow-up,Completed
+821,210,35,18,2025-12-17 05:36:42,20,Follow-up,Completed
+822,506,85,36,2025-09-16 03:47:38,40,Test results discussion,Scheduled
+823,355,60,18,2025-09-15 17:46:47,30,Test results discussion,Scheduled
+824,565,95,12,2025-12-03 23:14:12,15,New symptoms,Scheduled
+825,107,18,13,2025-09-08 21:54:30,30,Test results discussion,Completed
+826,359,60,18,2025-11-24 19:00:29,30,New symptoms,Completed
+827,22,4,1,2025-09-12 17:58:48,10,Medication review,No-show
+828,19,4,1,2025-12-18 06:49:04,30,Follow-up,No-show
+829,387,65,36,2025-09-26 07:38:54,30,Annual review,Completed
+830,119,20,27,2025-11-26 01:00:29,10,Test results discussion,Cancelled
+831,361,61,38,2025-10-09 14:27:14,20,Annual review,Scheduled
+832,244,41,1,2025-10-17 01:21:14,10,Test results discussion,Scheduled
+833,233,39,35,2025-11-21 05:01:28,40,Test results discussion,Scheduled
+834,16,3,11,2025-10-20 12:43:22,10,Follow-up,Scheduled
+835,130,22,40,2025-11-26 03:49:06,15,New symptoms,Scheduled
+836,322,54,37,2025-11-08 21:34:06,40,Medication review,Cancelled
+837,133,23,19,2025-12-28 16:44:30,30,Annual review,Scheduled
+838,79,14,17,2025-09-16 19:56:48,20,Test results discussion,Completed
+839,507,85,36,2025-11-10 07:32:46,15,Annual review,Cancelled
+840,376,63,22,2025-12-18 01:44:14,20,Medication review,Cancelled
+841,327,55,38,2025-12-16 03:11:46,40,Follow-up,Scheduled
+842,355,60,18,2025-11-20 18:37:28,40,Annual review,Cancelled
+843,81,14,17,2025-10-11 12:38:05,15,Test results discussion,Completed
+844,313,53,8,2025-12-18 09:00:24,15,Follow-up,Cancelled
+845,146,25,31,2025-09-08 23:09:19,15,Annual review,No-show
+846,117,20,27,2025-09-06 03:13:01,30,Follow-up,Cancelled
+847,285,48,27,2025-12-25 05:23:52,30,New symptoms,Scheduled
+848,62,11,23,2025-10-26 04:39:54,40,Annual review,No-show
+849,20,4,1,2025-11-15 06:59:24,30,Annual review,Scheduled
+850,230,39,35,2025-10-11 22:46:18,30,Medication review,No-show
+851,546,91,20,2025-09-12 03:32:51,20,Follow-up,Cancelled
+852,27,5,24,2025-12-29 04:55:50,20,New symptoms,Completed
+853,29,5,24,2025-11-07 04:54:57,40,Annual review,No-show
+854,59,10,7,2025-09-23 04:57:23,40,Annual review,Cancelled
+855,548,92,29,2025-12-01 00:04:42,30,Test results discussion,Cancelled
+856,167,28,40,2025-11-15 00:56:42,30,Medication review,Completed
+857,16,3,11,2025-10-26 12:09:26,20,Follow-up,Completed
+858,556,93,39,2025-10-29 10:38:38,20,Test results discussion,No-show
+859,40,7,7,2025-12-30 12:39:29,20,New symptoms,Cancelled
+860,257,43,32,2025-12-29 01:28:53,10,Follow-up,Cancelled
+861,583,98,27,2025-11-03 07:55:08,20,Medication review,No-show
+862,474,79,37,2025-09-05 08:28:06,30,Follow-up,No-show
+863,38,7,7,2025-11-10 15:46:24,30,Test results discussion,Completed
+864,419,70,30,2025-09-13 09:01:30,40,Follow-up,Cancelled
+865,565,95,12,2025-11-01 23:28:10,10,Annual review,Completed
+866,265,45,38,2025-10-25 14:55:33,20,Annual review,Completed
+867,233,39,35,2025-10-05 21:12:25,15,Test results discussion,Scheduled
+868,239,40,38,2025-09-24 05:21:34,10,Medication review,No-show
+869,594,99,36,2025-11-02 14:53:08,10,Test results discussion,Completed
+870,63,11,23,2025-10-22 07:16:57,20,Follow-up,Cancelled
+871,554,93,39,2025-09-10 16:28:16,40,Medication review,Cancelled
+872,112,19,21,2025-09-17 01:04:44,40,Annual review,Scheduled
+873,524,88,38,2025-09-17 00:56:39,15,Medication review,Cancelled
+874,585,98,27,2025-11-13 02:39:36,30,Follow-up,No-show
+875,290,49,4,2025-09-29 18:47:55,10,New symptoms,Cancelled
+876,344,58,22,2025-11-20 06:03:31,20,Annual review,Cancelled
+877,32,6,20,2025-10-03 03:06:42,20,Follow-up,Cancelled
+878,154,26,40,2025-12-25 19:19:10,10,Follow-up,Completed
+879,321,54,37,2025-12-10 04:28:57,40,Test results discussion,Cancelled
+880,221,37,35,2025-11-14 13:31:15,40,Follow-up,Completed
+881,391,66,27,2025-09-17 05:34:48,10,Medication review,No-show
+882,552,92,29,2025-09-25 13:01:49,40,Follow-up,No-show
+883,538,90,39,2025-12-12 00:56:29,30,New symptoms,Cancelled
+884,200,34,11,2025-12-22 16:49:48,20,Medication review,Cancelled
+885,249,42,35,2025-11-11 06:52:44,15,Annual review,Cancelled
+886,119,20,27,2025-10-18 19:21:28,30,Annual review,Cancelled
+887,82,14,17,2025-11-09 08:22:01,40,Test results discussion,Scheduled
+888,371,62,16,2025-12-05 00:19:24,40,Medication review,No-show
+889,429,72,12,2025-10-16 14:46:28,40,Medication review,Completed
+890,418,70,30,2025-12-24 13:09:26,15,Test results discussion,Cancelled
+891,294,49,4,2025-11-07 07:50:23,20,Follow-up,Scheduled
+892,419,70,30,2025-11-22 18:06:26,40,Medication review,No-show
+893,203,34,11,2025-10-06 22:28:04,30,Follow-up,Completed
+894,124,21,13,2025-11-22 06:56:12,20,Test results discussion,No-show
+895,104,18,13,2025-09-26 13:03:25,10,Annual review,Scheduled
+896,171,29,25,2025-09-16 04:16:23,15,Test results discussion,No-show
+897,433,73,38,2025-11-09 19:28:24,15,Annual review,Completed
+898,301,51,9,2025-09-25 02:43:06,20,New symptoms,Scheduled
+899,47,8,16,2025-09-16 07:42:42,20,Annual review,No-show
+900,461,77,19,2025-11-25 14:27:47,20,Annual review,Completed
+901,188,32,9,2025-12-25 11:32:24,40,Follow-up,Completed
+902,8,2,18,2025-12-26 06:09:31,40,New symptoms,No-show
+903,389,65,36,2025-11-03 05:20:38,30,Medication review,Cancelled
+904,100,17,28,2025-10-17 02:25:35,20,Annual review,Cancelled
+905,50,9,22,2025-12-20 13:02:33,40,Test results discussion,No-show
+906,293,49,4,2025-11-03 16:21:26,30,New symptoms,Completed
+907,147,25,31,2025-09-10 03:25:42,15,Annual review,Cancelled
+908,589,99,36,2025-12-30 12:19:58,20,Follow-up,Cancelled
+909,292,49,4,2025-10-04 03:43:01,10,New symptoms,Cancelled
+910,499,84,14,2025-11-26 05:30:01,15,Medication review,Cancelled
+911,266,45,38,2025-12-28 16:57:28,10,Medication review,Cancelled
+912,145,25,31,2025-09-20 15:16:50,15,Test results discussion,Completed
+913,29,5,24,2025-12-27 04:42:24,10,Test results discussion,Completed
+914,7,2,18,2025-12-05 19:57:00,10,New symptoms,Completed
+915,289,49,4,2025-12-21 21:49:21,30,Annual review,Completed
+916,465,78,17,2025-10-29 06:31:38,10,Follow-up,No-show
+917,443,74,19,2025-12-06 18:44:14,20,Follow-up,Completed
+918,286,48,27,2025-09-24 14:45:18,20,Follow-up,Completed
+919,77,13,33,2025-11-04 12:28:11,15,Test results discussion,Cancelled
+920,283,48,27,2025-11-29 01:17:44,40,Follow-up,Cancelled
+921,40,7,7,2025-11-25 03:41:10,10,Test results discussion,Cancelled
+922,195,33,29,2025-12-19 09:15:43,10,Follow-up,Completed
+923,141,24,21,2025-12-24 20:33:29,30,Medication review,Completed
+924,272,46,9,2025-12-02 06:53:47,15,Annual review,Completed
+925,509,85,36,2025-10-26 21:00:35,15,Medication review,Scheduled
+926,529,89,10,2025-10-13 14:11:36,10,Annual review,Scheduled
+927,503,84,14,2025-12-19 07:14:36,40,Medication review,Completed
+928,40,7,7,2025-11-22 04:45:49,20,Test results discussion,No-show
+929,598,100,8,2025-10-17 13:51:17,20,Annual review,Completed
+930,308,52,17,2025-10-17 00:42:04,20,Annual review,No-show
+931,402,67,32,2025-12-27 02:08:46,20,Test results discussion,No-show
+932,303,51,9,2025-09-20 17:52:38,15,Follow-up,Cancelled
+933,430,72,12,2025-11-27 19:58:36,20,Medication review,No-show
+934,119,20,27,2025-10-06 05:07:32,30,New symptoms,Scheduled
+935,356,60,18,2025-11-18 07:13:50,15,Annual review,No-show
+936,422,71,13,2025-10-17 14:31:37,10,New symptoms,Cancelled
+937,520,87,19,2025-10-13 18:28:02,30,Follow-up,Cancelled
+938,268,45,38,2025-11-02 16:12:31,30,Annual review,No-show
+939,436,73,38,2025-11-18 09:58:52,20,Follow-up,Cancelled
+940,498,83,4,2025-10-14 12:22:21,20,Follow-up,Cancelled
+941,459,77,19,2025-11-20 13:51:36,15,Test results discussion,Completed
+942,549,92,29,2025-10-12 00:57:55,10,Test results discussion,Cancelled
+943,133,23,19,2025-12-28 11:19:24,40,Follow-up,Scheduled
+944,389,65,36,2025-09-19 12:36:29,20,New symptoms,Scheduled
+945,51,9,22,2025-12-11 17:04:46,15,New symptoms,Completed
+946,161,27,15,2025-12-15 00:32:14,30,Medication review,Cancelled
+947,166,28,40,2025-11-13 14:24:24,20,Annual review,Completed
+948,567,95,12,2025-10-20 07:02:36,10,Follow-up,Scheduled
+949,540,90,39,2025-09-21 21:46:52,40,Annual review,No-show
+950,44,8,16,2025-10-02 11:25:08,20,New symptoms,Scheduled
+951,236,40,38,2025-10-20 00:32:32,10,New symptoms,Scheduled
+952,387,65,36,2025-11-18 19:38:05,15,New symptoms,Scheduled
+953,79,14,17,2025-09-16 08:21:12,40,Annual review,Scheduled
+954,16,3,11,2025-12-16 04:29:43,40,Medication review,Scheduled
+955,401,67,32,2025-10-09 17:25:45,40,New symptoms,Cancelled
+956,436,73,38,2025-12-10 11:45:01,10,New symptoms,Cancelled
+957,470,79,37,2025-10-11 08:29:42,10,New symptoms,No-show
+958,386,65,36,2025-10-28 13:16:13,30,Follow-up,Completed
+959,417,70,30,2025-12-19 22:25:55,20,Annual review,Cancelled
+960,547,92,29,2025-12-09 08:53:48,15,Annual review,Scheduled
+961,509,85,36,2025-11-17 10:31:10,20,Test results discussion,Scheduled
+962,464,78,17,2025-10-15 12:11:57,40,Follow-up,No-show
+963,238,40,38,2025-11-27 19:34:06,20,Annual review,Scheduled
+964,319,54,37,2025-11-05 13:15:41,15,Follow-up,Scheduled
+965,575,96,38,2025-10-04 20:47:19,15,Annual review,Completed
+966,86,15,28,2025-09-29 10:38:53,30,Test results discussion,No-show
+967,536,90,39,2025-12-21 00:43:48,15,Follow-up,No-show
+968,259,44,11,2025-11-20 23:24:00,20,New symptoms,Completed
+969,38,7,7,2025-11-03 10:01:58,40,Test results discussion,No-show
+970,6,1,33,2025-10-24 01:38:44,15,Test results discussion,No-show
+971,559,94,38,2025-12-08 01:18:32,20,Medication review,Cancelled
+972,473,79,37,2025-12-04 18:55:33,40,Test results discussion,Scheduled
+973,108,18,13,2025-11-23 15:54:54,10,Annual review,Completed
+974,14,3,11,2025-10-03 11:24:31,40,Follow-up,Completed
+975,203,34,11,2025-11-25 23:22:10,10,Follow-up,No-show
+976,508,85,36,2025-10-05 03:37:21,40,Annual review,Completed
+977,561,94,38,2025-11-22 04:42:28,30,Follow-up,Cancelled
+978,121,21,13,2025-11-25 13:28:51,20,New symptoms,Cancelled
+979,381,64,23,2025-12-20 11:32:48,15,Medication review,Cancelled
+980,536,90,39,2025-10-11 16:51:40,40,New symptoms,Cancelled
+981,484,81,39,2025-11-30 21:10:40,15,New symptoms,Completed
+982,169,29,25,2025-12-12 19:46:50,30,Follow-up,Cancelled
+983,427,72,12,2025-10-06 19:15:09,15,Annual review,Scheduled
+984,6,1,33,2025-11-01 13:16:55,15,Medication review,Scheduled
+985,551,92,29,2025-11-30 01:12:03,20,Follow-up,Scheduled
+986,480,80,20,2025-12-26 10:21:30,15,Follow-up,Cancelled
+987,573,96,38,2025-10-15 21:22:25,20,Follow-up,Completed
+988,282,47,14,2025-10-27 04:24:36,30,Test results discussion,Cancelled
+989,377,63,22,2025-11-19 07:22:00,20,Test results discussion,Completed
+990,80,14,17,2025-12-26 01:53:54,15,Follow-up,Completed
+991,287,48,27,2025-10-06 15:03:21,20,Test results discussion,Scheduled
+992,130,22,40,2025-12-12 10:10:38,40,Annual review,Cancelled
+993,590,99,36,2025-12-25 23:42:43,40,New symptoms,No-show
+994,215,36,5,2025-10-04 15:23:59,10,Medication review,Completed
+995,94,16,33,2025-12-30 09:45:07,15,Medication review,Completed
+996,487,82,29,2025-09-02 01:09:01,20,Follow-up,Scheduled
+997,141,24,21,2025-12-10 08:43:09,30,Annual review,No-show
+998,335,56,20,2025-10-30 18:01:26,40,Follow-up,Completed
+999,574,96,38,2025-11-17 08:39:44,30,Annual review,No-show
+1000,364,61,38,2025-11-01 12:54:55,40,New symptoms,Scheduled

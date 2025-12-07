@@ -1,0 +1,801 @@
+lab_result_id,lab_test_id,patient_id,doctor_id,requested_date,result_date,result_value,is_normal,notes
+1,15,220,22,2024-02-22,2024-02-26,142.3,1,Clinical correlation advised
+2,8,502,89,2025-03-20,2025-03-21,111.6,1,Significantly abnormal
+3,3,26,47,2024-08-11,2024-08-16,145.7,0,Clinical correlation advised
+4,9,196,49,2024-11-13,2024-11-15,186.6,0,Slightly elevated
+5,8,370,68,2025-05-16,2025-05-16,117.3,1,Within normal range
+6,15,378,33,2024-07-05,2024-07-05,121.4,0,Significantly abnormal
+7,11,491,51,2025-10-18,2025-10-22,54.9,0,Clinical correlation advised
+8,14,32,92,2024-08-06,2024-08-13,98.1,1,Clinical correlation advised
+9,13,107,5,2024-11-18,2024-11-18,122.6,0,Slightly elevated
+10,14,135,11,2024-09-28,2024-09-29,11.3,0,Significantly abnormal
+11,2,558,36,2025-05-17,2025-05-17,66.6,1,Slightly elevated
+12,15,376,67,2025-11-17,2025-11-23,83.3,0,Within normal range
+13,4,514,19,2025-03-03,2025-03-04,34.6,0,Significantly abnormal
+14,10,204,89,2024-07-02,2024-07-08,34.7,0,Significantly abnormal
+15,5,575,45,2025-08-03,2025-08-08,93.3,0,Clinical correlation advised
+16,15,475,12,2025-08-04,2025-08-05,36.6,0,Slightly elevated
+17,6,21,99,2025-06-11,2025-06-11,43.6,1,Repeat test recommended
+18,2,253,40,2024-01-04,2024-01-07,149.5,0,Significantly abnormal
+19,1,389,91,2025-02-11,2025-02-13,55.9,1,Repeat test recommended
+20,4,193,35,2025-05-11,2025-05-13,195.9,1,Repeat test recommended
+21,5,95,63,2024-12-03,2024-12-08,69.8,1,Slightly elevated
+22,1,600,50,2025-06-25,2025-06-28,198.8,1,Significantly abnormal
+23,11,296,27,2024-12-16,2024-12-20,18.2,0,Significantly abnormal
+24,4,479,34,2025-10-30,2025-10-31,103.5,0,Repeat test recommended
+25,3,479,76,2025-01-05,2025-01-10,112.8,0,Significantly abnormal
+26,12,108,81,2024-11-29,2024-11-29,31.8,1,Significantly abnormal
+27,6,103,24,2024-11-30,2024-12-04,32.6,0,Within normal range
+28,8,468,76,2024-04-21,2024-04-27,146.2,1,Slightly elevated
+29,5,383,77,2024-12-21,2024-12-28,135.7,1,Within normal range
+30,15,240,98,2024-06-30,2024-07-01,84.3,1,Clinical correlation advised
+31,7,30,21,2024-06-25,2024-06-27,184.5,0,Clinical correlation advised
+32,13,143,17,2024-01-22,2024-01-27,157.7,0,Within normal range
+33,5,145,45,2024-08-19,2024-08-25,33.2,0,Slightly elevated
+34,4,177,39,2025-01-21,2025-01-22,37.0,0,Repeat test recommended
+35,2,251,20,2023-12-31,2024-01-05,1.1,0,Significantly abnormal
+36,2,483,71,2023-12-29,2024-01-04,139.8,1,Repeat test recommended
+37,14,475,91,2025-03-28,2025-03-29,77.6,1,Slightly elevated
+38,7,335,37,2024-01-11,2024-01-17,119.4,0,Significantly abnormal
+39,8,28,29,2024-03-18,2024-03-20,153.6,1,Significantly abnormal
+40,6,514,1,2024-03-16,2024-03-22,182.9,0,Slightly elevated
+41,8,193,6,2025-04-29,2025-05-03,87.1,1,Repeat test recommended
+42,11,185,55,2025-06-30,2025-07-04,62.3,1,Within normal range
+43,5,432,23,2025-06-17,2025-06-23,136.5,0,Repeat test recommended
+44,13,85,45,2023-12-30,2023-12-31,131.2,1,Within normal range
+45,3,327,17,2024-04-22,2024-04-28,137.3,0,Repeat test recommended
+46,11,412,55,2025-10-07,2025-10-11,85.1,0,Clinical correlation advised
+47,13,462,65,2024-11-15,2024-11-22,142.4,1,Within normal range
+48,13,184,55,2024-06-05,2024-06-11,174.1,0,Slightly elevated
+49,1,346,91,2024-04-06,2024-04-10,39.6,1,Repeat test recommended
+50,1,476,37,2025-10-22,2025-10-23,173.6,1,Significantly abnormal
+51,1,379,33,2024-09-22,2024-09-27,135.0,0,Clinical correlation advised
+52,5,184,38,2024-12-01,2024-12-07,3.6,1,Significantly abnormal
+53,11,37,77,2025-08-09,2025-08-14,146.4,1,Slightly elevated
+54,3,87,69,2025-08-27,2025-08-29,145.4,1,Repeat test recommended
+55,15,282,45,2024-08-19,2024-08-22,183.8,1,Within normal range
+56,2,335,48,2025-10-23,2025-10-25,121.9,0,Repeat test recommended
+57,9,81,44,2024-02-18,2024-02-22,84.6,0,Slightly elevated
+58,12,264,93,2024-02-02,2024-02-03,167.4,1,Within normal range
+59,13,197,74,2025-03-09,2025-03-13,123.2,0,Within normal range
+60,6,588,61,2025-04-25,2025-05-01,55.0,0,Significantly abnormal
+61,9,47,78,2024-10-19,2024-10-21,135.7,1,Within normal range
+62,7,213,3,2024-10-03,2024-10-05,55.0,1,Clinical correlation advised
+63,13,326,13,2025-04-19,2025-04-22,3.7,1,Slightly elevated
+64,2,295,94,2023-12-03,2023-12-10,117.6,1,Clinical correlation advised
+65,7,488,72,2025-11-19,2025-11-24,68.2,1,Repeat test recommended
+66,3,474,96,2024-07-09,2024-07-12,106.5,0,Repeat test recommended
+67,5,413,5,2024-01-25,2024-01-26,126.3,1,Within normal range
+68,4,543,48,2025-01-24,2025-01-28,150.2,1,Repeat test recommended
+69,1,160,80,2024-04-12,2024-04-14,124.9,1,Repeat test recommended
+70,13,24,97,2025-02-14,2025-02-21,197.9,1,Clinical correlation advised
+71,3,388,78,2025-07-28,2025-07-29,79.2,0,Within normal range
+72,10,297,23,2025-06-22,2025-06-28,110.1,1,Slightly elevated
+73,7,286,41,2024-11-25,2024-11-26,132.9,1,Clinical correlation advised
+74,9,546,51,2025-04-15,2025-04-21,99.0,1,Significantly abnormal
+75,14,461,21,2025-06-03,2025-06-09,57.8,1,Repeat test recommended
+76,11,177,88,2025-08-23,2025-08-29,116.1,1,Repeat test recommended
+77,7,194,82,2025-11-02,2025-11-05,27.8,0,Clinical correlation advised
+78,10,419,3,2025-01-03,2025-01-06,33.4,1,Within normal range
+79,6,24,96,2024-03-26,2024-04-01,110.5,0,Slightly elevated
+80,8,378,93,2025-03-31,2025-04-02,94.5,0,Significantly abnormal
+81,3,301,9,2025-10-31,2025-11-03,115.6,1,Slightly elevated
+82,11,455,31,2025-06-03,2025-06-10,100.1,0,Clinical correlation advised
+83,14,340,21,2025-03-26,2025-04-02,144.4,0,Within normal range
+84,12,34,88,2024-01-08,2024-01-14,173.4,1,Repeat test recommended
+85,2,428,34,2024-05-30,2024-05-31,143.2,0,Repeat test recommended
+86,8,62,38,2024-10-20,2024-10-20,72.7,1,Repeat test recommended
+87,13,128,14,2025-07-05,2025-07-09,151.6,0,Slightly elevated
+88,6,423,85,2024-12-19,2024-12-21,182.6,1,Slightly elevated
+89,5,100,43,2024-02-13,2024-02-14,91.7,1,Slightly elevated
+90,13,267,44,2025-02-02,2025-02-09,66.2,1,Significantly abnormal
+91,10,282,77,2025-10-26,2025-10-28,29.7,1,Within normal range
+92,4,380,73,2024-11-25,2024-11-29,61.4,0,Clinical correlation advised
+93,11,313,61,2023-12-02,2023-12-09,134.7,0,Slightly elevated
+94,3,300,50,2025-03-13,2025-03-16,5.7,0,Clinical correlation advised
+95,5,152,75,2025-11-19,2025-11-23,72.9,1,Repeat test recommended
+96,10,175,45,2024-02-11,2024-02-13,117.5,1,Clinical correlation advised
+97,6,388,63,2024-02-07,2024-02-09,174.2,1,Slightly elevated
+98,8,389,2,2024-01-17,2024-01-18,68.5,1,Slightly elevated
+99,4,154,36,2024-03-18,2024-03-19,130.0,1,Repeat test recommended
+100,8,584,82,2025-11-19,2025-11-22,148.3,1,Within normal range
+101,7,102,43,2024-06-30,2024-07-01,54.4,0,Within normal range
+102,8,581,67,2025-03-23,2025-03-26,51.3,0,Slightly elevated
+103,4,468,23,2025-10-21,2025-10-25,110.4,0,Slightly elevated
+104,12,66,17,2024-06-14,2024-06-18,12.3,0,Slightly elevated
+105,10,596,62,2024-08-13,2024-08-14,107.4,0,Significantly abnormal
+106,13,75,26,2024-07-30,2024-07-31,88.4,1,Slightly elevated
+107,2,556,76,2025-04-25,2025-05-02,60.1,0,Clinical correlation advised
+108,7,115,93,2024-09-04,2024-09-07,117.8,1,Within normal range
+109,5,417,77,2025-02-27,2025-03-06,126.3,1,Clinical correlation advised
+110,8,527,37,2024-02-10,2024-02-14,52.9,0,Significantly abnormal
+111,5,575,65,2025-01-19,2025-01-26,22.4,0,Repeat test recommended
+112,1,327,66,2024-08-07,2024-08-14,32.7,0,Repeat test recommended
+113,11,312,13,2024-09-04,2024-09-09,127.6,0,Slightly elevated
+114,13,112,98,2025-04-08,2025-04-11,61.5,1,Significantly abnormal
+115,13,544,61,2025-08-18,2025-08-22,185.5,0,Clinical correlation advised
+116,11,159,42,2025-06-24,2025-06-27,153.3,0,Slightly elevated
+117,10,161,42,2024-06-21,2024-06-28,130.7,1,Significantly abnormal
+118,4,270,61,2025-01-25,2025-01-30,29.1,1,Significantly abnormal
+119,14,323,58,2025-01-20,2025-01-26,112.7,1,Within normal range
+120,13,414,8,2024-10-09,2024-10-14,129.2,0,Repeat test recommended
+121,13,281,3,2023-12-11,2023-12-14,41.8,1,Significantly abnormal
+122,14,383,4,2025-01-06,2025-01-12,158.2,1,Clinical correlation advised
+123,9,205,28,2024-03-09,2024-03-16,171.3,0,Within normal range
+124,4,165,42,2024-07-28,2024-08-04,190.4,0,Repeat test recommended
+125,12,499,32,2025-02-18,2025-02-24,12.0,0,Significantly abnormal
+126,5,551,48,2024-09-09,2024-09-13,22.3,0,Within normal range
+127,6,424,20,2025-06-30,2025-07-04,114.9,0,Repeat test recommended
+128,4,336,74,2024-05-21,2024-05-25,111.4,1,Within normal range
+129,3,70,90,2023-12-04,2023-12-09,191.4,1,Repeat test recommended
+130,12,220,24,2025-01-07,2025-01-14,45.6,1,Significantly abnormal
+131,4,266,33,2024-03-23,2024-03-23,28.1,1,Repeat test recommended
+132,7,499,7,2024-06-08,2024-06-08,182.6,1,Within normal range
+133,10,448,5,2024-07-03,2024-07-08,158.0,1,Significantly abnormal
+134,10,342,82,2025-09-24,2025-09-25,113.1,0,Clinical correlation advised
+135,3,526,12,2024-04-23,2024-04-30,122.0,0,Within normal range
+136,13,442,36,2024-08-12,2024-08-19,177.9,0,Significantly abnormal
+137,2,187,83,2024-04-21,2024-04-26,90.9,1,Within normal range
+138,7,589,38,2025-11-25,2025-12-01,3.9,0,Significantly abnormal
+139,7,155,34,2025-04-17,2025-04-22,106.5,0,Clinical correlation advised
+140,15,364,92,2024-04-20,2024-04-22,37.9,0,Slightly elevated
+141,5,186,13,2025-11-05,2025-11-05,155.9,1,Within normal range
+142,6,323,30,2024-01-28,2024-01-31,40.4,0,Repeat test recommended
+143,5,239,28,2024-12-03,2024-12-03,27.5,1,Within normal range
+144,14,385,4,2024-09-03,2024-09-06,76.1,1,Repeat test recommended
+145,7,204,27,2024-11-07,2024-11-08,18.7,0,Clinical correlation advised
+146,15,593,93,2024-06-21,2024-06-22,32.7,0,Within normal range
+147,8,367,96,2025-01-11,2025-01-17,38.3,0,Clinical correlation advised
+148,6,490,33,2024-06-29,2024-06-30,189.0,0,Within normal range
+149,7,431,52,2025-08-21,2025-08-26,72.1,1,Within normal range
+150,7,308,30,2023-12-14,2023-12-15,130.1,1,Repeat test recommended
+151,1,282,94,2024-02-08,2024-02-13,9.2,0,Slightly elevated
+152,10,10,17,2024-06-18,2024-06-20,28.1,1,Within normal range
+153,1,215,95,2024-01-25,2024-01-29,74.4,1,Slightly elevated
+154,7,177,23,2024-06-18,2024-06-20,148.4,0,Significantly abnormal
+155,15,113,21,2025-11-01,2025-11-08,40.9,1,Significantly abnormal
+156,15,272,80,2025-01-07,2025-01-07,156.7,1,Within normal range
+157,15,482,5,2025-07-07,2025-07-13,9.4,1,Clinical correlation advised
+158,12,538,22,2025-06-23,2025-06-24,3.1,0,Within normal range
+159,7,68,15,2024-08-01,2024-08-08,196.7,1,Slightly elevated
+160,14,1,40,2024-08-01,2024-08-08,179.9,1,Slightly elevated
+161,6,553,47,2024-03-13,2024-03-14,95.6,0,Slightly elevated
+162,4,528,17,2025-07-08,2025-07-11,131.9,0,Repeat test recommended
+163,5,108,32,2025-04-14,2025-04-18,37.0,1,Significantly abnormal
+164,12,474,86,2024-04-06,2024-04-10,152.0,0,Significantly abnormal
+165,7,384,85,2025-07-06,2025-07-06,149.6,1,Within normal range
+166,13,203,24,2025-11-17,2025-11-19,127.0,0,Slightly elevated
+167,7,331,2,2024-04-25,2024-05-02,96.8,1,Slightly elevated
+168,11,592,52,2024-08-26,2024-08-29,90.7,1,Clinical correlation advised
+169,8,121,96,2025-02-18,2025-02-23,67.5,0,Significantly abnormal
+170,6,500,99,2024-05-18,2024-05-25,132.7,1,Clinical correlation advised
+171,5,65,47,2024-09-21,2024-09-21,193.0,0,Within normal range
+172,4,469,15,2025-07-31,2025-08-04,25.3,1,Significantly abnormal
+173,8,447,71,2025-09-08,2025-09-10,79.6,0,Slightly elevated
+174,14,228,100,2025-11-14,2025-11-17,146.7,1,Clinical correlation advised
+175,10,156,73,2024-06-06,2024-06-06,160.1,1,Clinical correlation advised
+176,4,544,22,2024-11-13,2024-11-15,20.1,0,Clinical correlation advised
+177,4,156,70,2024-03-17,2024-03-23,171.7,1,Within normal range
+178,7,304,50,2024-06-15,2024-06-21,178.8,1,Significantly abnormal
+179,3,308,1,2025-09-16,2025-09-20,141.7,1,Slightly elevated
+180,15,69,8,2024-10-07,2024-10-09,28.8,0,Slightly elevated
+181,7,164,83,2024-09-28,2024-10-04,118.3,0,Significantly abnormal
+182,2,232,36,2025-07-11,2025-07-17,24.8,0,Slightly elevated
+183,8,146,87,2025-02-22,2025-02-27,2.3,0,Clinical correlation advised
+184,5,537,14,2024-02-27,2024-03-05,46.5,1,Significantly abnormal
+185,14,128,70,2024-03-17,2024-03-24,30.8,1,Significantly abnormal
+186,1,391,33,2025-08-08,2025-08-15,85.2,0,Repeat test recommended
+187,13,299,29,2024-06-14,2024-06-15,17.8,1,Slightly elevated
+188,14,507,90,2024-09-15,2024-09-21,11.4,0,Significantly abnormal
+189,14,283,33,2024-02-15,2024-02-20,84.0,1,Significantly abnormal
+190,2,14,13,2023-12-02,2023-12-09,48.6,1,Slightly elevated
+191,10,445,86,2025-03-04,2025-03-05,199.5,1,Clinical correlation advised
+192,10,580,49,2024-03-20,2024-03-26,8.5,0,Clinical correlation advised
+193,14,101,74,2025-08-26,2025-08-27,193.3,0,Significantly abnormal
+194,10,432,51,2025-10-22,2025-10-27,129.5,1,Repeat test recommended
+195,10,536,5,2024-10-19,2024-10-25,133.8,0,Slightly elevated
+196,10,186,4,2024-02-25,2024-03-01,19.9,1,Within normal range
+197,12,468,33,2024-11-29,2024-12-04,70.5,0,Significantly abnormal
+198,8,49,42,2024-08-19,2024-08-23,153.7,0,Slightly elevated
+199,9,561,83,2025-01-06,2025-01-12,150.7,0,Repeat test recommended
+200,14,92,43,2024-12-06,2024-12-09,63.4,1,Within normal range
+201,15,93,82,2024-10-12,2024-10-17,124.4,0,Repeat test recommended
+202,4,272,91,2024-07-22,2024-07-27,67.5,1,Significantly abnormal
+203,13,164,22,2025-01-05,2025-01-05,22.4,1,Clinical correlation advised
+204,12,574,38,2024-05-07,2024-05-09,79.7,0,Slightly elevated
+205,2,93,92,2024-03-29,2024-04-04,170.5,0,Significantly abnormal
+206,9,363,51,2025-07-18,2025-07-24,20.8,1,Clinical correlation advised
+207,10,85,42,2025-04-15,2025-04-22,165.2,0,Clinical correlation advised
+208,3,281,4,2024-07-13,2024-07-16,166.7,0,Slightly elevated
+209,15,232,57,2024-02-07,2024-02-10,29.2,1,Slightly elevated
+210,1,495,57,2024-10-03,2024-10-06,82.5,1,Clinical correlation advised
+211,15,397,96,2025-03-09,2025-03-14,160.7,1,Repeat test recommended
+212,6,374,31,2025-01-08,2025-01-13,15.5,0,Significantly abnormal
+213,14,253,69,2024-04-18,2024-04-20,19.4,1,Clinical correlation advised
+214,6,108,78,2025-04-12,2025-04-17,143.5,0,Repeat test recommended
+215,5,589,7,2024-08-17,2024-08-24,99.5,1,Within normal range
+216,3,23,72,2024-08-29,2024-08-29,179.2,1,Slightly elevated
+217,2,363,9,2025-02-22,2025-02-26,189.5,0,Clinical correlation advised
+218,8,442,91,2025-07-18,2025-07-24,43.1,1,Significantly abnormal
+219,9,312,43,2025-04-07,2025-04-13,28.9,1,Within normal range
+220,10,55,92,2024-11-30,2024-12-01,154.9,0,Clinical correlation advised
+221,2,543,53,2025-06-19,2025-06-22,49.8,0,Slightly elevated
+222,1,507,94,2025-08-01,2025-08-06,17.9,1,Clinical correlation advised
+223,12,397,53,2024-11-06,2024-11-13,27.8,1,Slightly elevated
+224,2,319,46,2025-06-03,2025-06-09,175.8,1,Within normal range
+225,3,267,52,2025-05-10,2025-05-13,70.3,0,Significantly abnormal
+226,8,97,68,2025-03-13,2025-03-13,175.9,0,Clinical correlation advised
+227,1,383,13,2025-06-12,2025-06-12,192.7,0,Within normal range
+228,6,394,40,2025-11-03,2025-11-08,171.9,0,Slightly elevated
+229,11,511,24,2024-06-01,2024-06-04,195.2,0,Slightly elevated
+230,10,384,74,2025-06-03,2025-06-10,141.3,0,Clinical correlation advised
+231,3,456,4,2024-03-04,2024-03-04,187.1,0,Significantly abnormal
+232,15,299,14,2024-12-09,2024-12-11,118.1,0,Within normal range
+233,8,198,78,2025-06-26,2025-07-01,187.6,1,Repeat test recommended
+234,2,568,9,2024-12-20,2024-12-23,73.2,0,Repeat test recommended
+235,4,414,6,2024-11-30,2024-11-30,183.3,1,Clinical correlation advised
+236,2,533,12,2024-01-22,2024-01-27,182.4,1,Clinical correlation advised
+237,11,206,37,2025-01-07,2025-01-09,89.6,0,Significantly abnormal
+238,11,437,52,2024-09-12,2024-09-18,16.6,0,Repeat test recommended
+239,2,330,72,2024-07-24,2024-07-30,61.2,1,Within normal range
+240,9,43,25,2025-09-01,2025-09-05,178.4,0,Significantly abnormal
+241,12,50,69,2025-11-03,2025-11-03,193.4,1,Slightly elevated
+242,6,551,7,2024-01-01,2024-01-07,147.7,0,Clinical correlation advised
+243,6,46,28,2025-08-22,2025-08-29,190.0,0,Significantly abnormal
+244,2,209,64,2025-05-04,2025-05-04,9.1,1,Slightly elevated
+245,15,120,38,2025-11-27,2025-11-30,132.0,1,Slightly elevated
+246,7,234,48,2024-10-16,2024-10-16,31.3,0,Clinical correlation advised
+247,11,265,55,2024-01-05,2024-01-09,41.1,1,Repeat test recommended
+248,12,11,54,2024-10-04,2024-10-10,55.7,0,Repeat test recommended
+249,5,11,81,2023-12-23,2023-12-29,8.5,1,Slightly elevated
+250,11,229,10,2024-02-18,2024-02-19,23.1,1,Within normal range
+251,3,550,42,2025-06-13,2025-06-17,191.1,1,Significantly abnormal
+252,9,294,37,2024-04-27,2024-05-01,21.8,0,Repeat test recommended
+253,14,207,12,2024-05-12,2024-05-19,40.2,0,Repeat test recommended
+254,8,112,15,2025-04-11,2025-04-11,166.6,0,Within normal range
+255,13,70,31,2024-09-11,2024-09-16,87.7,0,Repeat test recommended
+256,10,43,85,2024-07-04,2024-07-07,153.7,1,Within normal range
+257,10,15,20,2024-12-17,2024-12-21,184.4,1,Repeat test recommended
+258,4,58,51,2024-11-07,2024-11-09,189.4,0,Slightly elevated
+259,3,200,43,2024-01-28,2024-02-04,5.2,1,Within normal range
+260,14,252,78,2024-06-08,2024-06-12,111.4,0,Clinical correlation advised
+261,6,59,15,2023-12-31,2024-01-01,82.0,0,Clinical correlation advised
+262,12,174,93,2025-01-06,2025-01-11,7.8,0,Slightly elevated
+263,1,391,1,2024-05-04,2024-05-04,162.8,0,Slightly elevated
+264,13,37,73,2024-05-22,2024-05-23,4.1,1,Clinical correlation advised
+265,11,396,37,2023-12-30,2024-01-05,90.0,0,Repeat test recommended
+266,10,257,45,2024-02-19,2024-02-26,95.9,0,Repeat test recommended
+267,9,369,29,2025-07-07,2025-07-11,127.5,0,Repeat test recommended
+268,5,165,48,2025-11-10,2025-11-16,161.1,0,Within normal range
+269,8,421,91,2024-05-26,2024-05-29,197.5,0,Significantly abnormal
+270,4,416,54,2024-09-30,2024-10-07,146.7,1,Repeat test recommended
+271,8,373,44,2025-01-02,2025-01-08,26.7,0,Slightly elevated
+272,4,196,73,2025-05-16,2025-05-21,180.1,1,Significantly abnormal
+273,11,315,28,2024-10-25,2024-10-27,94.1,1,Significantly abnormal
+274,15,423,7,2025-05-11,2025-05-14,67.6,0,Repeat test recommended
+275,15,530,56,2025-05-31,2025-06-07,4.9,0,Repeat test recommended
+276,10,177,35,2024-01-05,2024-01-07,128.3,0,Slightly elevated
+277,7,325,60,2025-03-25,2025-03-27,152.5,1,Significantly abnormal
+278,10,544,95,2024-02-27,2024-02-27,135.3,0,Within normal range
+279,1,9,7,2024-12-27,2024-12-28,62.7,1,Slightly elevated
+280,12,155,28,2025-01-21,2025-01-22,72.7,1,Clinical correlation advised
+281,15,458,61,2024-12-20,2024-12-22,58.0,0,Clinical correlation advised
+282,3,156,21,2024-10-02,2024-10-03,106.5,1,Slightly elevated
+283,9,566,81,2024-08-08,2024-08-12,138.0,0,Within normal range
+284,11,151,57,2025-08-24,2025-08-24,27.2,1,Repeat test recommended
+285,7,489,22,2025-11-11,2025-11-16,186.2,0,Repeat test recommended
+286,15,21,63,2024-01-14,2024-01-19,177.1,0,Significantly abnormal
+287,2,182,18,2024-03-02,2024-03-06,135.5,0,Within normal range
+288,15,202,82,2025-01-07,2025-01-11,142.3,0,Significantly abnormal
+289,10,507,3,2024-03-05,2024-03-11,198.3,1,Significantly abnormal
+290,4,526,36,2024-06-17,2024-06-17,98.0,0,Within normal range
+291,11,245,90,2025-01-22,2025-01-26,89.8,1,Significantly abnormal
+292,1,280,96,2024-01-29,2024-02-05,131.9,1,Clinical correlation advised
+293,1,134,80,2025-11-21,2025-11-21,60.6,0,Repeat test recommended
+294,7,398,5,2023-12-21,2023-12-25,139.4,1,Significantly abnormal
+295,13,525,55,2024-10-11,2024-10-16,26.6,1,Significantly abnormal
+296,9,198,63,2025-02-16,2025-02-20,16.8,1,Within normal range
+297,13,327,66,2025-08-07,2025-08-07,162.2,0,Slightly elevated
+298,2,182,48,2025-09-26,2025-09-28,114.4,0,Within normal range
+299,14,78,2,2025-11-18,2025-11-23,174.0,0,Slightly elevated
+300,10,472,81,2024-12-28,2024-12-29,122.6,0,Slightly elevated
+301,4,84,24,2025-08-30,2025-08-31,0.9,0,Slightly elevated
+302,1,82,50,2025-01-07,2025-01-10,95.3,0,Repeat test recommended
+303,10,191,61,2025-02-10,2025-02-10,88.6,0,Within normal range
+304,3,203,34,2025-07-07,2025-07-10,140.0,0,Slightly elevated
+305,3,330,97,2025-04-12,2025-04-14,79.0,1,Clinical correlation advised
+306,7,519,82,2025-02-12,2025-02-15,85.4,1,Slightly elevated
+307,9,8,84,2024-01-02,2024-01-06,56.4,0,Within normal range
+308,1,65,64,2024-12-14,2024-12-14,124.0,1,Within normal range
+309,11,457,2,2024-01-11,2024-01-12,63.7,1,Clinical correlation advised
+310,11,68,73,2025-03-08,2025-03-13,90.2,1,Significantly abnormal
+311,8,308,98,2024-07-19,2024-07-24,109.2,0,Slightly elevated
+312,10,175,6,2023-12-25,2023-12-30,82.0,1,Significantly abnormal
+313,15,413,60,2024-08-13,2024-08-20,30.6,1,Repeat test recommended
+314,1,143,41,2024-11-06,2024-11-08,79.9,0,Repeat test recommended
+315,13,177,20,2024-04-03,2024-04-05,43.5,0,Repeat test recommended
+316,8,154,35,2024-12-21,2024-12-24,4.4,1,Slightly elevated
+317,5,563,36,2025-04-12,2025-04-15,97.4,1,Repeat test recommended
+318,7,164,63,2024-01-20,2024-01-20,70.7,0,Within normal range
+319,6,489,78,2025-02-08,2025-02-10,47.1,1,Slightly elevated
+320,7,503,2,2025-01-20,2025-01-22,67.8,1,Clinical correlation advised
+321,7,125,77,2025-07-22,2025-07-26,68.3,1,Slightly elevated
+322,6,579,61,2025-09-28,2025-09-28,89.5,1,Slightly elevated
+323,4,335,89,2025-04-06,2025-04-11,126.8,1,Significantly abnormal
+324,9,349,74,2024-12-27,2024-12-30,180.4,1,Clinical correlation advised
+325,15,235,91,2024-04-03,2024-04-06,162.7,0,Repeat test recommended
+326,10,482,3,2025-01-15,2025-01-16,76.9,0,Clinical correlation advised
+327,6,84,68,2024-07-17,2024-07-24,120.6,1,Within normal range
+328,8,399,100,2025-05-18,2025-05-22,142.4,1,Within normal range
+329,8,253,29,2024-02-22,2024-02-22,65.5,1,Clinical correlation advised
+330,3,280,41,2024-07-23,2024-07-28,121.0,0,Slightly elevated
+331,15,124,38,2025-09-30,2025-10-03,104.7,1,Slightly elevated
+332,13,386,55,2023-12-15,2023-12-15,59.7,0,Slightly elevated
+333,5,26,4,2024-02-03,2024-02-09,15.8,1,Slightly elevated
+334,8,392,72,2025-06-24,2025-07-01,151.7,0,Significantly abnormal
+335,8,283,26,2023-12-09,2023-12-16,57.0,0,Significantly abnormal
+336,1,127,7,2025-01-01,2025-01-08,73.8,1,Repeat test recommended
+337,9,27,81,2024-09-13,2024-09-18,79.2,1,Clinical correlation advised
+338,14,36,83,2025-02-15,2025-02-20,113.2,0,Clinical correlation advised
+339,1,136,64,2025-09-27,2025-09-28,28.1,0,Clinical correlation advised
+340,3,241,12,2024-11-28,2024-12-03,67.7,1,Significantly abnormal
+341,13,72,64,2024-10-17,2024-10-17,105.0,1,Slightly elevated
+342,9,92,27,2024-08-29,2024-08-31,23.1,1,Slightly elevated
+343,4,58,83,2024-01-02,2024-01-02,10.6,0,Repeat test recommended
+344,1,44,29,2025-04-07,2025-04-09,190.9,0,Clinical correlation advised
+345,6,331,50,2024-02-21,2024-02-27,3.9,1,Repeat test recommended
+346,1,425,71,2025-09-23,2025-09-23,40.1,0,Slightly elevated
+347,4,597,63,2025-11-24,2025-11-29,140.4,1,Clinical correlation advised
+348,15,169,51,2025-04-28,2025-04-30,107.3,1,Significantly abnormal
+349,9,384,66,2024-10-30,2024-11-01,167.0,1,Significantly abnormal
+350,4,335,34,2024-10-25,2024-10-26,130.1,1,Within normal range
+351,8,525,99,2024-10-12,2024-10-15,37.0,0,Repeat test recommended
+352,13,110,96,2025-05-05,2025-05-08,152.0,1,Slightly elevated
+353,15,311,47,2024-08-14,2024-08-14,129.6,0,Clinical correlation advised
+354,15,259,28,2024-06-26,2024-06-26,62.0,0,Slightly elevated
+355,14,342,27,2024-07-08,2024-07-14,144.0,1,Repeat test recommended
+356,10,170,63,2024-07-28,2024-08-01,159.0,0,Within normal range
+357,10,110,1,2025-10-31,2025-10-31,171.4,1,Within normal range
+358,5,456,49,2024-04-29,2024-05-01,19.5,1,Slightly elevated
+359,11,196,55,2024-11-15,2024-11-16,56.1,0,Significantly abnormal
+360,13,36,16,2025-01-26,2025-01-28,52.6,0,Within normal range
+361,15,32,61,2025-06-06,2025-06-06,22.6,0,Repeat test recommended
+362,14,594,89,2024-05-10,2024-05-14,54.1,1,Within normal range
+363,12,157,28,2025-09-26,2025-10-02,135.6,0,Within normal range
+364,8,443,60,2024-10-05,2024-10-07,194.6,0,Within normal range
+365,13,288,91,2025-02-16,2025-02-23,40.6,1,Within normal range
+366,11,279,25,2025-04-05,2025-04-12,162.1,0,Clinical correlation advised
+367,14,446,72,2023-12-13,2023-12-20,158.4,0,Significantly abnormal
+368,6,91,77,2024-11-20,2024-11-27,164.2,0,Significantly abnormal
+369,11,381,93,2024-05-16,2024-05-18,64.2,1,Repeat test recommended
+370,3,595,52,2024-11-15,2024-11-22,196.7,1,Slightly elevated
+371,14,507,87,2024-05-25,2024-05-31,72.1,1,Within normal range
+372,10,260,18,2024-12-26,2024-12-31,129.1,1,Clinical correlation advised
+373,14,169,6,2024-12-15,2024-12-17,119.8,0,Clinical correlation advised
+374,3,211,89,2024-10-22,2024-10-23,164.7,0,Clinical correlation advised
+375,9,43,67,2025-08-17,2025-08-17,51.0,0,Slightly elevated
+376,11,343,63,2025-08-04,2025-08-09,146.4,1,Clinical correlation advised
+377,15,405,67,2024-01-29,2024-02-04,43.9,1,Repeat test recommended
+378,12,109,29,2024-02-15,2024-02-22,31.2,0,Within normal range
+379,15,517,14,2024-07-12,2024-07-14,183.2,1,Slightly elevated
+380,13,416,39,2025-05-01,2025-05-02,190.3,0,Within normal range
+381,1,32,38,2025-07-31,2025-08-03,37.2,0,Within normal range
+382,5,464,16,2024-09-25,2024-09-30,132.4,0,Clinical correlation advised
+383,5,352,50,2024-11-13,2024-11-16,60.8,1,Clinical correlation advised
+384,10,43,87,2024-07-16,2024-07-16,100.0,1,Within normal range
+385,5,485,50,2024-05-29,2024-05-30,84.6,1,Repeat test recommended
+386,1,390,5,2024-07-20,2024-07-21,95.0,0,Within normal range
+387,4,97,59,2024-11-08,2024-11-13,48.4,1,Within normal range
+388,6,318,71,2023-12-12,2023-12-19,43.4,1,Within normal range
+389,1,132,76,2024-01-10,2024-01-10,187.1,1,Within normal range
+390,9,186,60,2025-02-23,2025-03-01,160.3,0,Significantly abnormal
+391,10,121,90,2024-06-20,2024-06-27,34.9,1,Significantly abnormal
+392,14,167,6,2025-02-07,2025-02-12,85.4,0,Within normal range
+393,4,494,63,2025-03-21,2025-03-21,77.5,0,Repeat test recommended
+394,1,310,24,2025-04-17,2025-04-22,173.1,1,Slightly elevated
+395,12,456,90,2025-08-05,2025-08-06,33.0,0,Clinical correlation advised
+396,10,25,57,2024-07-11,2024-07-16,158.9,1,Within normal range
+397,12,538,89,2024-11-19,2024-11-20,83.8,0,Significantly abnormal
+398,7,571,90,2024-09-25,2024-09-26,13.1,1,Significantly abnormal
+399,8,411,65,2025-03-27,2025-03-29,24.3,0,Within normal range
+400,10,192,86,2025-05-14,2025-05-21,132.0,1,Clinical correlation advised
+401,5,490,9,2024-01-29,2024-01-31,116.5,0,Clinical correlation advised
+402,1,238,26,2025-07-04,2025-07-08,26.7,1,Within normal range
+403,6,62,66,2025-11-19,2025-11-20,105.0,1,Clinical correlation advised
+404,9,10,39,2025-07-14,2025-07-19,184.2,1,Slightly elevated
+405,4,487,62,2024-07-29,2024-08-01,19.9,1,Clinical correlation advised
+406,11,555,10,2025-07-05,2025-07-07,171.6,0,Within normal range
+407,8,526,10,2024-05-01,2024-05-03,49.5,1,Significantly abnormal
+408,4,269,53,2025-10-01,2025-10-07,8.7,1,Repeat test recommended
+409,1,198,86,2024-11-14,2024-11-20,90.0,0,Slightly elevated
+410,8,522,53,2024-02-09,2024-02-11,48.3,1,Repeat test recommended
+411,13,77,56,2024-03-27,2024-03-27,83.5,0,Slightly elevated
+412,13,41,48,2025-02-20,2025-02-26,56.2,1,Significantly abnormal
+413,14,549,78,2025-01-01,2025-01-05,171.1,1,Clinical correlation advised
+414,8,396,97,2023-12-28,2023-12-30,93.9,0,Repeat test recommended
+415,6,546,67,2024-03-10,2024-03-11,50.4,1,Significantly abnormal
+416,14,296,77,2024-06-24,2024-06-27,62.7,1,Slightly elevated
+417,10,196,45,2025-01-22,2025-01-25,165.2,1,Significantly abnormal
+418,5,435,86,2024-01-27,2024-01-30,153.7,0,Significantly abnormal
+419,4,371,92,2024-05-25,2024-05-30,41.0,1,Clinical correlation advised
+420,9,178,16,2025-02-06,2025-02-09,41.2,1,Slightly elevated
+421,15,509,48,2025-03-25,2025-03-31,96.9,1,Clinical correlation advised
+422,8,551,44,2025-07-05,2025-07-09,121.2,1,Within normal range
+423,7,564,51,2025-11-28,2025-11-29,37.9,1,Repeat test recommended
+424,8,564,75,2025-02-21,2025-02-27,39.9,0,Repeat test recommended
+425,11,502,77,2025-08-13,2025-08-20,87.5,1,Within normal range
+426,3,186,16,2024-11-26,2024-11-26,8.3,0,Significantly abnormal
+427,2,562,69,2025-03-02,2025-03-04,156.8,1,Slightly elevated
+428,1,581,8,2025-11-21,2025-11-22,67.6,1,Significantly abnormal
+429,7,247,30,2025-04-20,2025-04-24,185.6,1,Slightly elevated
+430,3,24,71,2024-04-12,2024-04-17,152.5,0,Repeat test recommended
+431,4,555,79,2025-11-14,2025-11-16,18.3,1,Repeat test recommended
+432,2,98,32,2024-10-11,2024-10-14,48.5,0,Slightly elevated
+433,15,226,36,2025-08-14,2025-08-14,47.8,1,Repeat test recommended
+434,10,396,58,2025-04-27,2025-04-30,20.2,0,Repeat test recommended
+435,12,455,57,2025-07-01,2025-07-07,170.1,1,Within normal range
+436,9,279,27,2024-01-12,2024-01-19,87.4,1,Significantly abnormal
+437,1,512,65,2024-03-11,2024-03-17,167.7,0,Significantly abnormal
+438,3,80,77,2023-12-17,2023-12-23,33.8,1,Slightly elevated
+439,4,322,46,2024-10-13,2024-10-17,49.8,1,Slightly elevated
+440,7,481,4,2023-12-30,2024-01-02,129.1,0,Repeat test recommended
+441,12,23,50,2024-04-25,2024-04-30,72.0,0,Repeat test recommended
+442,7,457,55,2025-09-01,2025-09-07,51.1,0,Significantly abnormal
+443,6,267,62,2025-06-23,2025-06-25,43.9,0,Within normal range
+444,7,374,7,2025-04-11,2025-04-12,141.5,0,Within normal range
+445,10,567,7,2025-03-20,2025-03-21,105.1,1,Repeat test recommended
+446,3,301,19,2024-09-11,2024-09-15,174.2,0,Slightly elevated
+447,7,320,22,2024-06-16,2024-06-17,46.4,0,Clinical correlation advised
+448,1,587,84,2025-06-04,2025-06-08,109.6,1,Slightly elevated
+449,4,18,26,2024-03-24,2024-03-25,13.6,0,Significantly abnormal
+450,14,184,69,2025-07-27,2025-08-03,110.7,1,Slightly elevated
+451,3,547,24,2025-03-25,2025-03-25,65.2,0,Significantly abnormal
+452,9,22,65,2024-07-03,2024-07-03,78.8,0,Within normal range
+453,8,160,17,2025-03-29,2025-04-03,114.8,1,Repeat test recommended
+454,4,466,23,2023-12-05,2023-12-06,142.7,0,Clinical correlation advised
+455,13,44,9,2024-11-10,2024-11-12,0.2,1,Clinical correlation advised
+456,13,502,87,2024-10-23,2024-10-29,177.8,1,Clinical correlation advised
+457,6,592,92,2024-10-13,2024-10-17,104.7,1,Slightly elevated
+458,9,512,17,2025-10-25,2025-10-28,14.8,1,Significantly abnormal
+459,2,423,49,2024-11-12,2024-11-16,74.8,1,Repeat test recommended
+460,4,17,28,2024-09-12,2024-09-14,90.0,0,Significantly abnormal
+461,7,251,19,2025-11-15,2025-11-18,180.7,1,Repeat test recommended
+462,7,478,92,2024-08-12,2024-08-17,176.5,1,Slightly elevated
+463,7,53,32,2025-07-05,2025-07-06,59.2,0,Significantly abnormal
+464,8,396,84,2024-09-14,2024-09-15,119.7,1,Clinical correlation advised
+465,9,489,6,2024-07-29,2024-07-30,70.6,0,Significantly abnormal
+466,15,519,22,2025-11-20,2025-11-21,29.3,1,Within normal range
+467,1,522,28,2024-02-25,2024-03-01,4.9,1,Significantly abnormal
+468,13,472,45,2024-03-05,2024-03-10,57.1,0,Clinical correlation advised
+469,10,127,57,2024-07-20,2024-07-26,152.8,0,Clinical correlation advised
+470,12,580,65,2025-09-24,2025-09-26,186.6,1,Significantly abnormal
+471,11,451,94,2024-02-20,2024-02-24,28.9,0,Within normal range
+472,10,394,36,2024-10-24,2024-10-27,8.5,1,Within normal range
+473,3,200,54,2024-04-28,2024-05-01,83.6,0,Repeat test recommended
+474,9,582,33,2025-04-30,2025-04-30,198.2,0,Within normal range
+475,5,495,9,2025-04-21,2025-04-28,183.0,0,Repeat test recommended
+476,2,82,86,2024-08-18,2024-08-23,123.4,1,Repeat test recommended
+477,5,591,72,2024-05-19,2024-05-24,126.3,1,Clinical correlation advised
+478,3,533,88,2025-02-19,2025-02-22,45.3,0,Repeat test recommended
+479,8,279,43,2024-06-28,2024-07-02,99.8,1,Within normal range
+480,10,308,33,2025-08-14,2025-08-16,111.0,0,Slightly elevated
+481,8,157,13,2023-12-18,2023-12-23,82.6,1,Repeat test recommended
+482,10,340,39,2025-09-09,2025-09-12,32.6,1,Within normal range
+483,13,322,8,2024-09-11,2024-09-17,163.0,0,Repeat test recommended
+484,8,32,43,2024-11-17,2024-11-18,61.7,1,Repeat test recommended
+485,15,406,76,2025-04-26,2025-05-02,86.1,0,Significantly abnormal
+486,4,169,44,2025-06-21,2025-06-26,118.7,0,Within normal range
+487,2,85,95,2025-11-23,2025-11-25,108.1,1,Within normal range
+488,15,156,7,2025-11-29,2025-12-06,35.6,0,Significantly abnormal
+489,14,376,87,2023-12-30,2024-01-04,133.2,0,Within normal range
+490,3,318,43,2025-08-21,2025-08-21,199.3,0,Within normal range
+491,10,1,25,2025-06-10,2025-06-16,164.9,1,Within normal range
+492,5,299,79,2024-06-11,2024-06-12,166.4,1,Slightly elevated
+493,2,474,78,2025-03-10,2025-03-12,128.7,0,Repeat test recommended
+494,10,230,89,2025-02-14,2025-02-14,78.7,1,Slightly elevated
+495,12,485,58,2024-11-29,2024-12-03,58.8,1,Repeat test recommended
+496,13,241,40,2024-01-19,2024-01-24,42.2,1,Slightly elevated
+497,12,159,5,2025-09-11,2025-09-11,117.6,0,Slightly elevated
+498,2,460,17,2025-07-02,2025-07-03,56.6,1,Significantly abnormal
+499,10,245,92,2024-07-26,2024-08-01,82.0,1,Slightly elevated
+500,15,485,84,2025-10-28,2025-11-02,31.4,0,Significantly abnormal
+501,2,51,5,2025-03-18,2025-03-24,37.4,1,Repeat test recommended
+502,11,408,91,2025-01-04,2025-01-11,26.7,1,Repeat test recommended
+503,11,323,97,2024-04-30,2024-05-02,1.6,0,Significantly abnormal
+504,7,96,63,2024-12-24,2024-12-26,8.5,0,Slightly elevated
+505,9,508,36,2025-05-08,2025-05-10,83.6,0,Significantly abnormal
+506,12,352,79,2024-11-15,2024-11-20,0.6,1,Clinical correlation advised
+507,4,217,19,2024-12-26,2024-12-30,106.2,0,Repeat test recommended
+508,13,41,59,2024-04-05,2024-04-09,107.8,1,Within normal range
+509,5,341,3,2024-10-10,2024-10-11,95.0,1,Repeat test recommended
+510,15,586,30,2025-01-13,2025-01-16,89.9,1,Within normal range
+511,14,235,86,2024-04-17,2024-04-21,79.0,0,Clinical correlation advised
+512,4,42,29,2024-08-28,2024-08-31,79.5,1,Within normal range
+513,2,281,69,2024-05-21,2024-05-27,3.4,1,Clinical correlation advised
+514,11,53,64,2024-04-16,2024-04-19,106.9,1,Within normal range
+515,14,241,50,2024-05-06,2024-05-11,35.5,0,Within normal range
+516,11,440,11,2024-12-30,2025-01-02,189.3,0,Within normal range
+517,3,265,22,2024-01-28,2024-02-01,134.4,1,Slightly elevated
+518,15,437,27,2025-06-17,2025-06-22,19.6,1,Significantly abnormal
+519,9,562,82,2025-09-22,2025-09-23,196.6,0,Within normal range
+520,4,68,100,2025-02-28,2025-03-02,22.8,1,Significantly abnormal
+521,2,513,99,2024-06-02,2024-06-09,102.2,1,Clinical correlation advised
+522,5,86,46,2025-08-29,2025-09-03,35.4,0,Clinical correlation advised
+523,5,19,80,2025-09-04,2025-09-05,32.5,1,Slightly elevated
+524,9,548,25,2024-07-29,2024-08-03,6.1,1,Repeat test recommended
+525,2,525,100,2024-10-15,2024-10-18,33.6,1,Clinical correlation advised
+526,12,69,96,2025-04-13,2025-04-20,111.5,1,Repeat test recommended
+527,6,378,26,2025-10-20,2025-10-20,90.6,0,Clinical correlation advised
+528,6,18,86,2024-11-15,2024-11-20,83.2,0,Significantly abnormal
+529,14,475,11,2025-07-17,2025-07-18,119.0,0,Clinical correlation advised
+530,3,485,64,2024-05-14,2024-05-19,24.0,0,Significantly abnormal
+531,4,320,69,2024-09-22,2024-09-26,7.9,0,Within normal range
+532,5,141,90,2025-03-12,2025-03-18,199.9,1,Significantly abnormal
+533,14,422,10,2024-06-06,2024-06-11,15.1,1,Significantly abnormal
+534,7,24,4,2025-02-13,2025-02-18,37.0,0,Slightly elevated
+535,15,538,78,2024-03-28,2024-03-29,72.6,0,Significantly abnormal
+536,13,342,41,2025-07-28,2025-07-30,115.3,0,Slightly elevated
+537,1,284,40,2024-05-17,2024-05-18,162.3,1,Clinical correlation advised
+538,11,305,13,2024-10-14,2024-10-14,62.4,1,Within normal range
+539,11,342,35,2025-10-09,2025-10-11,13.8,0,Within normal range
+540,15,489,6,2024-08-08,2024-08-13,81.3,0,Significantly abnormal
+541,3,575,32,2025-09-09,2025-09-14,33.8,0,Within normal range
+542,8,224,94,2023-12-07,2023-12-09,34.0,0,Repeat test recommended
+543,1,536,35,2024-04-20,2024-04-23,98.6,0,Within normal range
+544,7,217,79,2024-01-19,2024-01-25,38.6,1,Significantly abnormal
+545,3,415,76,2024-10-06,2024-10-10,53.9,0,Repeat test recommended
+546,5,510,1,2025-08-06,2025-08-12,118.2,1,Slightly elevated
+547,10,189,83,2024-04-16,2024-04-17,193.4,0,Slightly elevated
+548,12,42,30,2025-03-21,2025-03-21,146.3,1,Slightly elevated
+549,4,284,15,2024-04-22,2024-04-22,130.4,0,Within normal range
+550,7,110,44,2025-05-04,2025-05-11,29.0,0,Significantly abnormal
+551,6,421,49,2024-01-26,2024-01-30,88.7,0,Slightly elevated
+552,4,399,46,2025-05-23,2025-05-26,98.0,1,Repeat test recommended
+553,1,259,1,2024-09-14,2024-09-21,31.8,0,Repeat test recommended
+554,9,297,27,2024-10-04,2024-10-05,176.3,0,Significantly abnormal
+555,5,182,55,2025-11-17,2025-11-24,157.2,0,Clinical correlation advised
+556,8,357,39,2024-02-11,2024-02-14,89.9,1,Repeat test recommended
+557,7,277,21,2024-07-28,2024-07-31,87.7,0,Within normal range
+558,13,241,83,2024-07-22,2024-07-28,43.9,0,Within normal range
+559,5,380,67,2025-03-16,2025-03-17,54.4,1,Repeat test recommended
+560,1,65,73,2025-08-14,2025-08-17,179.8,1,Slightly elevated
+561,13,570,79,2024-04-22,2024-04-24,125.5,0,Slightly elevated
+562,1,336,99,2023-12-26,2024-01-01,113.6,0,Repeat test recommended
+563,4,192,14,2025-01-22,2025-01-28,50.3,1,Clinical correlation advised
+564,4,412,86,2024-03-25,2024-03-30,19.3,1,Clinical correlation advised
+565,4,251,42,2025-10-16,2025-10-21,71.4,0,Clinical correlation advised
+566,6,505,30,2024-09-16,2024-09-16,138.0,0,Clinical correlation advised
+567,15,141,30,2024-10-07,2024-10-07,41.1,1,Clinical correlation advised
+568,12,75,14,2024-01-04,2024-01-11,143.7,0,Slightly elevated
+569,4,380,13,2025-10-25,2025-10-29,2.4,1,Within normal range
+570,5,461,27,2025-08-28,2025-09-02,184.7,0,Within normal range
+571,13,257,77,2024-05-31,2024-06-03,8.9,1,Clinical correlation advised
+572,3,7,63,2025-04-24,2025-04-30,177.5,0,Within normal range
+573,9,597,30,2024-04-21,2024-04-25,0.1,1,Significantly abnormal
+574,13,464,72,2023-12-20,2023-12-22,5.5,0,Clinical correlation advised
+575,1,282,25,2025-06-08,2025-06-10,46.9,0,Slightly elevated
+576,4,215,26,2025-07-19,2025-07-23,92.2,1,Slightly elevated
+577,10,138,5,2025-08-03,2025-08-06,73.4,1,Repeat test recommended
+578,3,65,21,2024-08-03,2024-08-09,1.6,1,Within normal range
+579,9,180,88,2024-09-27,2024-09-28,17.1,0,Slightly elevated
+580,2,158,54,2025-08-12,2025-08-18,45.9,0,Significantly abnormal
+581,12,533,92,2024-05-12,2024-05-17,177.3,0,Clinical correlation advised
+582,9,581,28,2024-08-29,2024-09-04,34.5,1,Significantly abnormal
+583,6,267,78,2025-04-26,2025-04-26,39.3,1,Repeat test recommended
+584,13,549,60,2025-08-30,2025-08-31,159.3,0,Within normal range
+585,4,547,15,2024-05-07,2024-05-14,79.0,0,Within normal range
+586,9,185,69,2025-04-08,2025-04-10,48.2,0,Clinical correlation advised
+587,14,557,10,2025-03-29,2025-03-30,67.9,0,Significantly abnormal
+588,5,341,71,2025-07-15,2025-07-17,8.9,1,Slightly elevated
+589,3,226,90,2024-02-19,2024-02-20,103.6,1,Within normal range
+590,7,560,11,2025-01-06,2025-01-13,33.0,1,Significantly abnormal
+591,1,34,98,2025-11-20,2025-11-20,155.1,0,Within normal range
+592,2,331,22,2024-02-18,2024-02-19,16.6,0,Repeat test recommended
+593,13,101,57,2024-05-29,2024-06-03,11.5,0,Slightly elevated
+594,6,321,49,2024-01-13,2024-01-14,159.0,1,Significantly abnormal
+595,5,164,11,2024-05-22,2024-05-24,120.1,1,Significantly abnormal
+596,8,535,99,2025-09-14,2025-09-16,35.2,1,Clinical correlation advised
+597,10,44,41,2024-11-08,2024-11-15,8.2,1,Repeat test recommended
+598,1,46,77,2025-10-12,2025-10-12,132.4,0,Repeat test recommended
+599,6,350,12,2024-11-26,2024-11-30,106.1,1,Repeat test recommended
+600,10,126,31,2024-10-05,2024-10-07,159.6,0,Significantly abnormal
+601,6,51,47,2025-01-18,2025-01-20,157.0,1,Within normal range
+602,9,41,81,2024-08-07,2024-08-07,81.4,0,Repeat test recommended
+603,10,572,59,2024-03-09,2024-03-14,157.3,0,Clinical correlation advised
+604,13,539,24,2025-07-26,2025-07-27,12.2,0,Within normal range
+605,14,402,33,2024-06-08,2024-06-09,178.1,0,Significantly abnormal
+606,11,265,83,2025-06-03,2025-06-10,99.7,0,Clinical correlation advised
+607,4,388,92,2025-05-23,2025-05-24,80.0,0,Slightly elevated
+608,11,68,19,2023-12-19,2023-12-25,123.9,1,Slightly elevated
+609,9,586,83,2024-01-16,2024-01-20,81.6,0,Within normal range
+610,4,430,97,2025-07-21,2025-07-26,144.5,1,Slightly elevated
+611,2,318,100,2025-03-19,2025-03-20,92.4,0,Repeat test recommended
+612,5,400,21,2024-12-03,2024-12-08,151.6,0,Slightly elevated
+613,7,235,93,2024-01-10,2024-01-15,68.1,0,Significantly abnormal
+614,4,24,86,2025-09-06,2025-09-13,75.5,1,Significantly abnormal
+615,14,298,66,2024-04-21,2024-04-21,154.4,0,Significantly abnormal
+616,4,570,90,2024-07-07,2024-07-09,166.1,1,Significantly abnormal
+617,12,138,60,2024-03-17,2024-03-17,134.8,1,Within normal range
+618,5,59,38,2025-04-01,2025-04-04,183.3,0,Significantly abnormal
+619,4,539,33,2024-04-09,2024-04-14,176.7,0,Repeat test recommended
+620,12,228,19,2025-08-19,2025-08-20,19.0,1,Clinical correlation advised
+621,8,127,70,2025-10-13,2025-10-16,48.3,0,Slightly elevated
+622,8,222,18,2024-10-13,2024-10-18,199.9,0,Repeat test recommended
+623,14,36,93,2025-09-14,2025-09-15,183.6,1,Significantly abnormal
+624,7,98,60,2024-07-07,2024-07-13,155.8,0,Within normal range
+625,15,190,27,2025-11-04,2025-11-04,117.3,1,Repeat test recommended
+626,2,563,17,2024-03-30,2024-03-30,49.0,1,Significantly abnormal
+627,8,510,34,2025-02-14,2025-02-15,192.1,1,Within normal range
+628,15,219,51,2024-11-20,2024-11-25,26.9,0,Within normal range
+629,5,73,16,2024-06-11,2024-06-15,21.9,1,Slightly elevated
+630,4,407,68,2024-07-31,2024-08-05,167.6,0,Repeat test recommended
+631,4,175,93,2025-06-23,2025-06-26,121.4,0,Within normal range
+632,4,463,36,2024-12-23,2024-12-28,83.7,0,Significantly abnormal
+633,15,38,90,2025-02-03,2025-02-05,104.0,1,Within normal range
+634,14,376,81,2025-11-10,2025-11-15,47.6,1,Repeat test recommended
+635,7,48,67,2023-12-22,2023-12-23,23.4,0,Repeat test recommended
+636,13,19,6,2025-05-18,2025-05-18,104.1,0,Significantly abnormal
+637,7,408,78,2025-09-02,2025-09-02,77.3,1,Within normal range
+638,6,218,13,2025-06-05,2025-06-08,50.9,1,Significantly abnormal
+639,1,441,66,2024-05-17,2024-05-19,87.3,0,Repeat test recommended
+640,11,497,55,2024-05-06,2024-05-08,124.3,1,Significantly abnormal
+641,12,42,15,2025-03-29,2025-04-02,179.3,0,Clinical correlation advised
+642,8,199,44,2025-01-30,2025-02-02,95.4,0,Repeat test recommended
+643,1,218,30,2024-02-10,2024-02-15,122.9,0,Within normal range
+644,2,380,58,2023-12-25,2023-12-25,121.2,0,Clinical correlation advised
+645,6,579,75,2023-12-08,2023-12-09,160.7,1,Clinical correlation advised
+646,3,17,92,2024-08-25,2024-08-29,116.6,0,Repeat test recommended
+647,13,587,80,2024-03-01,2024-03-07,153.3,1,Significantly abnormal
+648,14,566,83,2024-03-22,2024-03-29,18.0,1,Slightly elevated
+649,9,375,75,2024-11-03,2024-11-06,29.5,0,Significantly abnormal
+650,1,513,40,2024-04-27,2024-04-30,190.7,0,Within normal range
+651,3,229,38,2025-07-10,2025-07-16,80.9,0,Repeat test recommended
+652,10,24,72,2024-08-04,2024-08-06,79.7,0,Repeat test recommended
+653,13,428,4,2024-02-13,2024-02-20,34.9,0,Significantly abnormal
+654,9,234,67,2024-03-20,2024-03-23,65.2,1,Slightly elevated
+655,15,533,18,2024-01-28,2024-01-28,167.2,1,Within normal range
+656,15,353,53,2024-01-22,2024-01-23,196.3,1,Significantly abnormal
+657,1,563,19,2024-10-12,2024-10-17,108.9,0,Repeat test recommended
+658,11,273,12,2024-05-17,2024-05-23,114.6,1,Repeat test recommended
+659,11,75,28,2025-11-16,2025-11-23,161.8,0,Slightly elevated
+660,13,195,68,2025-01-14,2025-01-19,196.1,0,Significantly abnormal
+661,14,197,100,2025-03-03,2025-03-09,108.3,0,Clinical correlation advised
+662,13,319,66,2025-02-26,2025-02-26,170.9,0,Repeat test recommended
+663,13,230,1,2025-11-25,2025-12-01,120.1,1,Within normal range
+664,1,120,98,2024-10-31,2024-11-03,15.1,0,Clinical correlation advised
+665,6,27,7,2025-09-25,2025-10-01,105.6,1,Within normal range
+666,5,75,95,2025-01-06,2025-01-06,90.7,0,Clinical correlation advised
+667,4,597,57,2024-02-13,2024-02-19,125.4,0,Significantly abnormal
+668,4,287,35,2025-11-14,2025-11-21,88.2,1,Repeat test recommended
+669,3,60,92,2024-08-29,2024-08-31,145.2,1,Slightly elevated
+670,10,141,45,2025-11-12,2025-11-13,149.2,1,Repeat test recommended
+671,15,394,7,2025-06-20,2025-06-21,153.8,1,Within normal range
+672,7,537,87,2024-06-03,2024-06-07,13.5,0,Slightly elevated
+673,4,465,30,2025-09-01,2025-09-03,190.8,1,Significantly abnormal
+674,12,176,26,2024-12-13,2024-12-19,21.8,0,Repeat test recommended
+675,1,210,22,2024-01-07,2024-01-08,15.8,0,Within normal range
+676,7,116,29,2024-09-25,2024-09-28,165.1,1,Slightly elevated
+677,8,508,70,2024-04-23,2024-04-28,75.3,0,Slightly elevated
+678,8,77,86,2024-05-22,2024-05-26,61.5,0,Slightly elevated
+679,14,593,42,2025-10-14,2025-10-16,172.8,1,Clinical correlation advised
+680,1,97,56,2025-02-22,2025-02-26,199.0,0,Repeat test recommended
+681,4,257,14,2024-10-20,2024-10-27,106.9,0,Repeat test recommended
+682,12,512,86,2024-06-24,2024-06-26,183.0,0,Within normal range
+683,14,166,82,2025-08-29,2025-09-05,178.9,0,Within normal range
+684,11,199,34,2024-06-18,2024-06-24,34.4,1,Repeat test recommended
+685,13,449,30,2024-09-21,2024-09-24,175.0,0,Within normal range
+686,14,528,23,2024-05-24,2024-05-29,81.7,1,Slightly elevated
+687,10,461,95,2025-11-08,2025-11-15,157.1,1,Repeat test recommended
+688,11,122,59,2024-07-30,2024-07-30,80.6,1,Slightly elevated
+689,15,415,67,2025-07-04,2025-07-04,73.1,0,Repeat test recommended
+690,9,148,11,2024-01-27,2024-01-29,36.2,1,Significantly abnormal
+691,11,164,12,2024-10-25,2024-10-30,3.1,1,Clinical correlation advised
+692,8,108,88,2025-03-05,2025-03-11,113.9,0,Clinical correlation advised
+693,11,179,10,2024-04-26,2024-04-28,65.5,1,Repeat test recommended
+694,13,41,72,2024-04-06,2024-04-10,47.1,1,Clinical correlation advised
+695,14,17,21,2025-07-25,2025-07-25,170.2,0,Clinical correlation advised
+696,12,236,85,2024-05-25,2024-05-31,195.0,1,Clinical correlation advised
+697,5,134,39,2024-03-21,2024-03-26,169.2,0,Within normal range
+698,5,356,58,2024-02-29,2024-03-07,192.5,0,Repeat test recommended
+699,2,366,23,2025-04-05,2025-04-11,89.6,1,Slightly elevated
+700,9,192,4,2024-03-11,2024-03-18,55.1,0,Clinical correlation advised
+701,2,473,64,2024-03-16,2024-03-23,77.0,0,Clinical correlation advised
+702,10,447,65,2024-07-10,2024-07-12,167.4,0,Significantly abnormal
+703,9,591,26,2024-07-14,2024-07-14,158.1,1,Clinical correlation advised
+704,1,409,83,2025-05-25,2025-05-28,73.8,1,Within normal range
+705,11,370,97,2024-10-28,2024-11-03,145.6,1,Repeat test recommended
+706,10,40,4,2024-01-12,2024-01-13,33.7,0,Significantly abnormal
+707,14,384,35,2025-03-19,2025-03-21,186.9,1,Repeat test recommended
+708,10,404,26,2025-07-11,2025-07-16,165.3,1,Slightly elevated
+709,11,253,82,2025-07-18,2025-07-22,157.9,0,Slightly elevated
+710,9,587,14,2024-12-18,2024-12-24,33.0,0,Significantly abnormal
+711,3,546,98,2024-12-21,2024-12-28,35.7,1,Repeat test recommended
+712,3,590,22,2024-10-14,2024-10-17,173.7,0,Significantly abnormal
+713,9,379,14,2025-04-17,2025-04-18,112.0,1,Significantly abnormal
+714,6,27,83,2024-07-18,2024-07-22,191.3,1,Within normal range
+715,10,329,97,2024-07-20,2024-07-24,165.0,0,Within normal range
+716,4,314,81,2024-03-03,2024-03-04,175.6,0,Within normal range
+717,15,493,77,2024-07-24,2024-07-26,9.5,1,Clinical correlation advised
+718,4,276,5,2025-09-04,2025-09-09,42.1,1,Within normal range
+719,6,301,59,2025-08-13,2025-08-18,165.5,0,Within normal range
+720,4,178,47,2024-03-07,2024-03-10,163.5,1,Clinical correlation advised
+721,2,244,55,2024-08-30,2024-09-04,9.3,1,Slightly elevated
+722,12,112,37,2025-09-03,2025-09-03,155.3,0,Repeat test recommended
+723,7,542,16,2023-12-20,2023-12-27,112.3,0,Repeat test recommended
+724,1,279,47,2025-07-22,2025-07-25,169.0,1,Repeat test recommended
+725,3,141,43,2024-05-10,2024-05-16,83.3,1,Clinical correlation advised
+726,9,426,97,2024-08-28,2024-09-04,56.0,0,Slightly elevated
+727,8,346,66,2024-12-21,2024-12-25,108.3,1,Clinical correlation advised
+728,7,373,41,2023-12-03,2023-12-07,35.6,0,Significantly abnormal
+729,10,122,11,2023-12-23,2023-12-29,197.1,0,Slightly elevated
+730,15,7,6,2025-10-19,2025-10-21,160.3,1,Slightly elevated
+731,10,238,10,2025-04-03,2025-04-05,128.6,0,Significantly abnormal
+732,14,325,9,2025-05-02,2025-05-02,64.9,1,Within normal range
+733,9,209,82,2024-02-22,2024-02-28,111.2,0,Within normal range
+734,5,311,37,2024-06-17,2024-06-23,77.2,1,Slightly elevated
+735,8,228,55,2024-08-29,2024-09-05,143.9,1,Repeat test recommended
+736,3,7,17,2024-11-21,2024-11-23,183.9,1,Slightly elevated
+737,2,539,28,2025-06-07,2025-06-08,147.4,0,Within normal range
+738,3,205,78,2025-07-08,2025-07-08,125.4,0,Within normal range
+739,7,9,12,2024-06-17,2024-06-20,83.1,1,Slightly elevated
+740,4,567,60,2024-12-13,2024-12-13,106.5,1,Repeat test recommended
+741,9,90,86,2024-08-22,2024-08-24,157.4,1,Repeat test recommended
+742,8,329,34,2024-11-25,2024-11-29,96.8,1,Slightly elevated
+743,14,585,5,2025-01-02,2025-01-04,123.8,1,Repeat test recommended
+744,15,568,31,2025-08-19,2025-08-25,10.7,0,Repeat test recommended
+745,2,481,23,2025-09-28,2025-10-05,137.5,0,Repeat test recommended
+746,13,223,73,2024-01-30,2024-02-01,191.3,0,Significantly abnormal
+747,3,177,20,2024-04-20,2024-04-23,148.2,0,Within normal range
+748,12,438,42,2024-01-28,2024-01-29,128.1,0,Clinical correlation advised
+749,9,148,31,2025-06-14,2025-06-19,130.7,0,Clinical correlation advised
+750,14,554,27,2025-01-08,2025-01-12,53.4,0,Repeat test recommended
+751,12,475,95,2024-07-15,2024-07-18,32.4,1,Significantly abnormal
+752,4,21,74,2024-12-26,2024-12-30,173.1,1,Clinical correlation advised
+753,12,120,24,2024-08-31,2024-09-07,0.6,0,Repeat test recommended
+754,2,166,8,2024-12-27,2024-12-30,133.4,1,Clinical correlation advised
+755,15,510,93,2025-08-08,2025-08-11,98.1,1,Slightly elevated
+756,10,572,67,2025-03-28,2025-03-30,29.9,0,Slightly elevated
+757,13,374,51,2025-10-07,2025-10-10,34.7,0,Significantly abnormal
+758,13,568,63,2024-03-20,2024-03-27,103.8,1,Significantly abnormal
+759,11,216,89,2023-12-11,2023-12-16,133.5,1,Slightly elevated
+760,4,548,51,2025-09-30,2025-09-30,40.5,1,Significantly abnormal
+761,4,398,83,2025-09-09,2025-09-14,22.0,0,Significantly abnormal
+762,14,167,27,2024-04-26,2024-04-27,4.7,0,Clinical correlation advised
+763,3,357,85,2025-11-07,2025-11-08,60.6,1,Significantly abnormal
+764,11,524,25,2025-10-04,2025-10-07,182.3,1,Repeat test recommended
+765,2,216,88,2024-04-03,2024-04-10,18.7,0,Slightly elevated
+766,7,50,82,2025-06-30,2025-07-02,23.2,0,Within normal range
+767,14,472,53,2024-08-11,2024-08-13,10.8,0,Within normal range
+768,2,392,52,2025-08-16,2025-08-18,182.7,0,Within normal range
+769,10,33,58,2025-07-15,2025-07-20,132.4,1,Slightly elevated
+770,4,220,5,2025-02-04,2025-02-07,86.3,1,Slightly elevated
+771,9,14,85,2025-06-01,2025-06-08,130.2,1,Clinical correlation advised
+772,2,154,98,2025-02-16,2025-02-18,20.2,1,Within normal range
+773,13,572,88,2024-10-23,2024-10-25,184.4,0,Clinical correlation advised
+774,11,335,18,2025-07-01,2025-07-05,75.2,0,Clinical correlation advised
+775,4,376,45,2024-11-07,2024-11-08,162.1,0,Slightly elevated
+776,12,583,77,2024-12-13,2024-12-15,155.9,1,Within normal range
+777,13,100,30,2024-08-24,2024-08-25,28.5,0,Repeat test recommended
+778,15,368,71,2025-01-01,2025-01-06,77.5,0,Slightly elevated
+779,14,28,34,2025-09-16,2025-09-18,5.2,1,Within normal range
+780,7,127,47,2024-03-13,2024-03-15,95.9,1,Significantly abnormal
+781,1,171,77,2024-03-07,2024-03-07,88.7,0,Repeat test recommended
+782,7,23,53,2025-04-12,2025-04-14,25.4,1,Clinical correlation advised
+783,11,110,44,2025-01-08,2025-01-12,190.6,0,Within normal range
+784,4,293,5,2025-03-21,2025-03-21,25.0,1,Repeat test recommended
+785,8,578,99,2024-02-15,2024-02-22,73.8,1,Clinical correlation advised
+786,2,380,57,2024-04-06,2024-04-11,74.5,1,Slightly elevated
+787,4,258,62,2025-08-15,2025-08-17,167.4,1,Repeat test recommended
+788,7,3,15,2025-10-17,2025-10-17,153.9,0,Within normal range
+789,4,28,95,2024-10-05,2024-10-08,20.2,1,Significantly abnormal
+790,13,93,63,2025-06-19,2025-06-25,103.3,0,Clinical correlation advised
+791,2,376,58,2025-08-14,2025-08-16,118.6,0,Significantly abnormal
+792,12,63,60,2025-09-06,2025-09-09,101.7,1,Repeat test recommended
+793,2,253,7,2024-08-15,2024-08-18,66.5,0,Significantly abnormal
+794,6,544,36,2024-07-16,2024-07-20,40.0,1,Slightly elevated
+795,2,202,4,2025-11-14,2025-11-20,36.4,1,Repeat test recommended
+796,7,440,77,2025-03-17,2025-03-24,6.0,0,Clinical correlation advised
+797,1,342,26,2024-01-14,2024-01-17,121.4,0,Repeat test recommended
+798,15,261,56,2024-10-24,2024-10-30,164.7,0,Significantly abnormal
+799,10,66,68,2025-03-30,2025-04-01,139.9,1,Within normal range
+800,1,59,35,2024-10-15,2024-10-21,85.2,1,Significantly abnormal
