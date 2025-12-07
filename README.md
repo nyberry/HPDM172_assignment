@@ -1,10 +1,10 @@
 # HPDM172_assignment
 
 ## Overview
-This project implements a relational database for the HPDM172 MSc Data Science assignment, representing the activities of a group of hospitals.
+This project implements a relational database for the HPDM172 MSc Data Science assignment. It represents the activities of a group of hospitals.
 
 It includes:
-- a MySQL database schema describung hospitals, doctors, patients and clinical activtity.
+- a MySQL database schema describing hospitals, doctors, patients and clinical activtity.
 - a sythnetic data generator
 - SQL scripts for creating and loading the database
 - SQL searches
@@ -17,7 +17,6 @@ It includes:
 HPDM172_assignment/
 │
 ├── README.md                     # Project documentation 
-├── index.html                    # GitHub Pages site
 │
 ├── mysql/
 │   ├── schema.sql                # Creates the database tables
@@ -107,6 +106,15 @@ SOURCE mysql/schema.sql;
 SOURCE mysql/data_import.sql;
 ```
 
+## Running the Required SQL queries
+
+Run the queries in MySQL:
+
+```sql
+SOURCE mysql/queries.sql
+```
+
+
 ## Planning
 
 An Entity relationshp diagram for the projecty is available at
@@ -121,14 +129,6 @@ an editable .drawio file is included, snd a description of the steps taken to de
 planning/database_design.md
 ```
 
-## Running the Required SQL queries
-
-Run the queries in MySQL:
-
-```sql
-SOURCE mysql/queries.sql
-```
-
 
 ## Team Portfolio
 
@@ -137,3 +137,9 @@ All meetings, agendas and documentation of AI assistance is stored in
 ```
 TeamPOrtfolio/
 ```
+
+
+## Example SQL queries and outputs
+
+
+
