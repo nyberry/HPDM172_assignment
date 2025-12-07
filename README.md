@@ -135,7 +135,7 @@ planning/database_design.md
 All meetings, agendas and documentation of AI assistance is stored in 
 
 ```
-TeamPOrtfolio/
+TeamPortfolio/
 ```
 
 ---
@@ -473,7 +473,7 @@ ORDER BY a.appointment_start DESC;
 
 ---
 
-## **14. List prescriptions issued at a given hospital (4-column summary)**
+## **14. List prescriptions issued at a given hospital **
 
 ```sql
 SELECT  
