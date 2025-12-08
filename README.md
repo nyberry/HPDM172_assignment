@@ -369,7 +369,7 @@ ORDER BY p.last_name ASC, p.first_name ASC;
 ```
 ---
 
-#### List doctors who specialise in treating a particular disease at a hospital
+#### 10. List doctors who specialise in treating a particular disease at a hospital
 
 ```sql
 SELECT 
@@ -432,7 +432,7 @@ ORDER BY
 
 ---
 
-#### 12. List all appointments for a particular patient
+#### 12. List all appointments for a particular patient
 
 ```sql
 SELECT 
