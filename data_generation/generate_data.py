@@ -1,10 +1,38 @@
+"""
+Data generator for the HPDM172 assignment.
+
+This script creates synthetic data representing hospitals, doctors, patients,
+medications, diseases, appointments, prescriptions, and lab test results.
+All outputs are written as CSV files into the ./data/ directory.
+
+Run directly:
+
+    python generate_data.py
+
+Outputs:
+    hospitals.csv
+    doctors.csv
+    patients.csv
+    medications.csv
+    diseases.csv
+    disease_treatments.csv
+    disease_specialists.csv
+    lab_tests.csv
+    prescriptions.csv
+    appointments.csv
+    lab_results.csv
+"""
+
 import csv
 import random
 from datetime import datetime, timedelta
 
-random.seed(42)  # for reproducibile results
+random.seed(42)  # ensure reproducibile results
 
-# Constants: how many records
+
+# ---------------------------------------------------------------------------
+# Constants: number of records to generate
+# ---------------------------------------------------------------------------
 
 N_HOSPITALS = 40
 N_DOCTORS = 100
@@ -19,32 +47,11 @@ N_LAB_RESULTS = 800
 TODAY = datetime(2025, 12, 1)  # fixed "today" so it’s reproducible
 
 
-# Helper functions
+# ---------------------------------------------------------------------------
+# Lists of names for each entity type
+# ---------------------------------------------------------------------------
 
 
-def rand_date(start_year=1958, end_year=2005):
-    """For DOB: Random date between 1 Jan start_year and 31 Dec end_year (inclusive)."""
-    start = datetime(start_year, 1, 1)
-    end = datetime(end_year, 12, 31)
-    delta = (end - start).days
-    return (start + timedelta(days=random.randint(0, delta))).date()
-
-
-def rand_date_within_years(years=2):
-    """Random date within the last `years` years from TODAY."""
-    days = years * 365
-    return (TODAY - timedelta(days=random.randint(0, days))).date()
-
-
-def rand_datetime_within_days(past_days=90, future_days=30):
-    """Random date and time between TODAY - past_days and TODAY + future_days."""
-    start = TODAY - timedelta(days=past_days)
-    end = TODAY + timedelta(days=future_days)
-    total_seconds = int((end - start).total_seconds())
-    return start + timedelta(seconds=random.randint(0, total_seconds))
-
-
-# 100 most common names in UK
 FIRST_NAMES = [
     "Oliver",
     "George",
@@ -485,14 +492,73 @@ HOSPITAL_TYPES = [
 GENDERS = ["Male", "Female", "Other"]
 
 
-# Hospitals
+# ---------------------------------------------------------------------------
+# Helper functions
+# ---------------------------------------------------------------------------
+
+
+def rand_date(start_year=1958, end_year=2005):
+    """For DOB: Random date between 1 Jan start_year and 31 Dec end_year (inclusive)."""
+    start = datetime(start_year, 1, 1)
+    end = datetime(end_year, 12, 31)
+    delta = (end - start).days
+    return (start + timedelta(days=random.randint(0, delta))).date()
+
+
+def rand_date_within_years(years=2):
+    """Random date within the last `years` years from TODAY."""
+    days = years * 365
+    return (TODAY - timedelta(days=random.randint(0, days))).date()
+
+
+def rand_datetime_within_days(past_days=90, future_days=30):
+    """
+    Return a random datetime between TODAY - past_days and TODAY + future_days.
+
+    Args:
+        past_days (int): Days before TODAY to include.
+        future_days (int): Days after TODAY to include.
+
+    Returns:
+        datetime: Random datetime in the defined interval.
+    """
+    start = TODAY - timedelta(days=past_days)
+    end = TODAY + timedelta(days=future_days)
+    total_seconds = int((end - start).total_seconds())
+    return start + timedelta(seconds=random.randint(0, total_seconds))
+
+
+# ---------------------------------------------------------------------------
+# Generators for each entity type
+# ---------------------------------------------------------------------------
+
+
 def generate_hospitals():
+    """
+    Generate a list of synthetic hospitals with UNIQUE names.
+
+    Returns:
+        list[list]: Rows of hospital data:
+            [hospital_id, name, address, beds, accreditation_date, has_ae, is_teaching]
+    """
+
     hospitals = []
+    used_names = set()  # Track uniqueness
+
     for i in range(1, N_HOSPITALS + 1):
-        name = f"{random.choice(TOWNS)} {random.choice(HOSPITAL_TYPES)}"
+
+        # Generate a unique hospital name
+        while True:
+            name = f"{random.choice(TOWNS)} {random.choice(HOSPITAL_TYPES)}"
+            if name not in used_names:
+                used_names.add(name)
+                break
+
+        # Random address
         street = random.choice(STREET_NAMES)
         town = random.choice(TOWNS)
         address = f"{random.randint(1, 200)} {street}, {town}, UK"
+
         beds = random.randint(100, 800)
         accreditation_year = random.randint(2000, 2025)
         accreditation_date = rand_date(accreditation_year, accreditation_year)
@@ -502,11 +568,22 @@ def generate_hospitals():
         hospitals.append(
             [i, name, address, beds, accreditation_date.isoformat(), has_ae, teaching]
         )
+
     return hospitals
 
 
-# DOctors
 def generate_doctors(hospitals):
+    """
+    Generate synthetic doctors assigned to hospitals.
+
+    Args:
+        hospitals (list): List of hospital rows.
+
+    Returns:
+        list[list]: Rows of doctor data following:
+            [doctor_id, hospital_id, first, last, dob, address]
+    """
+
     doctors = []
     hospital_ids = [h[0] for h in hospitals]
 
@@ -523,8 +600,17 @@ def generate_doctors(hospitals):
     return doctors
 
 
-# Patients
 def generate_patients(doctors):
+    """
+    Generate synthetic patients fairly distributed across doctors.
+
+    Args:
+        doctors (list): Doctor rows with IDs.
+
+    Returns:
+        list[list]: Patient rows:
+            [patient_id, doctor_id, first, last, dob, address, gender]
+    """
     patients = []
     doctor_ids = [d[0] for d in doctors]
 
@@ -550,8 +636,14 @@ def generate_patients(doctors):
     return patients
 
 
-#  Medications
 def generate_medications():
+    """
+    Generate synthetic medications (or labelled placeholders if > base list size).
+
+    Returns:
+        list[list]: Medication rows:
+            [medication_id, name]
+    """
     base_names = [
         "Atorvastatin",
         "Lisinopril",
@@ -610,10 +702,15 @@ def generate_medications():
     return meds
 
 
-# Diseases
-
-
 def generate_diseases():
+    """
+    Return disease definitions with ICD-10 codes.
+
+    Returns:
+        list[list]: Disease rows:
+            [disease_id, name, description, icd10_code]
+    """
+
     disease_defs = [
         ("Hypertension", "Elevated blood pressure", "I10"),
         ("Type 2 diabetes mellitus", "Disorder of glucose metabolism", "E11"),
@@ -638,10 +735,14 @@ def generate_diseases():
     return diseases
 
 
-#  DiseaseTreatment (link diseases to medications)
-
-
 def generate_disease_treatments(diseases, medications):
+    """
+    Link diseases to 1–3 medications each.
+
+    Returns:
+        list[list]: DiseaseTreatment rows:
+            [disease_treatment_id, disease_id, medication_id]
+    """
     treatments = []
     treatment_id = 1
     med_ids = [m[0] for m in medications]
@@ -655,10 +756,14 @@ def generate_disease_treatments(diseases, medications):
     return treatments
 
 
-# DiseaseSpecialist (link diseases to doctors)
-
-
 def generate_disease_specialists(diseases, doctors):
+    """
+    Assign 2–5 specialist doctors per disease.
+
+    Returns:
+        list[list]: DiseaseSpecialist rows:
+            [disease_specialist_id, disease_id, doctor_id]
+    """
     specialists = []
     spec_id = 1
     doctor_ids = [d[0] for d in doctors]
@@ -672,10 +777,14 @@ def generate_disease_specialists(diseases, doctors):
     return specialists
 
 
-# Lab Tests
-
-
 def generate_lab_tests():
+    """
+    Return definitions of lab tests (blood, urine, imaging).
+
+    Returns:
+        list[list]: Lab test rows:
+            [test_id, name, description, units, reference_range, sample_type]
+    """
     base_tests = [
         ("Full blood count", "Haematology panel", "10^9/L", "See comment", "Blood"),
         ("Serum creatinine", "Renal function", "µmol/L", "60–110", "Blood"),
@@ -705,6 +814,14 @@ def generate_lab_tests():
 
 
 def generate_prescriptions(patients, doctors, medications):
+    """
+    Generate prescription records, ensuring patient is linked to their GP.
+
+    Returns:
+        list[list]: Prescription rows:
+            [id, patient_id, doctor_id, medication_id, prescribed_date,
+             dose_value, dose_units, instructions, duration_days, route]
+    """
 
     prescriptions = []
     presc_id = 1
@@ -753,10 +870,15 @@ def generate_prescriptions(patients, doctors, medications):
     return prescriptions
 
 
-# Appointments
-
-
 def generate_appointments(patients, doctors, hospitals):
+    """
+    Generate synthetic appointments for patients with their registered doctor.
+
+    Returns:
+        list[list]: Appointment rows:
+            [id, patient_id, doctor_id, hospital_id, datetime_string,
+             duration_minutes, reason, status]
+    """
     appointments = []
     appt_id = 1
 
@@ -804,6 +926,14 @@ def generate_appointments(patients, doctors, hospitals):
 
 
 def generate_lab_results(patients, doctors, lab_tests):
+    """
+    Generate synthetic lab results for random patients and tests.
+
+    Returns:
+        list[list]: Lab result rows:
+            [id, test_id, patient_id, doctor_id, requested_date, result_date,
+             value, is_normal, notes]
+    """
     lab_results = []
     result_id = 1
 
@@ -848,10 +978,23 @@ def generate_lab_results(patients, doctors, lab_tests):
     return lab_results
 
 
-# CSV writer helper
+# ---------------------------------------------------------------------------
+# CSV output helper
+# ---------------------------------------------------------------------------
 
 
 def write_csv(filename, header, rows):
+    """
+    Write data rows to a CSV file in ./data/.
+
+    Args:
+        filename (str): Name of the CSV file.
+        header (list[str]): Column names.
+        rows (list[list]): Data rows.
+
+    Side effects:
+        Writes a CSV file and prints a status message.
+    """
     filepath = f"data/{filename}"
     with open(filepath, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -860,7 +1003,9 @@ def write_csv(filename, header, rows):
     print(f"Wrote {len(rows)} rows to {filepath}")
 
 
-# Main data generatort
+# ---------------------------------------------------------------------------
+# Main generator function
+# ---------------------------------------------------------------------------
 
 
 def main():
