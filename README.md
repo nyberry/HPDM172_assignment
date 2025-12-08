@@ -4,11 +4,13 @@
 This project implements a relational database for the HPDM172 MSc Data Science assignment. It represents the activities of a group of hospitals.
 
 It includes:
-- a MySQL database schema describing hospitals, doctors, patients and clinical activtity.
-- a sythnetic data generator
-- SQL scripts for creating and loading the database
-- SQL searches
-- a GitHub Pages site for documentation and project presentation
+- a MySQL database schema describing hospitals and their clinical activtity.
+- a synthnetic data generator.
+- SQL scripts for creating and loading the database.
+- SQL searches.
+- A shell script to export the database.
+- Tests to ensure correct structure and behaviour of the SQL.
+- Documentation about planning and team working.
 
 
 ## Repository Structure
