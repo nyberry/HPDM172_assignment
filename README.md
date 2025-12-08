@@ -661,14 +661,14 @@ WHERE h.accreditation_date BETWEEN '2013-01-01' AND '2020-12-31';
 
 ## Testing
 
-This project inclues a testing framework using `pytest` to validate the correctness of the database schema, and the SQL queries required by the assignment (tests for queries 1,2 and 3 have been implemented, for purposes of demonstration - in production, tests would be applied to all queries).
+This project inclues a testing framework using `pytest` to validate the correctness of the database schema and queries. 
 
 All tests run against an isolated MySQL test database.
 
-- `tests/conftest.py` defines a session-wide pytest fixture that automatically creates a temporary MySQL test database for every test run.
+- `tests/conftest.py` creates a temporary MySQL test database for every test run.
 
-- `tests/test_sql_queries.py` performs structural and testing of the SQL queries provided in `mysql/queries.sql`. This ensures that queries.sql functions as a valid, executable collection of SQL statements.
+- `tests/test_sql_queries.py` performs structural and logical testing of the SQL queries provided in `mysql/queries.sql`. This ensures that queries.sql functions as a valid, executable collection of SQL statements.
 
-- Each assignment query is also tested individually in dedicated test files, such as `test_query_1.py`, `test_query_2.py` and  `test_query_3.py`.  These tests validate logical correctness, including filtering, ordering, Correct join behaviour, Consistency of foreign-key relationships, and expected shapes of returned result sets.
+- Each assignment query is also tested individually in dedicated test files, such as `test_query_1.py`, `test_query_2.py` and  `test_query_3.py`.  These tests validate logical correctness, including filtering, ordering, Correct join behaviour, Consistency of foreign-key relationships, and expected shapes of returned result sets. For demonstration purposes, tests for queries 1,2 and 3 have been implemented. In production, tests would be applied to all queries.
 
 This testing strategy ensures that SQL files behave as documented, and remain stable as the project evolves.
