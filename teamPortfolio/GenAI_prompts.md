@@ -6,8 +6,6 @@ Generative AI was used to develop ideas, to assist with research and info gather
 
 ## Record of AI prompts with hyperlinks to output:
 
-### Used by nb770@exeter.ac.uk:
-
 #### SQL table design
 
 https://chatgpt.com/share/69289384-4ad0-800c-a49b-865a06f6f192
@@ -23,3 +21,7 @@ https://chatgpt.com/share/692b47ef-5e2c-800c-b8e5-599b2e4a61dc
 #### Working with github
 
 https://chatgpt.com/share/6935e4f5-5e04-800c-a8e2-d38be8b3d21a
+
+#### Developing a test suite using pytest
+
+https://chatgpt.com/share/6936a81b-04d8-800c-a27d-75ad9f0df071
