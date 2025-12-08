@@ -450,12 +450,20 @@ FROM Appointment a
 JOIN Patient p ON a.patient_id = p.patient_id
 JOIN Doctor d  ON a.doctor_id = d.doctor_id
 JOIN Hospital h ON a.hospital_id = h.hospital_id
-WHERE a.patient_id = 46
+WHERE a.patient_id = 121
 ORDER BY a.appointment_start DESC;
 ```
 
 ```
-Empty set (0.001 sec)
++----------------+---------------------+------------------+-------------------+-----------+------------+--------------+-----------+-------------+-----------------------------------------+
+| appointment_id | appointment_start   | duration_minutes | reason            | status    | patient_id | patient_name | doctor_id | doctor_name | hospital_name                           |
++----------------+---------------------+------------------+-------------------+-----------+------------+--------------+-----------+-------------+-----------------------------------------+
+|            978 | 2025-11-25 13:28:51 |               20 | New symptoms      | Cancelled |        121 | Aria Green   |        21 | Ava Graham  | Newton Poppleford Rehabilitation Centre |
+|            128 | 2025-11-13 03:09:48 |               20 | New symptoms      | Cancelled |        121 | Aria Green   |        21 | Ava Graham  | Newton Poppleford Rehabilitation Centre |
+|             90 | 2025-10-11 21:10:09 |               20 | Medication review | Cancelled |        121 | Aria Green   |        21 | Ava Graham  | Newton Poppleford Rehabilitation Centre |
+|            560 | 2025-09-29 18:47:06 |               30 | Follow-up         | No-show   |        121 | Aria Green   |        21 | Ava Graham  | Newton Poppleford Rehabilitation Centre |
+|              1 | 2025-09-04 17:46:48 |               40 | Annual review     | No-show   |        121 | Aria Green   |        21 | Ava Graham  | Newton Poppleford Rehabilitation Centre |
++----------------+---------------------+------------------+-------------------+-----------+------------+--------------+-----------+-------------+-----------------------------------------+
 ```
 
 ---
