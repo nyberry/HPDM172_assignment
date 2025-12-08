@@ -12,6 +12,8 @@ It includes:
 - Tests to ensure correct structure and behaviour of the SQL.
 - Documentation about planning and team working.
 
+The project has a [Github Pages site](https://nyberry.github.io/HPDM172_assignment/) at  `https://nyberry.github.io/HPDM172_assignment/`
+
 
 ## Repository Structure
 
