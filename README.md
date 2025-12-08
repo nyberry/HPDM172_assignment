@@ -585,6 +585,14 @@ WHERE h.beds = (
 );
 ```
 
+```
++-----------+------------+-----------+-----------------------------+------+
+| doctor_id | first_name | last_name | hospital_name               | beds |
++-----------+------------+-----------+-----------------------------+------+
+|        25 | Imogen     | Harris    | Uffculme Urgent Care Centre |  777 |
++-----------+------------+-----------+-----------------------------+------+
+```
+
 ---
 
 #### 17. Hospitals accredited before 2015 with an emergency department
