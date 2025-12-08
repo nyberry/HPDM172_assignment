@@ -21,8 +21,9 @@ HPDM172_assignment/
 ├── mysql/
 │   ├── schema.sql                # Creates the database tables
 │   ├── data_import.sql           # Loads CSV data into MySQL
+|   ├── queries.sql               # SQL queries
 │   ├── export_database.sh        # Exports the database
-│   └── queries.sql               # SQL queries
+|   └──  hospitaldb_export.sql    # The exported database
 │
 ├── data/                         # Synthetic data 
 │   ├── hospitals.csv
@@ -38,26 +39,35 @@ HPDM172_assignment/
 │   └── lab_results.csv
 │
 ├── data_generation/
-│   ├── generate_data.py          # Python to generate data
+│   └── generate_data.py          # Python to generate data
+|
+├── tests/                        
+│   ├── conftest.py               # configures a test database
+│   ├── test_sql_queries.py       # logical tests of schema SQL
+│   ├── test_query_1.py           # behavioural tests for each query
+│   ├── test_query_2.py
+│   ├── test_query_3.py
+|   └── etc...
+|
 │
 ├── planning/
 │   ├── assignment_brief.pdf
-│   ├── ERD.drawio                # Editable
-│   ├── ERD.png                   
-│   ├── database_design.md        
+│   ├── database_design.md   
+|   ├── erd.drawio                # Editable
+│   ├── erd.png                   
 │   ├── repo_structure.md
-│   ├── repo_workflow.md
+│   └── repo_workflow.md
 │
 └── TeamPortfolio/
     ├── ActionPlan.xls
-    ├── meeting_minutes_1.docx
-    ├── meeting_minutes_2.docx
-    ├── meeting_minutes_3.docx
-    ├── meeting_minutes_4.docx
     ├── meeting_agenda_1.docx
     ├── meeting_agenda_2.docx
     ├── meeting_agenda_3.docx
     ├── meeting_agenda_4.docx
+    ├── meeting_minutes_1.docx
+    ├── meeting_minutes_2.docx
+    ├── meeting_minutes_3.docx
+    ├── meeting_minutes_4.docx
     └── GenAI_prompts.md          # Records of GenAI use
 ```
 
@@ -66,6 +76,7 @@ HPDM172_assignment/
 
 - MySQL 8.x
 - Python 3.x
+- Pytest 8.x
 
 
 ## Setup Instructions
@@ -77,7 +88,7 @@ git clone https://github.com/nyberry/HPDM172_assignment.git
 cd HPDM172_assignment
 ```
 
-### 2. (optional) Run the python script to recreate CSV files
+### 2. Optionally, run the python script to recreate CSV files
 
 ```bash
 cd data_generation
@@ -91,16 +102,16 @@ python generate_data.py
 mysql --local-infile=1 -u root -p
 
 ```
-notes:
-(--local-infile=1 enables .csv loading)
-(if you are asked for a password, just press enter)
+- `--local-infile=1` enables `.csv` loading
+- if you are asked for a password, leave blank. Just press `enter`.
 
 
-### 4. Create the database (+drops any previous tables)
+### 4. Create the database 
 
 ```sql
 SOURCE mysql/schema.sql;
 ```
+- Any previous tables will be dropped.
 
 ### 5. Load the data
 
@@ -108,63 +119,48 @@ SOURCE mysql/schema.sql;
 SOURCE mysql/data_import.sql;
 ```
 
-## 6. Running the Required SQL queries
-
-Run the queries in MySQL:
+### 6. Run the required SQL queries
 
 ```sql
 SOURCE mysql/queries.sql
 ```
 
-## 7. Exporting the database
-
-SQL cannot execute the export directly. The export must be run using the mysqldump command in the terminal.
-
-Run the export script provided: 
+### 7. Optionally, export the database
 
 ```bash
 cd mysql
 ./export_database.sh
 ```
-
-This generates:
-
-```bash
-mysql/hospitaldb_export.sql
-```
+- This shell script runs the export using the mysqldump command in the terminal. 
+- The export cannot be executed directly from within MySQL
+- The database file generated is `mysql/hospitaldb_export.sql`
 
 ## Planning
 
-An Entity relationshp diagram for the projecty is available at
+An account of our reasoning around database structure, and steps taken to design the database, is contained in `planning/database_design.md`
 
-```
-planning/erd.png
-```
+This entity relationship diagram (ERD) for the project is available at `planning/erd.png` and in an editable form at `planning/erd.drawio`.
 
-an editable .drawio file is included, snd a description of the steps taken to design the database is at
+The ERD shows that the database is fully normalised, and captures the one to one `|-|`, one to many `|-{` and many to many `}-{` relationships between tables in the database.
 
-```
-planning/database_design.md
-```
+Many to many relationships occur via join tables such as DiseaseSpecialist and DiseaseTreatment.
+
+![Entity Relationship Diagram](planning/erd.png)
 
 
 ## Team Portfolio
 
-All meetings, agendas and documentation of AI assistance is stored in 
-
-```
-TeamPortfolio/
-```
+All meetings, agendas and documentation of AI assistance is stored in `TeamPortfolio/`
 
 ---
 
 # Example SQL Queries
 
-These sample SQL queries demonstrate how the hospital database can be queried.
+These sample SQL queries demonstrate how the hospital database can be queried. Here, for demonstration purposes, the output has beeen trimmed to 3 rows.
 
 ---
 
-## **1. List all doctors at a particular hospital**
+#### **1. List all doctors at a particular hospital**
 
 ```sql
 SELECT d.doctor_id, d.first_name, d.last_name
@@ -183,7 +179,7 @@ WHERE h.hospital_id = 2;
 
 ---
 
-## **2. List all prescriptions for a particular patient (chronological)**
+#### 2. List all prescriptions for a particular patient in chronological order
 
 ```sql
 SELECT *
@@ -203,7 +199,7 @@ ORDER BY prescribed_date ASC;
 
 ---
 
-## **3. List all prescriptions written by a specific doctor**
+#### 3. List all prescriptions written by a specific doctor
 
 ```sql
 SELECT *
@@ -225,7 +221,7 @@ ORDER BY prescription_id ASC;
 
 ---
 
-## **4. List all prescriptions ordered alphabetically by patient name**
+#### 4. List all prescriptions ordered alphabetically by patient name
 
 ```sql
 SELECT *
@@ -247,7 +243,7 @@ ORDER BY
 
 ---
 
-## **5. Add a new patient to the database**
+#### 5. Add a new patient to the database
 
 ```sql
 INSERT INTO Patient (
@@ -261,7 +257,7 @@ INSERT INTO Patient (
 
 ---
 
-## **6. Update the address of an existing patient**
+#### 6. Update the address of an existing patient
 
 ```sql
 SELECT first_name, last_name, address
@@ -292,7 +288,7 @@ WHERE patient_id = 300;
 ```
 ---
 
-## **7. List all patients whose doctors work at a particular hospital**
+#### 7. List all patients whose doctors work at a particular hospital
 
 ```sql
 SELECT 
@@ -315,7 +311,7 @@ WHERE d.hospital_id = 39;
 
 ---
 
-## **8. List doctors at teaching hospitals accredited between 2015–2024**
+#### 8. List doctors at teaching hospitals accredited between 2015–2024
 
 ```sql
 SELECT 
@@ -345,7 +341,7 @@ ORDER BY
 
 ---
 
-## **9. List all patients who may have a condition based on medication prescribed**
+#### 9. List all patients who may have a condition based on medication prescribed
 
 ```sql
 SELECT 
@@ -371,7 +367,7 @@ ORDER BY p.last_name ASC, p.first_name ASC;
 ```
 ---
 
-## **10. List doctors who specialise in treating a particular disease at a hospital**
+#### List doctors who specialise in treating a particular disease at a hospital
 
 ```sql
 SELECT 
@@ -399,7 +395,7 @@ WHERE h.hospital_id = 18
 
 ---
 
-## **11. List lab results for all patients over age 60**
+#### 11. List lab results for all patients over age 60
 
 ```sql
 SELECT 
@@ -434,7 +430,7 @@ ORDER BY
 
 ---
 
-## **12. List all appointments for a particular patient**
+#### 12. List all appointments for a particular patient
 
 ```sql
 SELECT 
@@ -462,7 +458,7 @@ Empty set (0.001 sec)
 
 ---
 
-## **13. List all appointments for a particular doctor**
+#### 13. List all appointments for a particular doctor
 
 ```sql
 SELECT 
@@ -491,7 +487,7 @@ ORDER BY a.appointment_start DESC;
 
 ---
 
-## **14. List prescriptions issued at a given hospital **
+#### 14. List prescriptions issued at a given hospital
 
 ```sql
 SELECT  
@@ -518,7 +514,7 @@ WHERE h.name = 'Talaton Clinic';
 
 ---
 
-## **15. Doctor with the highest number of prescriptions**
+#### 15. Doctor with the highest number of prescriptions
 
 ```sql
 SELECT 
@@ -547,7 +543,7 @@ LIMIT 1;
 
 ---
 
-## **16. Doctors working at the hospital with the most beds**
+#### 16. Doctors working at the hospital with the most beds
 
 ```sql
 SELECT 
@@ -567,7 +563,7 @@ WHERE h.beds = (
 
 ---
 
-## **17. Hospitals accredited before 2015 with an emergency department**
+#### 17. Hospitals accredited before 2015 with an emergency department
 
 ```sql
 SELECT 
@@ -587,7 +583,7 @@ WHERE accreditation_date < '2015-01-01'
 
 ---
 
-## **18. Patients whose doctors work at hospitals with fewer than 400 beds**
+#### 18. Patients whose doctors work at hospitals with fewer than 400 beds
 
 ```sql
 SELECT 
@@ -616,7 +612,7 @@ WHERE h.beds < 400;
 
 ---
 
-## **19. Lab results from hospitals accredited between 2013 and 2020**
+#### 19. Lab results from hospitals accredited between 2013 and 2020
 
 ```sql
 SELECT 
@@ -639,3 +635,16 @@ WHERE h.accreditation_date BETWEEN '2013-01-01' AND '2020-12-31';
 ```
 
 
+## Testing
+
+This project inclues a testing framework using `pytest` to validate the correctness of the database schema, and the SQL queries required by the assignment (tests for queries 1,2 and 3 have been implemented, for purposes of demonstration - in production, tests would be applied to all queries).
+
+All tests run against an isolated MySQL test database.
+
+- `tests/conftest.py` defines a session-wide pytest fixture that automatically creates a temporary MySQL test database for every test run.
+
+- `tests/test_sql_queries.py` performs structural and testing of the SQL queries provided in `mysql/queries.sql`. This ensures that queries.sql functions as a valid, executable collection of SQL statements.
+
+- Each assignment query is also tested individually in dedicated test files, such as `test_query_1.py`, `test_query_2.py` and  `test_query_3.py`.  These tests validate logical correctness, including filtering, ordering, Correct join behaviour, Consistency of foreign-key relationships, and expected shapes of returned result sets.
+
+This testing strategy ensures that SQL files behave as documented, and remain stable as the project evolves.
