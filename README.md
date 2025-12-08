@@ -1,5 +1,14 @@
 # HPDM172_assignment
 
+## Contents
+1. Overview
+2. Repository Structure
+3. Setup Instructions
+4. Planning
+5. Team Portfolio
+6. Examples of SQL queries
+7. Testing
+
 ## Overview
 This project implements a relational database for the HPDM172 MSc Data Science assignment. It represents the activities of a group of hospitals.
 
@@ -13,6 +22,7 @@ It includes:
 - Documentation about planning and team working.
 
 The project has a [Github Pages site](https://nyberry.github.io/HPDM172_assignment/) at  `https://nyberry.github.io/HPDM172_assignment/`
+
 
 
 ## Repository Structure
