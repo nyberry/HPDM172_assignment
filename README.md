@@ -553,7 +553,9 @@ LIMIT 1;
 
 ---
 
-#### 16. Doctors working at the hospital with the most beds
+
+#### 16. Doctors working at the hospital with the most beds
+
 
 ```sql
 SELECT 
@@ -593,7 +595,7 @@ WHERE accreditation_date < '2015-01-01'
 
 ---
 
-#### 18. Patients whose doctors work at hospitals with fewer than 400 beds
+#### 18. Patients whose doctors work at hospitals with fewer than 400 beds
 
 ```sql
 SELECT 
@@ -622,7 +624,7 @@ WHERE h.beds < 400;
 
 ---
 
-#### 19. Lab results from hospitals accredited between 2013 and 2020
+#### 19. Lab results from hospitals accredited between 2013 and 2020
 
 ```sql
 SELECT 
