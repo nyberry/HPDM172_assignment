@@ -680,3 +680,9 @@ All tests run against an isolated MySQL test database.
 - Each assignment query is also tested individually in dedicated test files, such as `test_query_1.py`, `test_query_2.py` and  `test_query_3.py`.  These tests validate logical correctness, including filtering, ordering, Correct join behaviour, Consistency of foreign-key relationships, and expected shapes of returned result sets. For demonstration purposes, tests for queries 1,2 and 3 have been implemented. In production, tests would be applied to all queries.
 
 This testing strategy ensures that SQL files behave as documented, and remain stable as the project evolves.
+
+To run the tests:
+
+```bash
+pytest tests /-q
+```

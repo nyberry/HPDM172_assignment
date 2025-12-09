@@ -25,21 +25,16 @@ TABLES_AND_CSVS = {
 @pytest.fixture(scope="session")
 def mysql_conn():
     """
-    Create a fully isolated MySQL test database for the test session.
-
-    This fixture:
+    Create a fully isolated MySQL test database for the test session:
     - Connects to the local MySQL server.
     - Drops any existing test database named `hospital_test`.
     - Creates a fresh empty test database.
     - Executes all CREATE TABLE statements from `schema.sql`.
     - Loads every CSV file listed in TABLES_AND_CSVS directly into its
       corresponding table using parameterised INSERTs.
-      (This avoids the use of multi-statement execution and
-       `LOAD DATA LOCAL INFILE`, which are incompatible with the
-       MySQL Connector/Python C-extension.)
     - Commits all changes and yields a live MySQL connection to tests.
 
-    After all tests complete, the fixture:
+    After all tests complete:
     - Drops the entire test database to leave the MySQL server clean.
     - Closes the database connection.
 
