@@ -684,5 +684,5 @@ This testing strategy ensures that SQL files behave as documented, and remain st
 To run the tests:
 
 ```bash
-pytest tests /-q
+pytest tests/ -q
 ```
