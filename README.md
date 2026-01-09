@@ -1,4 +1,6 @@
-# HPDM172_assignment
+# Hospital Database Project
+
+![Database image](/assets/images/hospital_database.jpeg)
 
 ## Contents
 1. Overview
