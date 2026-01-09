@@ -1,5 +1,3 @@
-# Hospital Database Project
-
 ![Database image](/assets/images/hospital_database.jpeg)
 
 ## Contents
